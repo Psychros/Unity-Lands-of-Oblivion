@@ -11,7 +11,8 @@ public class GlobalStore : MonoBehaviour {
 	public int storeSize = 10;			      //Size of store
 
 	//All text-components
-	public Text woodText = null;
+	public Text woodText;
+	public Text stoneText;
 
 
 	public void Start(){
@@ -52,6 +53,9 @@ public class GlobalStore : MonoBehaviour {
 		switch(id){
 			case Ressources.Wood: 
 				woodText.text = "" + getNumberOfRessource(id);
+				break;
+			case Ressources.Stone: 
+				stoneText.text = "" + getNumberOfRessource(id);
 				break;
 		}
 	}

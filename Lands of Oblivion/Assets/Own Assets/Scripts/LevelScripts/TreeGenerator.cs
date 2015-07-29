@@ -22,7 +22,6 @@ public class TreeGenerator : MonoBehaviour {
 				Vector3 pos = new Vector3(x, y, z);
 				Quaternion rotation = new Quaternion(0, Random.Range(0, 1), 0, 0);
 
-				print(pos);
 				GameObject newTree = (GameObject)Instantiate(tree, pos, rotation);
 				newTree.name = "Tree" + i;
 				newTree.transform.parent = transform;
