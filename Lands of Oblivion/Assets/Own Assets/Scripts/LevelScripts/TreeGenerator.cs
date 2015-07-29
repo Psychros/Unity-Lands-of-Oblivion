@@ -14,8 +14,8 @@ public class TreeGenerator : MonoBehaviour {
 	void Start () {
 		//Generate Trees at random positions
 		for(int i=0; i<numberTrees; i++){
-			int x = Random.Range(0, 2000);
-			int z = Random.Range(0, 2000);
+			int x = (int)Random.Range(terrain.transform.position.x, terrain.transform.position.x + terrain.terrainData.size.x);
+			int z = (int)Random.Range(terrain.transform.position.z, terrain.transform.position.z + terrain.terrainData.size.z);
 			float y = terrain.SampleHeight(new Vector3(x, 0, z));
 
 			if(y >= minHeight && y<= maxHeight){

@@ -31,6 +31,7 @@ public class TreeControler : MonoBehaviour
 		yield  return new WaitForSeconds(7);
 
 		Destroy(gameObject);
+		GlobalStore.instance.addRessources(Ressources.Wood, 1);
 	}
 }
 
