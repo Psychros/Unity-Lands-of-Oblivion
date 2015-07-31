@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour {
 
 	//All KeyCodes
 	public KeyCode cutTree = KeyCode.Mouse0;
+	public KeyCode placeBuilding = KeyCode.Mouse1;
 
 
 	
@@ -21,6 +22,11 @@ public class InputManager : MonoBehaviour {
 		//CutTree
 		if(Input.GetKeyDown(cutTree)){
 			CutTreeEvent userEvent = new CutTreeEvent();
+			userEvent.execute();
+		}
+		//Place Building
+		if(Input.GetKeyDown(placeBuilding)){
+			BuildBuildingEvent userEvent = new BuildBuildingEvent();
 			userEvent.execute();
 		}
 	}
