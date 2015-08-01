@@ -26,8 +26,10 @@ public class InputManager : MonoBehaviour {
 		}
 		//Place Building
 		if(Input.GetKeyDown(placeBuilding)){
-			BuildBuildingEvent userEvent = new BuildBuildingEvent();
-			userEvent.execute();
+			if(SetBuildingPositionController.instance.building == null){
+				BuildBuildingEvent userEvent = new BuildBuildingEvent();
+				userEvent.execute();
+			}
 		}
 	}
 }

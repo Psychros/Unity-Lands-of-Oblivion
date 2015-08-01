@@ -17,6 +17,9 @@ public class BuildBuildingEvent : UserEvent {
 				GameObject building = Instantiate(BuildingManager.instance.storeHouse);
 				building.transform.parent = BuildingManager.instance.buildings.transform;
 				building.transform.position = pos;
+
+				//The 
+				SetBuildingPositionController.instance.building = building;
 			}
 		} 
 		catch(Exception e){
