@@ -15,8 +15,8 @@ public class SetBuildingPositionController : MonoBehaviour {
 	void Update () {
 		//The building follows the mouse
 		if(building != null){
-			RaycastHit hit = RayCastManager.startRayCast(15);
-			if(hit.collider.transform.gameObject.tag == "Terrain")
+			RaycastHit hit = RayCastManager.startRayCast(50);
+			if(hit.collider != null && hit.collider.transform.gameObject.tag == "Terrain")
 				building.transform.position = hit.point;
 		}
 	}

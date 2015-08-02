@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour {
 	//All KeyCodes
 	public KeyCode cutTree = KeyCode.Mouse0;
 	public KeyCode placeBuilding = KeyCode.Mouse1;
+	public KeyCode stopPlaceBuilding = KeyCode.Mouse0;
 
 
 	
@@ -19,17 +20,23 @@ public class InputManager : MonoBehaviour {
 	
 
 	void Update () {
-		//CutTree
+		//Cut tree
 		if(Input.GetKeyDown(cutTree)){
 			CutTreeEvent userEvent = new CutTreeEvent();
 			userEvent.execute();
 		}
-		//Place Building
+
+		//Place building
 		if(Input.GetKeyDown(placeBuilding)){
-			if(SetBuildingPositionController.instance.building == null){
-				BuildBuildingEvent userEvent = new BuildBuildingEvent();
-				userEvent.execute();
-			}
+			BuildBuildingEvent userEvent = new BuildBuildingEvent();
+			userEvent.execute();
+		}
+
+		//Stop place building
+		if(Input.GetKeyDown(stopPlaceBuilding)){
+			//Destroy the building which the player is placing
+			Destroy(SetBuildingPositionController.instance.building);
+			SetBuildingPositionController.instance.building = null;
 		}
 	}
 }
