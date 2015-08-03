@@ -212,10 +212,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   island: {fileID: 1709758558}
-  oceanNorth: {fileID: 1515187661}
-  oceanEast: {fileID: 1862941954}
-  oceanSouth: {fileID: 1924416228}
-  oceanWest: {fileID: 1957001405}
+  oceanTop: {fileID: 1515187661}
+  oceanRight: {fileID: 1862941954}
+  oceanBottom: {fileID: 1924416228}
+  oceanLeft: {fileID: 1957001405}
 --- !u!1001 &167102974
 Prefab:
   m_ObjectHideFlags: 0
@@ -521,8 +521,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663905372}
-  m_LocalRotation: {x: .559818923, y: .0384976007, z: .0260503273, w: -.827310145}
-  m_LocalPosition: {x: 1751.59375, y: -7155.08057, z: -3087.90503}
+  m_LocalRotation: {x: -.0770701021, y: .14692077, z: .0114832334, w: .986074388}
+  m_LocalPosition: {x: -57.5764465, y: 660.170654, z: -768.626587}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6253190}
@@ -972,7 +972,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 45.2299805
+      value: 184.199997
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.x
