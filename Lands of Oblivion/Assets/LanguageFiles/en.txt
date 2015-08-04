@@ -1,4 +1,0 @@
-Startmenu.Titel=Lands of Oblivion
-Startmenu.StartGame=Start Game
-Startmenu.Options=Options
-Startmenu.QuitGame=Quit Game

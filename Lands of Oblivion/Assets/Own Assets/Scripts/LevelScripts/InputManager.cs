@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class InputManager : MonoBehaviour {
@@ -6,11 +7,17 @@ public class InputManager : MonoBehaviour {
 	public static InputManager instance = null;
 
 	public Transform playerTransform = null;
+	public GameObject ui;
+
+	//All menupanels
+	public RectTransform panelBuildmenu;
 
 	//All KeyCodes
-	public KeyCode cutTree = KeyCode.Mouse0;
-	public KeyCode placeBuilding = KeyCode.Mouse1;
+	public KeyCode cutTree			 = KeyCode.Mouse0;
+	public KeyCode placeBuilding 	 = KeyCode.Mouse1;
 	public KeyCode stopPlaceBuilding = KeyCode.Mouse0;
+
+	public KeyCode buildmenu 		 = KeyCode.F;
 
 
 	
@@ -37,6 +44,14 @@ public class InputManager : MonoBehaviour {
 			//Destroy the building which the player is placing
 			Destroy(SetBuildingPositionController.instance.building);
 			SetBuildingPositionController.instance.building = null;
+		}
+
+		//Open or close the buildmenu
+		if(Input.GetKeyDown(buildmenu)){
+			if(panelBuildmenu.parent != null)
+				panelBuildmenu.parent = null;
+			else
+				panelBuildmenu.parent = ui.transform;
 		}
 	}
 }
