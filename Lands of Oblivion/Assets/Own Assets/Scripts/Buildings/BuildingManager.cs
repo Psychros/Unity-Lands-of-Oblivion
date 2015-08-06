@@ -5,6 +5,8 @@ public class BuildingManager : MonoBehaviour {
 
 	public static BuildingManager instance;
 
+	public string selectedBuilding = null;		//Bulding which the player wants to build
+
 	//All Building Prefabs
 	public GameObject storeHouse;
 

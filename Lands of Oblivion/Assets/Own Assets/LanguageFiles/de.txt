@@ -4,4 +4,5 @@ Startmenu.Options  			= Optionen
 Startmenu.QuitGame		    = Spiel beenden
 
 Buildmenu.Title    			= Baumenü
+Buildmenu.ButtonNothing		= Nichts
 Buildmenu.ButtonStoreHouse  = Lagerhaus

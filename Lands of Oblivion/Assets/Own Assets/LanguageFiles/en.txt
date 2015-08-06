@@ -4,4 +4,5 @@ Startmenu.Options   		= Options
 Startmenu.QuitGame  	    = Quit Game
 
 Buildmenu.Title     	    = Buildmenu
+Buildmenu.ButtonNothing     = Nothing
 Buildmenu.ButtonStoreHouse  = Store House

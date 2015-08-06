@@ -17,14 +17,14 @@ public class BuildBuildingEvent : UserEvent {
 				if(hit.transform.gameObject.tag == "Terrain"){
 					Vector3 pos = hit.point;
 					
-					building = Instantiate(BuildingManager.instance.storeHouse);
+					building = createSelectedBuilding();
 					building.transform.position = pos;
 
 					SetBuildingPositionController.instance.building = building;
 				}
 			} 
 			catch(Exception e){
-				Debug.LogError(e);
+				Debug.LogError("No building selected!");
 			}
 		} else{
 			SetBuildingPositionController.instance.building = null;
@@ -56,5 +56,16 @@ public class BuildBuildingEvent : UserEvent {
 
 		//Make the change visible
 		data.SetHeights(x/4, z/4, area);
+	}
+
+
+	public GameObject createSelectedBuilding(){
+		GameObject building = null;
+
+		switch(BuildingManager.instance.selectedBuilding){
+			case "storehouse": building = Instantiate(BuildingManager.instance.storeHouse); break;
+		}
+
+		return building;
 	}
 }

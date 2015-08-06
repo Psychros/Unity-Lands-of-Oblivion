@@ -8,9 +8,11 @@ public class InputManager : MonoBehaviour {
 
 	public Transform playerTransform = null;
 	public GameObject ui;
+	private bool isPause = false;
+	public bool isMenu = false;
 
 	//All menupanels
-	public RectTransform panelBuildmenu;
+	public Canvas buildmenuCanvas;
 
 	//All KeyCodes
 	public KeyCode cutTree			 = KeyCode.Mouse0;
@@ -18,6 +20,7 @@ public class InputManager : MonoBehaviour {
 	public KeyCode stopPlaceBuilding = KeyCode.Mouse0;
 
 	public KeyCode buildmenu 		 = KeyCode.F;
+	public KeyCode pausemenu 		 = KeyCode.Escape;
 
 
 	
@@ -48,10 +51,29 @@ public class InputManager : MonoBehaviour {
 
 		//Open or close the buildmenu
 		if(Input.GetKeyDown(buildmenu)){
-			if(panelBuildmenu.parent != null)
-				panelBuildmenu.parent = null;
-			else
-				panelBuildmenu.parent = ui.transform;
+			isMenu = !isMenu;
+			if(isMenu){
+				buildmenuCanvas.enabled = true;
+			} else {
+				buildmenuCanvas.enabled = false;
+			}
 		}
+
+		//Open or close the pausemenu
+		if(Input.GetKeyDown(pausemenu)){
+			toggleTimeScale();
+		}
+	}
+
+
+	public void toggleTimeScale(){
+		isPause = !isPause;
+
+		if(isPause){
+			Time.timeScale = 0;
+		} else {
+			Time.timeScale = 1;
+		}
+
 	}
 }
