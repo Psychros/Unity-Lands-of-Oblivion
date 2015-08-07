@@ -56,21 +56,6 @@ public class Localizer : MonoBehaviour
         }
     }
 
-    public string UserLocaleName
-    {
-        get
-        {
-            string result;
-            string userLocale = PlayerPrefs.GetString("UserLocale", "en");
-            switch (userLocale)
-            {
-                case "de": result = "Deutsch"; break;
-                default: result = "English"; break;
-            }
-            return result;
-        }
-    }
-
     public void LoadLocalizationFile(string userLocale)
     {
         TextAsset languageFile = null;
