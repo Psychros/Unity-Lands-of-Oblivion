@@ -16,7 +16,7 @@ public class CutTreeEvent : UserEvent {
 			}
 		}
 		catch(NullReferenceException e){
-			Debug.LogError("You should click on a tree if you want to cut one!");
+			//Debug.LogError("You should click on a tree if you want to cut one!");
 		}
 	}
 }

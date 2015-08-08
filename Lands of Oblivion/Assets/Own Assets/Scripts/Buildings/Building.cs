@@ -8,14 +8,11 @@ public class Building : MonoBehaviour {
 	float startHeight;
 	Vector3 pos;
 
+	bool isInBuildProcess = false;
+
 	// Use this for initialization
 	void Start () {
-		BoxCollider collider = gameObject.GetComponent<BoxCollider>();
-		distance = collider.size.y/time;
 
-		pos = gameObject.transform.position;
-		startHeight = pos.y;
-		transform.position.Set(pos.x, pos.y-collider.size.y, pos.z);
 	}
 
 	//Build the building
@@ -24,7 +21,14 @@ public class Building : MonoBehaviour {
 	}
 
 	public virtual void build(){
+		BoxCollider collider = gameObject.GetComponent<BoxCollider>();
+		distance = collider.size.y/time;
+		
+		pos = gameObject.transform.position;
+		startHeight = pos.y;
+		transform.position = new Vector3(pos.x, pos.y-collider.size.y, pos.z);
 
+		isInBuildProcess = true;
 	}
 
 	public virtual void finishBuilding(){
@@ -32,9 +36,13 @@ public class Building : MonoBehaviour {
 	}
 
 	public void moveBuilding(){
-		print ("Start");
-		if(transform.position.y < startHeight){
-			transform.position.Set(pos.x, transform.position.y + distance * Time.deltaTime, pos.z);
+		if(isInBuildProcess){
+			if(transform.position.y < startHeight){
+
+				transform.position = new Vector3(pos.x, transform.position.y + distance * Time.deltaTime, pos.z);
+			} else{
+				isInBuildProcess = false;
+			}
 		}
 	}
 }

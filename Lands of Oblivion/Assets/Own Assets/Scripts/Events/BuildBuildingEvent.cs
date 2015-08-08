@@ -29,8 +29,11 @@ public class BuildBuildingEvent : UserEvent {
 		} else{
 			SetBuildingPositionController.instance.building = null;
 
-			if(building != null)
+			if(building != null){
+				print ("Building");
 				adjustTerrain(building);
+				building.GetComponent<Building>().build();
+			}
 		}
 	}
 
@@ -42,7 +45,6 @@ public class BuildBuildingEvent : UserEvent {
 		Vector3 pos = collider.transform.position;
 		Vector3 size = collider.size;
 
-		print (pos.x + ", " + pos.z);
 		int x = (int)(pos.x/4);	
 		int z = (int)(pos.z-(size.z/4));	
 		float[,] area = new float[(int)(size.z), (int)(size.x)];
