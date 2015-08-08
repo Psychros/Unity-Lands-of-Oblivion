@@ -17,7 +17,7 @@ public class MenuController : MonoBehaviour {
 
 	public void setLanguageKey(string key){
 		Localizer.Instance.LoadLocalizationFile(key);
-
+		
 		LocalizeText[] texts = FindObjectsOfType<LocalizeText>();
 		foreach(LocalizeText text in texts){
 			text.Start();
