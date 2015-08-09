@@ -36,7 +36,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 294769208}
+  m_Sun: {fileID: 0}
 --- !u!127 &3
 LevelGameManager:
   m_ObjectHideFlags: 0
@@ -754,8 +754,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663905372}
-  m_LocalRotation: {x: .173122332, y: .00295442436, z: .000519479043, w: -.984895766}
-  m_LocalPosition: {x: -226.552917, y: 112.970459, z: -1356.00867}
+  m_LocalRotation: {x: -.240507066, y: .0291132499, z: .00721696252, w: .970183849}
+  m_LocalPosition: {x: -62.9990845, y: 541.757202, z: -865.846802}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6253190}

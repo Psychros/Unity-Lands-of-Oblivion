@@ -30,7 +30,6 @@ public class BuildBuildingEvent : UserEvent {
 			SetBuildingPositionController.instance.building = null;
 
 			if(building != null){
-				print ("Building");
 				adjustTerrain(building);
 				building.GetComponent<Building>().build();
 			}
