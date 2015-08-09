@@ -8,11 +8,13 @@ public class InputManager : MonoBehaviour {
 
 	public Transform playerTransform = null;
 	public GameObject ui;
+	public  bool isMenu = false;
 	private bool isPause = false;
-	public bool isMenu = false;
 
 	//All menupanels
+	public Canvas inGameCanvas;
 	public Canvas buildmenuCanvas;
+	public Canvas pausemenuCanvas;
 
 	//All KeyCodes
 	public KeyCode cutTree			 = KeyCode.Mouse0;
@@ -51,16 +53,12 @@ public class InputManager : MonoBehaviour {
 
 		//Open or close the buildmenu
 		if(Input.GetKeyDown(buildmenu)){
-			isMenu = !isMenu;
-			if(isMenu){
-				buildmenuCanvas.enabled = true;
-			} else {
-				buildmenuCanvas.enabled = false;
-			}
+			switchToMenu(buildmenuCanvas, false);
 		}
 
 		//Open or close the pausemenu
 		if(Input.GetKeyDown(pausemenu)){
+			switchToMenu(pausemenuCanvas, false);
 			toggleTimeScale();
 		}
 	}
@@ -74,6 +72,19 @@ public class InputManager : MonoBehaviour {
 		} else {
 			Time.timeScale = 1;
 		}
+	}
 
+	public void switchToMenu(Canvas menu, Boolean showInGame){
+		isMenu = !isMenu;
+		if(isMenu){
+			if(!showInGame)
+				inGameCanvas.enabled = false;
+
+			menu.enabled = true;
+			
+		} else {
+			inGameCanvas.enabled = true;
+			menu.enabled = false;
+		}
 	}
 }
