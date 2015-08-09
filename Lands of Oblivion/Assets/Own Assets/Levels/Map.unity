@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86265d2e1531173439973e4118caea1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storeSize: 0
+  storeSize: 10
   woodText: {fileID: 739231331}
   stoneText: {fileID: 927308861}
 --- !u!1 &663905372
@@ -754,8 +754,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663905372}
-  m_LocalRotation: {x: -.240507066, y: .0291132499, z: .00721696252, w: .970183849}
-  m_LocalPosition: {x: -62.9990845, y: 541.757202, z: -865.846802}
+  m_LocalRotation: {x: -.256578654, y: .0115969302, z: .00307865557, w: .966448903}
+  m_LocalPosition: {x: -108.005219, y: 672.833679, z: -721.634644}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6253190}

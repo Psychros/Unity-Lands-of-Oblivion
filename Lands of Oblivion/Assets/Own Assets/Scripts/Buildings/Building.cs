@@ -59,7 +59,9 @@ public class Building : MonoBehaviour {
 				if(haveEnoughRessources)
 					transform.position = new Vector3(pos.x, transform.position.y + speed * Time.deltaTime, pos.z);
 			} else{
+				//Finish the build process
 				isInBuildProcess = false;
+				finishBuilding();
 			}
 		}
 	}
