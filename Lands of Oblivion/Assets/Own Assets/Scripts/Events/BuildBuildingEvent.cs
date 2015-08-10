@@ -7,18 +7,17 @@ public class BuildBuildingEvent : UserEvent {
 	private static GameObject building;
 
 	public void execute(){
-		if(SetBuildingPositionController.instance.building == null){
+		if(SetBuildingPositionController.instance.building == null)
+		{
 			//Get the position where the player is looking at the terrain
 			RaycastHit hit = RayCastManager.startRayCast(50);
 			
 			
 			//Buildings can only be build on terrains
 			try{
-				if(hit.transform.gameObject.tag == "Terrain"){
-					Vector3 pos = hit.point;
-					
+				if(hit.transform.gameObject.tag == "Terrain"){		
 					building = createSelectedBuilding();
-					building.transform.position = pos;
+					building.transform.position = hit.point;
 
 					SetBuildingPositionController.instance.building = building;
 				}
@@ -26,7 +25,8 @@ public class BuildBuildingEvent : UserEvent {
 			catch(Exception e){
 				Debug.LogError("No building selected!");
 			}
-		} else{
+		} else
+		{
 			SetBuildingPositionController.instance.building = null;
 
 			if(building != null){
@@ -64,7 +64,8 @@ public class BuildBuildingEvent : UserEvent {
 		GameObject building = null;
 
 		switch(BuildingManager.instance.selectedBuilding){
-			case "storehouse": building = Instantiate(BuildingManager.instance.storeHouse); break;
+			case "storehouse":  building = Instantiate(BuildingManager.instance.storeHouse); break;
+			case "woodenhouse": building = Instantiate(BuildingManager.instance.woodenHouse); break;
 		}
 
 		return building;

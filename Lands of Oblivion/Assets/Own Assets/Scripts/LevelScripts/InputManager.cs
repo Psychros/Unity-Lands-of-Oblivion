@@ -67,7 +67,6 @@ public class InputManager : MonoBehaviour {
 		//Storemenu
 		if(Input.GetKeyDown(storemenu)){
 			switchToMenu(storemenuCanvas, false);
-			toggleTimeScale();
 		}
 	}
 
@@ -82,7 +81,7 @@ public class InputManager : MonoBehaviour {
 		}
 	}
 
-	public void switchToMenu(Canvas menu, Boolean showInGame){
+	public void switchToMenu(Canvas menu, bool showInGame){
 		isMenu = !isMenu;
 		if(isMenu){
 			if(!showInGame)

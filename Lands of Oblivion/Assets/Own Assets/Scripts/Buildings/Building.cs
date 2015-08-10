@@ -41,8 +41,6 @@ public class Building : MonoBehaviour {
 			time += cost.number * timeForOneRessource;
 		}
 
-		print (time);
-
 		//Calculate the buildspeed
 		speed = collider.size.y/time;
 	}

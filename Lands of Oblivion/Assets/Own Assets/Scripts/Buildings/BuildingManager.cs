@@ -9,6 +9,7 @@ public class BuildingManager : MonoBehaviour {
 
 	//All Building Prefabs
 	public GameObject storeHouse;
+	public GameObject woodenHouse;
 
 
 	public void Start(){

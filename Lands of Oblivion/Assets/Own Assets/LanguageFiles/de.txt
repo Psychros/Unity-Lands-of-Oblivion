@@ -6,6 +6,7 @@ Startmenu.QuitGame		    = Spiel beenden
 Buildmenu.Title    			= Baumenü
 Buildmenu.ButtonNothing		= Nichts
 Buildmenu.ButtonStoreHouse  = Lagerhaus
+Buildmenu.ButtonWoodenHouse = Holzhaus
 
 Pausemenu.Continue			= Fortsetzen
 Pausemenu.Startmenu			= Startmenü

@@ -6,6 +6,7 @@ Startmenu.QuitGame  	    = Quit Game
 Buildmenu.Title     	    = Buildmenu
 Buildmenu.ButtonNothing     = Nothing
 Buildmenu.ButtonStoreHouse  = Store House
+Buildmenu.ButtonWoodenHouse = Wooden House
 
 Pausemenu.Continue			= Continue
 Pausemenu.Startmenu			= Startmenu
