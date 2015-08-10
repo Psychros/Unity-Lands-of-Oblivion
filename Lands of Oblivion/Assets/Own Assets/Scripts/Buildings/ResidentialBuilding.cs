@@ -19,14 +19,17 @@ public class ResidentialBuilding : Building {
 
 	public override void finishBuilding(){
 		//Spawn new Inhabitants
+		print (inhabitants.Length);
 		for(int i=0; i<inhabitants.Length; i++){
-			inhabitants[i] = Instantiate(BuildingManager.instance.woodenHouse);
-			inhabitants[i].transform.parent = transform;
+			inhabitants[i] = Instantiate(NPCManager.instance.humanModel);
 
 			float x = spawnPosition.x + transform.position.x;
 			float z = spawnPosition.y + transform.position.z;
-			float y = Terrain.activeTerrain.terrainData.GetHeight((int)(x/4), (int)(z/4));
+			float y = InputManager.instance.terrain.SampleHeight(new Vector3(x, 0, z));
 			inhabitants[i].transform.position = new Vector3(x, y, z);
+
+			inhabitants[i].transform.parent = transform;
+
 		}
 	}
 }

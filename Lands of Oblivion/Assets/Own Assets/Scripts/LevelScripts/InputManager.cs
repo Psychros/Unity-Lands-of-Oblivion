@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour {
 	public static InputManager instance = null;
 
 	public Transform playerTransform = null;
+	public Terrain terrain;
 	public GameObject ui;
 	public  bool isMenu = false;
 	private bool isPause = false;

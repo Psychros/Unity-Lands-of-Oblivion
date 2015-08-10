@@ -300,7 +300,7 @@ MonoBehaviour:
   - ressource: 0
     number: 1
   timeForOneRessource: 3
-  spawnPosition: {x: 0, y: 0}
+  spawnPosition: {x: -6.5, y: 0}
   inhabitants:
   - {fileID: 0}
   - {fileID: 0}
@@ -315,6 +315,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: spawnPosition.x
       value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

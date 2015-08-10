@@ -5,6 +5,7 @@ public class NPCManager : MonoBehaviour {
 
 	public static NPCManager instance;
 
+	public GameObject humanModel;
 	private int numberPeople = 0;
 	private int freePeople = 0;
 

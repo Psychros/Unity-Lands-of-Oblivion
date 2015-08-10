@@ -22,6 +22,7 @@ public class GlobalStore : MonoBehaviour {
 	public void Start(){
 		instance = this;
 		addSize(startSize);
+		addRessources(Ressources.Wood, 10);
 	}
 
 	public int getNumberOfRessource(Ressources id) {
