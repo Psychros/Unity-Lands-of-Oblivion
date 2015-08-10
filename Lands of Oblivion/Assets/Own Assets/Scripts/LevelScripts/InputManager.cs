@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour {
 	public Canvas inGameCanvas;
 	public Canvas buildmenuCanvas;
 	public Canvas pausemenuCanvas;
+	public Canvas storemenuCanvas;
 
 	//All KeyCodes
 	public KeyCode cutTree			 = KeyCode.Mouse0;
@@ -23,6 +24,7 @@ public class InputManager : MonoBehaviour {
 
 	public KeyCode buildmenu 		 = KeyCode.F;
 	public KeyCode pausemenu 		 = KeyCode.Escape;
+	public KeyCode storemenu 		 = KeyCode.Tab;
 
 
 	
@@ -51,14 +53,20 @@ public class InputManager : MonoBehaviour {
 			SetBuildingPositionController.instance.building = null;
 		}
 
-		//Open or close the buildmenu
+		//Buildmenu
 		if(Input.GetKeyDown(buildmenu)){
 			switchToMenu(buildmenuCanvas, false);
 		}
 
-		//Open or close the pausemenu
+		//Pausemenu
 		if(Input.GetKeyDown(pausemenu)){
 			switchToMenu(pausemenuCanvas, false);
+			toggleTimeScale();
+		}
+
+		//Storemenu
+		if(Input.GetKeyDown(storemenu)){
+			switchToMenu(storemenuCanvas, false);
 			toggleTimeScale();
 		}
 	}

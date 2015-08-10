@@ -10,7 +10,7 @@ public class StoreHouse : Building {
 		base.Update();
 	}
 
-	public virtual void finishBuilding(){
+	public override void finishBuilding(){
 		GlobalStore.instance.addSize(size);
 	}
 }

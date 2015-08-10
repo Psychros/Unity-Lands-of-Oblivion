@@ -8,15 +8,20 @@ public class GlobalStore : MonoBehaviour {
 	public static GlobalStore instance;
 
 	private int[]ressources = new int[300];   //Number of ressources
-	public int storeSize = 10;			      //Size of store
+	public int startSize = 10;
+	private int storeSize = 0;			      //Size of store
 
 	//All text-components
+	public Text storeText;
 	public Text woodText;
+	public Text woodText2;
 	public Text stoneText;
+	public Text stoneText2;
 
 
 	public void Start(){
 		instance = this;
+		addSize(startSize);
 	}
 
 	public int getNumberOfRessource(Ressources id) {
@@ -30,6 +35,8 @@ public class GlobalStore : MonoBehaviour {
 
 	public void addSize(int value){
 		storeSize += value;
+
+		storeText.text = "" + storeSize;
 	}
 
 
@@ -53,9 +60,11 @@ public class GlobalStore : MonoBehaviour {
 		switch(id){
 			case Ressources.Wood: 
 				woodText.text = "" + getNumberOfRessource(id);
+				woodText2.text = "" + getNumberOfRessource(id);
 				break;
 			case Ressources.Stone: 
 				stoneText.text = "" + getNumberOfRessource(id);
+				stoneText2.text = "" + getNumberOfRessource(id);
 				break;
 		}
 	}

@@ -298,7 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   costs:
   - ressource: 0
-    number: 5
+    number: 1
   timeForOneRessource: 3
 --- !u!1001 &100100000
 Prefab:
@@ -306,7 +306,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: costs.Array.data[0].number
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 131104}
