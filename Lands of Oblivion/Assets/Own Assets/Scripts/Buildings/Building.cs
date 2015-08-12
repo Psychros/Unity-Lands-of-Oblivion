@@ -17,10 +17,13 @@ public class Building : MonoBehaviour {
 	public List<Cost> costs = new List<Cost>();
 	public float timeForOneRessource = 3;		//Time in seconds
 
+
+
 	// Use this for initialization
 	void Start () {
 		timer = timeForOneRessource;
 	}
+	
 
 	//Build the building
 	public void Update(){

@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: af5183908107e104195286225f1d5be8
+timeCreated: 1439311559
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Holzf_ller_Balken
+    100002: Holzf_ller_Hackklotz
+    100004: Holzf_ller_Haus
+    100006: Holzf_ller_Holzst_mme
+    100008: Holzf_ller_Lagergestell
+    100010: Holzf_ller_S_gebank
+    100012: Holzf_ller_Schornstein
+    100014: Plane
+    100016: //RootNode
+    400000: Holzf_ller_Balken
+    400002: Holzf_ller_Hackklotz
+    400004: Holzf_ller_Haus
+    400006: Holzf_ller_Holzst_mme
+    400008: Holzf_ller_Lagergestell
+    400010: Holzf_ller_S_gebank
+    400012: Holzf_ller_Schornstein
+    400014: Plane
+    400016: //RootNode
+    2300000: Holzf_ller_Balken
+    2300002: Holzf_ller_Hackklotz
+    2300004: Holzf_ller_Haus
+    2300006: Holzf_ller_Holzst_mme
+    2300008: Holzf_ller_Lagergestell
+    2300010: Holzf_ller_S_gebank
+    2300012: Holzf_ller_Schornstein
+    2300014: Plane
+    3300000: Holzf_ller_Balken
+    3300002: Holzf_ller_Hackklotz
+    3300004: Holzf_ller_Haus
+    3300006: Holzf_ller_Holzst_mme
+    3300008: Holzf_ller_Lagergestell
+    3300010: Holzf_ller_S_gebank
+    3300012: Holzf_ller_Schornstein
+    3300014: Plane
+    4300000: Holzf_ller_Holzst_mme
+    4300002: Holzf_ller_S_gebank
+    4300004: Holzf_ller_Hackklotz
+    4300006: Holzf_ller_Schornstein
+    4300008: Holzf_ller_Balken
+    4300010: Plane
+    4300012: Holzf_ller_Lagergestell
+    4300014: Holzf_ller_Haus
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

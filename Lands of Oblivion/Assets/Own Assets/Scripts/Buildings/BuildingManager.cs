@@ -10,6 +10,7 @@ public class BuildingManager : MonoBehaviour {
 	//All Building Prefabs
 	public GameObject storeHouse;
 	public GameObject woodenHouse;
+	public GameObject woodcutter;
 
 
 	public void Start(){

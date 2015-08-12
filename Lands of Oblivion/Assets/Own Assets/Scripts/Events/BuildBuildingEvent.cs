@@ -66,6 +66,7 @@ public class BuildBuildingEvent : UserEvent {
 		switch(BuildingManager.instance.selectedBuilding){
 			case "storehouse":  building = Instantiate(BuildingManager.instance.storeHouse); break;
 			case "woodenhouse": building = Instantiate(BuildingManager.instance.woodenHouse); break;
+			case "woodcutter":  building = Instantiate(BuildingManager.instance.woodcutter); break;
 		}
 
 		return building;

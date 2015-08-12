@@ -5,17 +5,29 @@ public class NPC : MonoBehaviour {
 
 	private NavMeshAgent nav = null;
 
+	public WorkBuilding workPlace = null;
+
 	// Use this for initialization
 	void Start () {
-		NPCManager.instance.addPeople(1);
-		nav = GetComponent<NavMeshAgent>();
+		NPCManager.instance.addNPC(this);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(!nav.hasPath)
-			calculateRandomDestination();
+		if(nav != null){
+			if(!nav.hasPath && workPlace == null){
+				calculateRandomDestination();
+			}
+			//Is only executed if the npc is refered to a workBuilding an lets the workBuilding work
+			else if(workPlace != null && Vector3.Distance(transform.position, workPlace.transform.position) < 0.5f){	//Is the NPC at the workplace?
+				workPlace.worker = gameObject;
+				this.enabled = false;
+			}
+		} else {
+			nav = GetComponent<NavMeshAgent>();
+		}
 	}
+
 
 	//Calculates a random path
 	public void calculateRandomDestination(){
@@ -33,5 +45,4 @@ public class NPC : MonoBehaviour {
 		
 		nav.SetDestination(new Vector3(x, y, z));
 	}
-
 }

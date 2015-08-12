@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 490892}
   - 65: {fileID: 6566634}
   - 114: {fileID: 11433580}
-  - 208: {fileID: 20846474}
+  - 208: {fileID: 20885004}
   m_Layer: 0
   m_Name: Store House
   m_TagString: Untagged
@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 424.298798, y: 16.0589447, z: 147.294968}
+  m_LocalPosition: {x: 557.162231, y: 15.1907272, z: 165.821732}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 409334}
@@ -301,7 +301,7 @@ MonoBehaviour:
   - ressource: 0
     number: 1
   timeForOneRessource: 3
---- !u!208 &20846474
+--- !u!208 &20885004
 NavMeshObstacle:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -357,6 +357,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_CarveOnlyStationary
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_CostOverride
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Start
+      value: 
+      objectReference: {fileID: 490892}
+    - target: {fileID: 0}
+      propertyPath: m_End
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_AreaIndex
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 477598}
   - 65: {fileID: 6595480}
   - 114: {fileID: 11409840}
-  - 208: {fileID: 20872744}
+  - 208: {fileID: 20817916}
   m_Layer: 0
   m_Name: Wooden House
   m_TagString: Untagged
@@ -306,7 +306,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!208 &20872744
+--- !u!208 &20817916
 NavMeshObstacle:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -350,6 +350,30 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_MoveThreshold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_CostOverride
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Activated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Start
+      value: 
+      objectReference: {fileID: 477598}
+    - target: {fileID: 0}
+      propertyPath: m_End
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_AreaIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_AutoUpdatePositions
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
