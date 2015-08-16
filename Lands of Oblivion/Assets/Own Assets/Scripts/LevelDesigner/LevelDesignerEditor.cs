@@ -6,7 +6,6 @@ using UnityEditor;
 public class LevelDesignerEditor : Editor {
 
 	private LevelDesigner script;
-	private Vector3 pos;
 
 	void OnEnable(){
 		script = (LevelDesigner)target;
@@ -14,8 +13,27 @@ public class LevelDesignerEditor : Editor {
 
 	void OnSceneGUI(){
 		RaycastHit hit = RayCastManager.startRayCastFromGUI(3000);
-		script.pos = hit.point;
-		SceneView.RepaintAll();
+
+		if(!script.pos.Equals(hit.point)){
+			script.pos = hit.point;
+			SceneView.RepaintAll();
+		}
+
+		//Test for Input
+		Event e = Event.current;
+		if(e.type == EventType.mouseDown){
+			//Left mouse delete objects
+			if(e.button == 0){
+
+			}
+
+			//Right mouse create objects
+			if(e.button == 0){
+				for(int i=0; i<script.numberOfObjects; i++){
+
+				}
+			}
+		}
 
 		if(GUI.changed)
 			EditorUtility.SetDirty(target);
