@@ -8,8 +8,13 @@ public class LevelDesigner : MonoBehaviour {
 
 	public GameObject gameObject = null;
 	public Vector3 pos = new Vector3(100, 100, 100);
+	public Transform parent = null;
+	public bool rotateRandom = true;
+	public bool isActivated = false;
+	public Terrain terrain;
 
 	void OnDrawGizmos(){
-		Gizmos.DrawWireSphere(pos, range);
+		if(isActivated)
+			Gizmos.DrawWireSphere(pos, range);
 	}
 }

@@ -20,7 +20,7 @@ public class TreeGenerator : MonoBehaviour {
 
 			if(y >= minHeight && y<= maxHeight){
 				Vector3 pos = new Vector3(x, y, z);
-				Quaternion rotation = new Quaternion(0, Random.Range(0, 1), 0, 0);
+				Quaternion rotation = new Quaternion(0, Random.Range(0, 360), 0, 0);
 
 				GameObject newTree = (GameObject)Instantiate(tree, pos, rotation);
 				newTree.name = "Tree" + i;
