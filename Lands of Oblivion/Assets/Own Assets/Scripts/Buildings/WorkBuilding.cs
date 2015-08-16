@@ -7,7 +7,7 @@ public class WorkBuilding : Building {
 	public float productionTime;
 	public int number = 1;
 
-	private float timer = 0;
+	private float timerRessources = 0;
 
 	public GameObject worker = null;
 
@@ -33,12 +33,12 @@ public class WorkBuilding : Building {
 	//Produce the product every in productionTime seconds
 	protected void produce(){
 		if(worker != null){
-			if(timer >= productionTime){
+			if(timerRessources >= productionTime){
 				GlobalStore.instance.addRessources(ressource, number);
-				timer = 0;
+				timerRessources = 0;
 			}
 
-			timer += Time.deltaTime;
+			timerRessources += Time.deltaTime;
 		}
 	}
 }
