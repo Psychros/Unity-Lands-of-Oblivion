@@ -3,11 +3,20 @@ Startmenu.StartGame			= Spiel starten
 Startmenu.Options  			= Optionen
 Startmenu.QuitGame		    = Spiel beenden
 
+//Building Categories
 Buildmenu.Title    			= Baumenü
+Buildmenu.ButtonStore		= Lager
+Buildmenu.ButtonHouses		= Häuser
+Buildmenu.ButtonFood		= Nahrung
+Buildmenu.ButtonMaterials	= Baumaterial
+Buildmenu.ButtonProducts	= Waren
+Buildmenu.ButtonCivil		= Zivil
 Buildmenu.ButtonNothing		= Nichts
+//Buildings
 Buildmenu.ButtonStoreHouse  = Lagerhaus
 Buildmenu.ButtonWoodenHouse = Holzhaus
 Buildmenu.ButtonWoodcutter  = Holzfäller
+Buildmenu.ButtonChurch 		= Kirche
 
 Pausemenu.Continue			= Fortsetzen
 Pausemenu.Startmenu			= Startmenü

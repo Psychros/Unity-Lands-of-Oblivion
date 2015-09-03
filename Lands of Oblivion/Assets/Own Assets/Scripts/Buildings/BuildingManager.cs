@@ -11,6 +11,7 @@ public class BuildingManager : MonoBehaviour {
 	public GameObject storeHouse;
 	public GameObject woodenHouse;
 	public GameObject woodcutter;
+	public GameObject church;
 
 
 	public void Start(){
