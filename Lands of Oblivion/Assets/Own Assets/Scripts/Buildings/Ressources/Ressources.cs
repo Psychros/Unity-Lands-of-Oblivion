@@ -15,5 +15,5 @@ public enum Ressources{
 	Hemp = 214, Rope = 215, Paper = 216, Book = 217,  
 
 	//Civil
-	Faith = 1000
+	Faith = 800
 }

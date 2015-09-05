@@ -6,6 +6,25 @@ public class NPCManager : MonoBehaviour {
 
 	public static NPCManager instance;
 
+	//Need and Morality
+	public int morality = 100;	
+	public int time = 30;
+	private float timer = 0;
+	private List<Need> needs = new List<Need>();
+	public List<Need> level0 = new List<Need>();
+	public List<Need> level1 = new List<Need>();
+	public List<Need> level2 = new List<Need>();
+	public List<Need> level3 = new List<Need>();
+	public List<Need> level4 = new List<Need>();
+	public List<Need> level5 = new List<Need>();
+	public List<Need> level6 = new List<Need>();
+	public List<Need> level7 = new List<Need>();
+	public List<Need> level8 = new List<Need>();
+	public List<Need> level9 = new List<Need>();
+	public List<Need> level10 = new List<Need>();
+
+
+	//Organize the npcs
 	public GameObject humanModel;
 	private int numberPeople = 0;
 
@@ -16,8 +35,24 @@ public class NPCManager : MonoBehaviour {
 		get{return numberPeople;}
 	}
 
+	public int Morality{
+		get{return morality;}
+		set{morality = value;}
+	}
+
+
+
 	void Start(){
 		instance = this;
+	}
+
+	void Update(){
+		timer += Time.deltaTime;
+		if(timer >= time){
+			foreach(Need n in needs){
+				n.consume();
+			}
+		}
 	}
 
 	public void addNPC(NPC npc){

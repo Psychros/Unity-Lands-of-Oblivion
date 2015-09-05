@@ -7,7 +7,7 @@ public class GlobalStore : MonoBehaviour {
 
 	public static GlobalStore instance;
 
-	private int[]ressources = new int[300];   //Number of ressources
+	private int[]ressources = new int[1000];   //Number of ressources
 	public int startSize = 10;
 	private int storeSize = 0;			      //Size of store
 
