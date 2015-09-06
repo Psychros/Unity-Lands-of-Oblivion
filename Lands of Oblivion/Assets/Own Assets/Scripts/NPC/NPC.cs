@@ -17,7 +17,6 @@ public class NPC : MonoBehaviour {
 	void Update () {
 		if(nav != null){
 			if(!nav.hasPath && workPlace == null){
-				print("Hallo");
 				calculateRandomDestination();
 			}
 			//Is only executed if the npc is refered to a workBuilding an lets the workBuilding work

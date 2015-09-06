@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,8 +7,14 @@ public class NPCManager : MonoBehaviour {
 
 	public static NPCManager instance;
 
+	//level
+	public int level = 0;
+	public int points = 0;
+	public int basePoints = 10;	//Basispunktezahl für die Berechnung der nötigen Punkte
+
 	//Need and Morality
 	public int morality = 100;	
+	public Text moralityText;
 	public int time = 30;
 	private float timer = 0;
 	private List<Need> needs = new List<Need>();
@@ -37,21 +44,56 @@ public class NPCManager : MonoBehaviour {
 
 	public int Morality{
 		get{return morality;}
-		set{morality = value;}
+		set{morality = value; actualizeNPCText();}
 	}
 
 
 
 	void Start(){
 		instance = this;
+
+		actualizeNPCText();
+		addNewNeeds(level0);
 	}
 
 	void Update(){
+		//Consume products
 		timer += Time.deltaTime;
 		if(timer >= time){
+			timer = 0;
+
 			foreach(Need n in needs){
-				n.consume();
+				n.consume(numberPeople);
 			}
+		}
+	}
+
+
+	//Tests if the player reachs the next level
+	public void nextLevel(){
+		if(points >= basePoints){
+			level++;
+			basePoints *= 2;
+
+			switch(level){
+				case 1: addNewNeeds(level1); break;
+				case 2: addNewNeeds(level2); break;
+				case 3: addNewNeeds(level3); break;
+				case 4: addNewNeeds(level4); break;
+				case 5: addNewNeeds(level5); break;
+				case 6: addNewNeeds(level6); break;
+				case 7: addNewNeeds(level7); break;
+				case 8: addNewNeeds(level8); break;
+				case 9: addNewNeeds(level9); break;
+				case 10: addNewNeeds(level10); break;
+			}
+		}
+	}
+
+	//Add the needs of the List
+	public void addNewNeeds(List<Need> needs){
+		foreach(Need n in needs){
+			this.needs.Add(n);
 		}
 	}
 
@@ -59,6 +101,8 @@ public class NPCManager : MonoBehaviour {
 		numberPeople++;
 		freePeople.Add(npc);
 		referNPCToWorkBuilding();
+
+		actualizeNPCText();
 	}
 
 	public void addWorkBuilding(WorkBuilding b){
@@ -80,6 +124,13 @@ public class NPCManager : MonoBehaviour {
 			freePeople.TrimExcess();
 			freeWorkBuildings.RemoveAt(0);
 			freeWorkBuildings.TrimExcess();
+
+			actualizeNPCText();
 		}
+	}
+	
+
+	public void actualizeNPCText(){
+		moralityText.text = freePeople.Count + "/" + numberPeople + " (" + morality + "%)";
 	}
 }
