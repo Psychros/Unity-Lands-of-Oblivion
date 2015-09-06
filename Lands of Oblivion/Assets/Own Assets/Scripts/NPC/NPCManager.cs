@@ -13,7 +13,8 @@ public class NPCManager : MonoBehaviour {
 	public int basePoints = 10;	//Basispunktezahl für die Berechnung der nötigen Punkte
 
 	//Need and Morality
-	public int morality = 100;	
+	private int morality = 100;	
+	public int maxMorality = 200;
 	public Text moralityText;
 	public int time = 30;
 	private float timer = 0;
@@ -44,7 +45,17 @@ public class NPCManager : MonoBehaviour {
 
 	public int Morality{
 		get{return morality;}
-		set{morality = value; actualizeNPCText();}
+		set{
+			morality = value; 
+
+			//The morality cant be smaller than 0 or bigger than maxMorality
+			if(morality < 0)
+				morality = 0;
+			else if(morality > maxMorality)
+				morality = maxMorality;
+
+			actualizeNPCText();
+		}
 	}
 
 

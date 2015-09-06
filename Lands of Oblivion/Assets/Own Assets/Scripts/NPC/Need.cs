@@ -19,10 +19,10 @@ public class Need{
 
 		if(GlobalStore.instance.getNumberOfRessource(ressource) >= (int)neededProducts){
 			GlobalStore.instance.addRessources(ressource, (int) neededProducts);
-			NPCManager.instance.morality = NPCManager.instance.morality + moralityPrice;
+			NPCManager.instance.Morality = NPCManager.instance.Morality + moralityPrice;
 			NPCManager.instance.actualizeNPCText();
 		} else {
-			NPCManager.instance.morality = NPCManager.instance.morality - moralityPrice;
+			NPCManager.instance.Morality = NPCManager.instance.Morality - moralityPrice;
 			NPCManager.instance.actualizeNPCText();
 		}
 	}

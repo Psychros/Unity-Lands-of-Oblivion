@@ -32,13 +32,17 @@ public class WorkBuilding : Building {
 
 	//Produce the product every in productionTime seconds
 	protected void produce(){
+		timerRessources += Time.deltaTime;
+
 		if(worker != null){
 			if(timerRessources >= productionTime){
 				GlobalStore.instance.addRessources(ressource, number);
 				timerRessources = 0;
-			}
 
-			timerRessources += Time.deltaTime;
+				//The morality has an influence on the productionTime
+				timerRessources = 0f - (productionTime * (1f - (NPCManager.instance.Morality/100f)));
+				print(timerRessources);
+			}
 		}
 	}
 }
