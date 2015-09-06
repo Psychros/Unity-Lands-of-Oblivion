@@ -25,6 +25,7 @@ public class BuildmenuManager : MonoBehaviour {
 
 		subMenu.GetComponent<Canvas>().enabled   = true;
 		this.activeMenu = subMenu;
+		InputManager.instance.currentMenu = activeMenu;
 	}
 
 
@@ -32,5 +33,6 @@ public class BuildmenuManager : MonoBehaviour {
 		activeMenu.GetComponent<Canvas>().enabled = false;
 		rootMenu.GetComponent<Canvas>().enabled = true;
 		activeMenu = rootMenu;
+		InputManager.instance.currentMenu = activeMenu;
 	}
 }

@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour {
 	public Terrain terrain;
 	public GameObject ui;
 	public  bool isMenu = false;
+	public Canvas currentMenu;
 	private bool isPause = false;
 
 	//All menupanels
@@ -89,10 +90,12 @@ public class InputManager : MonoBehaviour {
 				inGameCanvas.enabled = false;
 
 			menu.enabled = true;
+			currentMenu = menu;
 			
 		} else {
 			inGameCanvas.enabled = true;
-			menu.enabled = false;
+			currentMenu.enabled = false;
+			currentMenu = null;
 		}
 	}
 }
