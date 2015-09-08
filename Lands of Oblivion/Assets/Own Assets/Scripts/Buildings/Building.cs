@@ -15,13 +15,13 @@ public class Building : MonoBehaviour {
 	bool isInBuildProcess = false;
 
 	public List<Cost> costs = new List<Cost>();
-	public float timeForOneRessource = 3;		//Time in seconds
+	public float buildingtimeForOneRessource = 3;		//Time in seconds
 
 
 
 	// Use this for initialization
 	void Start () {
-		timer = timeForOneRessource;
+		timer = buildingtimeForOneRessource;
 	}
 	
 
@@ -35,17 +35,17 @@ public class Building : MonoBehaviour {
 		
 		pos = gameObject.transform.position;
 		startHeight = pos.y;
-		transform.position = new Vector3(pos.x, pos.y-collider.size.y, pos.z);
+		transform.position = new Vector3(pos.x, pos.y-collider.size.z, pos.z);
 
 		isInBuildProcess = true;
 
 		//Calculate the time
 		foreach(Cost cost in costs){
-			time += cost.number * timeForOneRessource;
+			time += cost.number * buildingtimeForOneRessource;
 		}
 
 		//Calculate the buildspeed
-		speed = collider.size.y/time;
+		speed = collider.size.z/time;
 	}
 
 	public virtual void finishBuilding(){
@@ -72,7 +72,7 @@ public class Building : MonoBehaviour {
 	//If no ressources are in the store, the building process stops
 	public void payRessources(){
 		//Remove ressources
-		if(timer >= timeForOneRessource && costs.Capacity > 0){
+		if(timer >= buildingtimeForOneRessource && costs.Capacity > 0){
 			if(GlobalStore.instance.getNumberOfRessource((int)costs[0].ressource) > 0){
 				GlobalStore.instance.addRessources(costs[0].ressource,-1);
 				Cost c = costs[0];
