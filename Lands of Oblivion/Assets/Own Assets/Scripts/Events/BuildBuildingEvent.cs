@@ -64,10 +64,20 @@ public class BuildBuildingEvent : UserEvent {
 		GameObject building = null;
 
 		switch(BuildingManager.instance.selectedBuilding){
-			case "storehouse":  building = Instantiate(BuildingManager.instance.storeHouse); break;
-			case "woodenhouse": building = Instantiate(BuildingManager.instance.woodenHouse); break;
-			case "woodcutter":  building = Instantiate(BuildingManager.instance.woodcutter); break;
-			case "church":  	building = Instantiate(BuildingManager.instance.church); break;
+			//Stores
+			case "storehouse": 	 	 building = Instantiate(BuildingManager.instance.storeHouse); break;
+
+			//Houses	
+			case "farmhouse":	 	 building = Instantiate(BuildingManager.instance.woodenHouse); break;
+			case "citizensHouse":	 building = Instantiate(BuildingManager.instance.woodenHouse); break;
+			case "merchantsHouse":   building = Instantiate(BuildingManager.instance.woodenHouse); break;
+			case "nobleVilla": 		 building = Instantiate(BuildingManager.instance.woodenHouse); break;
+
+			//Work buildings
+			case "woodcutter":  	 building = Instantiate(BuildingManager.instance.woodcutter); break;
+
+			//Civil buildings
+			case "church":  		 building = Instantiate(BuildingManager.instance.church); break;
 		}
 
 		return building;

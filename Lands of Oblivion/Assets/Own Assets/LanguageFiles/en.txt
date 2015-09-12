@@ -1,21 +1,32 @@
-Startmenu.Titel     		= Lands of Oblivion
-Startmenu.StartGame 		= Start Game
-Startmenu.Options   		= Options
-Startmenu.QuitGame  	    = Quit Game
+Startmenu.Titel     			= Lands of Oblivion
+Startmenu.StartGame 			= Start Game
+Startmenu.Options   			= Options
+Startmenu.QuitGame  	   	 	= Quit Game
 
-Buildmenu.Title     	    = Buildmenu
-Buildmenu.ButtonStore		= Store
-Buildmenu.ButtonHouses		= Houses
-Buildmenu.ButtonFood		= Food
-Buildmenu.ButtonMaterials	= Building materials
-Buildmenu.ButtonProducts	= Products
-Buildmenu.ButtonCivil		= Civil
-Buildmenu.ButtonNothing     = Nothing
-Buildmenu.ButtonStoreHouse  = Store House
-Buildmenu.ButtonWoodenHouse = Wooden House
-Buildmenu.ButtonWoodcutter  = Woodcutter
-Buildmenu.ButtonChurch 		= Church
 
-Pausemenu.Continue			= Continue
-Pausemenu.Startmenu			= Startmenu
-Pausemenu.QuitGame			= Quit Game
+/*
+ * Buildmenu 
+ */
+Buildmenu.Title     	    	= Buildmenu
+Buildmenu.ButtonStore			= Store
+Buildmenu.ButtonHouses			= Houses
+Buildmenu.ButtonFood			= Food
+Buildmenu.ButtonMaterials		= Building materials
+Buildmenu.ButtonProducts		= Products
+Buildmenu.ButtonCivil			= Civil
+Buildmenu.ButtonNothing  	    = Nothing
+//Stores
+Buildmenu.ButtonStoreHouse  	= Store House
+//Houses
+Buildmenu.ButtonFarmHouse  	    = Farmhouse
+Buildmenu.ButtonCitizensHouse   = Citizens house
+Buildmenu.ButtonMerchantsHouse	= Merchants house
+Buildmenu.ButtonNobleVilla		= Noble villa
+//Workbuildings
+Buildmenu.ButtonWoodcutter 	    = Woodcutter
+//Civil buildings
+Buildmenu.ButtonChurch 			= Church
+
+Pausemenu.Continue				= Continue
+Pausemenu.Startmenu				= Startmenu
+Pausemenu.QuitGame				= Quit Game
