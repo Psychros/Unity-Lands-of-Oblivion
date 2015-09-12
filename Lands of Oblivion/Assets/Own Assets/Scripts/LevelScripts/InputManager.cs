@@ -58,6 +58,9 @@ public class InputManager : MonoBehaviour {
 		//Buildmenu
 		if(Input.GetKeyDown(buildmenu)){
 			switchToMenu(buildmenuCanvas, false);
+			if(isMenu){
+				BuildmenuManager.instance.activeMenu = null;
+			}
 		}
 
 		//Pausemenu

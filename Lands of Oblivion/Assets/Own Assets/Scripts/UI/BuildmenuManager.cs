@@ -2,7 +2,12 @@
 using System.Collections;
 
 public class BuildmenuManager : MonoBehaviour {
+	public static BuildmenuManager instance;
 	public Canvas activeMenu = null;
+
+	void Start () {
+		instance = this;
+	}
 
 	public void selectBuilding(string building){
 		if(activeMenu != null){
