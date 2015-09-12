@@ -40,7 +40,8 @@ public class WorkBuilding : Building {
 				timerRessources = 0;
 
 				//The morality has an influence on the productionTime
-				timerRessources = 0f - (productionTime * (1f - (NPCManager.instance.Morality/100f)));
+				float time = productionTime/(NPCManager.instance.Morality/100f);
+				timerRessources = productionTime - time;
 				print(timerRessources);
 			}
 		}
