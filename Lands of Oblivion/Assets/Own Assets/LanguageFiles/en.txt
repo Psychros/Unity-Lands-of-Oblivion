@@ -15,18 +15,36 @@ Buildmenu.ButtonMaterials		= Building materials
 Buildmenu.ButtonProducts		= Products
 Buildmenu.ButtonCivil			= Civil
 Buildmenu.ButtonNothing  	    = Nothing
+
 //Stores
 Buildmenu.ButtonStoreHouse  	= Store House
+
 //Houses
 Buildmenu.ButtonFarmHouse  	    = Farmhouse
 Buildmenu.ButtonCitizensHouse   = Citizens house
 Buildmenu.ButtonMerchantsHouse	= Merchants house
 Buildmenu.ButtonNobleVilla		= Noble villa
+
+//Foodbuildings
+Buildmenu.ButtonFisher			= Fisher
+Buildmenu.ButtonFountain		= Fountain
+Buildmenu.ButtonCropFarm		= Cropfarm
+Buildmenu.ButtonHopsFarm		= Hopsfarm
+Buildmenu.ButtonBrewery			= Brewery
+Buildmenu.ButtonMill			= Mill
+Buildmenu.ButtonBakery			= Bakery
+Buildmenu.ButtonPigFarm			= Pigfarm
+
 //Workbuildings
 Buildmenu.ButtonWoodcutter 	    = Woodcutter
+
 //Civil buildings
 Buildmenu.ButtonChurch 			= Church
 
+
+/*
+ * Pausemenu
+ */
 Pausemenu.Continue				= Continue
 Pausemenu.Startmenu				= Startmenu
 Pausemenu.QuitGame				= Quit Game

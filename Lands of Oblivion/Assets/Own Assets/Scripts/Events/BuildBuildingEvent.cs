@@ -73,6 +73,9 @@ public class BuildBuildingEvent : UserEvent {
 			case "merchantsHouse":   building = Instantiate(BuildingManager.instance.woodenHouse); break;
 			case "nobleVilla": 		 building = Instantiate(BuildingManager.instance.woodenHouse); break;
 
+			//Food buildings
+			case "fisher": 			 building = Instantiate(BuildingManager.instance.fisher); break;
+
 			//Work buildings
 			case "woodcutter":  	 building = Instantiate(BuildingManager.instance.woodcutter); break;
 

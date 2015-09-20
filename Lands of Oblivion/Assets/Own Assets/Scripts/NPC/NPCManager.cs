@@ -16,7 +16,7 @@ public class NPCManager : MonoBehaviour {
 	private int morality = 100;	
 	public int maxMorality = 200;
 	public Text moralityText;
-	public int time = 30;
+	public int time = 5;
 	private float timer = 0;
 	private List<Need> needs = new List<Need>();
 	public List<Need> level0 = new List<Need>();
@@ -68,13 +68,15 @@ public class NPCManager : MonoBehaviour {
 	}
 
 	void Update(){
-		//Consume products
-		timer += Time.deltaTime;
-		if(timer >= time){
-			timer = 0;
+		if(numberPeople > 0){
+			//Consume products
+			timer += Time.deltaTime;
+			if(timer >= time){
+				timer = 0;
 
-			foreach(Need n in needs){
-				n.consume(numberPeople);
+				foreach(Need n in needs){
+					n.consume(numberPeople);
+				}
 			}
 		}
 	}
@@ -106,6 +108,7 @@ public class NPCManager : MonoBehaviour {
 		foreach(Need n in needs){
 			this.needs.Add(n);
 		}
+		needs.TrimExcess();
 	}
 
 	public void addNPC(NPC npc){

@@ -15,15 +15,29 @@ Buildmenu.ButtonMaterials		= Baumaterial
 Buildmenu.ButtonProducts		= Waren
 Buildmenu.ButtonCivil			= Zivil
 Buildmenu.ButtonNothing			= Nichts
+
 //Stores
 Buildmenu.ButtonStoreHouse  	= Lagerhaus
+
 //Houses
 Buildmenu.ButtonFarmHouse   	= Bauernhaus
 Buildmenu.ButtonCitizensHouse   = Bürgerhaus
 Buildmenu.ButtonMerchantsHouse	= Kaufmannshaus
 Buildmenu.ButtonNobleVilla		= Adelige Villa
+
+//Foodbuildings
+Buildmenu.ButtonFisher			= Fischer
+Buildmenu.ButtonFountain		= Brunnen
+Buildmenu.ButtonCropFarm		= Getreidefarm
+Buildmenu.ButtonHopsFarm		= Hopfenfarm
+Buildmenu.ButtonBrewery			= Brauerei
+Buildmenu.ButtonMill			= Mühle
+Buildmenu.ButtonBakery			= Bäckerei
+Buildmenu.ButtonPigFarm			= Schweinefarm
+
 //Workbuildings
 Buildmenu.ButtonWoodcutter  	= Holzfäller
+
 //Civil buildings
 Buildmenu.ButtonChurch 			= Kirche
 
