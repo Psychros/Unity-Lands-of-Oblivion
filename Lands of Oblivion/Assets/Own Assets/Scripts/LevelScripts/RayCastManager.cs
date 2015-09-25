@@ -24,6 +24,14 @@ public class RayCastManager : MonoBehaviour {
 		return hit;
 	}
 
+	//Test for terrain in front of the player with a raycast 
+	public static RaycastHit[] startRayCastAllHits(float distance){
+		Vector3 direction = InputManager.instance.playerTransform.TransformDirection(Vector3.forward);
+		Vector3 position = InputManager.instance.playerTransform.position;
+
+		return Physics.RaycastAll(position, direction, distance);;
+	}
+
 	//Test for something in front of the GU with a raycast 
 	public static RaycastHit startRayCastFromGUI(float distance){
 		RaycastHit hit;
