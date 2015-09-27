@@ -501,7 +501,8 @@ MonoBehaviour:
   costs:
   - ressource: 0
     number: 1
-  timeForOneRessource: 3
+  buildingtimeForOneRessource: 3
+  height: 5
   ressource: 0
   productionTime: 10
   number: 1
@@ -547,6 +548,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: height
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

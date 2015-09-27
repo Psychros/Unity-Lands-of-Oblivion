@@ -16,6 +16,7 @@ public class Building : MonoBehaviour {
 
 	public List<Cost> costs = new List<Cost>();
 	public float buildingtimeForOneRessource = 3;		//Time in seconds
+	public float height = 0;
 
 
 
@@ -31,11 +32,9 @@ public class Building : MonoBehaviour {
 	}
 
 	public virtual void build(){
-		BoxCollider collider = gameObject.GetComponent<BoxCollider>();
-		
 		pos = gameObject.transform.position;
 		startHeight = pos.y;
-		transform.position = new Vector3(pos.x, pos.y-collider.size.z, pos.z);
+		transform.position = new Vector3(pos.x, pos.y-height, pos.z);
 
 		isInBuildProcess = true;
 
@@ -45,7 +44,7 @@ public class Building : MonoBehaviour {
 		}
 
 		//Calculate the buildspeed
-		speed = collider.size.z/time;
+		speed = height/time;
 	}
 
 	public virtual void finishBuilding(){

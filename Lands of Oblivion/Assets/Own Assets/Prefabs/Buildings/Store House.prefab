@@ -141,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 700.950195, y: 13.3347216, z: 494.986023}
+  m_LocalPosition: {x: 738.858826, y: 19.9301605, z: 166.881378}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 409334}
@@ -299,8 +299,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   costs:
   - ressource: 0
-    number: 1
-  timeForOneRessource: 3
+    number: 5
+  buildingtimeForOneRessource: 3
+  height: 7
 --- !u!208 &20885004
 NavMeshObstacle:
   m_ObjectHideFlags: 1
@@ -325,7 +326,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: costs.Array.data[0].number
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Size.x

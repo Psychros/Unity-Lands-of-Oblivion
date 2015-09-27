@@ -10,10 +10,10 @@ GameObject:
   - 4: {fileID: 416104}
   - 33: {fileID: 3356892}
   - 23: {fileID: 2360750}
-  - 95: {fileID: 9577174}
   - 208: {fileID: 20860604}
-  - 65: {fileID: 6527570}
   - 114: {fileID: 11490608}
+  - 65: {fileID: 6561248}
+  - 65: {fileID: 6512780}
   m_Layer: 0
   m_Name: Fisher
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131158}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
-  m_LocalPosition: {x: 556.785828, y: 17.75, z: 197.860321}
+  m_LocalPosition: {x: 696.800232, y: 16.6797276, z: 133.387192}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,7 +64,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131158}
   m_Mesh: {fileID: 4300000, guid: 9484a96bcf56e0f41807e822c1181a28, type: 3}
---- !u!65 &6527570
+--- !u!65 &6512780
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -74,25 +74,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.4583931, y: 4.57599783, z: 7}
-  m_Center: {x: 1.02670288, y: .527999461, z: 2.9124887}
---- !u!95 &9577174
-Animator:
-  serializedVersion: 3
+  m_Size: {x: 1.80715942, y: 3.03023958, z: .636288345}
+  m_Center: {x: 2.35232544, y: 1.3007735, z: .318138242}
+--- !u!65 &6561248
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 9484a96bcf56e0f41807e822c1181a28, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 2
+  m_Size: {x: 2.31212783, y: 3.46792603, z: 3.41810846}
+  m_Center: {x: -.0464477539, y: -.0260927305, z: 1.70905387}
 --- !u!114 &11490608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,8 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   costs:
   - ressource: 0
-    number: 2
+    number: 6
   buildingtimeForOneRessource: 3
+  height: 7
   ressource: 50
   productionTime: 10
   number: 2
@@ -118,7 +114,7 @@ NavMeshObstacle:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131158}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 2.22900009, y: 2.28800011, z: 1.70900011}
@@ -133,7 +129,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: costs.Array.data[0].number
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: height
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 131158}

@@ -12,7 +12,9 @@ GameObject:
   - 23: {fileID: 2343432}
   - 208: {fileID: 20820830}
   - 114: {fileID: 11433026}
-  - 65: {fileID: 6509326}
+  - 65: {fileID: 6536028}
+  - 65: {fileID: 6531432}
+  - 65: {fileID: 6563994}
   m_Layer: 0
   m_Name: Church
   m_TagString: Untagged
@@ -27,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160286}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
-  m_LocalPosition: {x: 554.481201, y: 15.5919781, z: 178.750931}
+  m_LocalPosition: {x: 693.241882, y: 16.188282, z: 164.215424}
   m_LocalScale: {x: 9.80000019, y: 25, z: 28}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68,7 +70,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160286}
   m_Mesh: {fileID: 4300000, guid: 6213837ff7160fa4e89778ef0a9d41c3, type: 3}
---- !u!65 &6509326
+--- !u!65 &6531432
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -78,8 +80,32 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.99373019, y: 2.01359773, z: 56}
-  m_Center: {x: -.0136426026, y: .00718858745, z: .992333651}
+  m_Size: {x: 1.96644402, y: 1.21101916, z: .891627908}
+  m_Center: {x: 0, y: .0527971797, z: .44393149}
+--- !u!65 &6536028
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160286}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.26987779, y: .478163958, z: 1.98843873}
+  m_Center: {x: -.000479561917, y: -.760231376, z: .992336333}
+--- !u!65 &6563994
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160286}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.53926957, y: .336878568, z: .724919021}
+  m_Center: {x: .00435965369, y: .826345682, z: .360576183}
 --- !u!114 &11433026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,6 +121,7 @@ MonoBehaviour:
   - ressource: 0
     number: 5
   buildingtimeForOneRessource: 3
+  height: 55
   ressource: 800
   productionTime: 10
   number: 1
@@ -164,6 +191,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Center.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: height
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
