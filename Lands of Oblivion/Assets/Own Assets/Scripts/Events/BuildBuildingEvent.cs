@@ -19,6 +19,8 @@ public class BuildBuildingEvent : UserEvent {
 					building = createSelectedBuilding();
 					building.transform.position = hit.point;
 
+
+					enableColliders(false);
 					SetBuildingPositionController.instance.building = building;
 				}
 			} 
@@ -30,6 +32,7 @@ public class BuildBuildingEvent : UserEvent {
 			SetBuildingPositionController.instance.building = null;
 
 			if(building != null){
+				enableColliders(true);
 				adjustTerrain(building);
 				building.GetComponent<Building>().build();
 			}
@@ -40,6 +43,14 @@ public class BuildBuildingEvent : UserEvent {
 	//Adjust the terrain under the building
 	private void adjustTerrain(GameObject building){
 
+	}
+
+	//Enable/Disable the colliders of the building
+	private void enableColliders(bool b){
+		Collider[] colliders = building.GetComponentsInChildren<Collider>();
+		foreach(Collider collider in colliders){
+			collider.enabled = b;
+		}
 	}
 
 
