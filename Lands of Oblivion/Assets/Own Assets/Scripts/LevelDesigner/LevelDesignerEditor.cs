@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+
+#if UNITY_EDITOR 
 using UnityEditor;
 
 [CustomEditor(typeof(LevelDesigner))]
@@ -13,7 +15,8 @@ public class LevelDesignerEditor : Editor {
 
 	void OnSceneGUI(){
 		if(script.isActivated){
-			RaycastHit hit = RayCastManager.startRayCastFromGUI(3000);
+
+			RaycastHit hit = startRayCastFromGUI(3000);
 
 			if(!script.pos.Equals(hit.point)){
 				script.pos = hit.point;
@@ -82,4 +85,15 @@ public class LevelDesignerEditor : Editor {
 
 		return pos;
 	}
+
+	//Test for something in front of the GUI with a raycast 
+	public static RaycastHit startRayCastFromGUI(float distance){
+		RaycastHit hit;
+		Vector3 direction = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition).direction;
+		Vector3 position  = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition).origin;
+		Physics.Raycast(position, direction, out hit, distance);
+		
+		return hit;
+	}
 }
+#endif

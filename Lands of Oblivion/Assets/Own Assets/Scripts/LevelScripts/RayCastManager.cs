@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor;
 
 public class RayCastManager : MonoBehaviour {
 
@@ -30,15 +29,5 @@ public class RayCastManager : MonoBehaviour {
 		Vector3 position = InputManager.instance.playerTransform.position;
 
 		return Physics.RaycastAll(position, direction, distance);;
-	}
-
-	//Test for something in front of the GU with a raycast 
-	public static RaycastHit startRayCastFromGUI(float distance){
-		RaycastHit hit;
-		Vector3 direction = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition).direction;
-		Vector3 position  = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition).origin;
-		Physics.Raycast(position, direction, out hit, distance);
-		
-		return hit;
 	}
 }
