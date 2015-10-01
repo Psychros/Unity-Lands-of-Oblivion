@@ -42,8 +42,28 @@ public class BuildBuildingEvent : UserEvent {
 
 	//Adjust the terrain under the building
 	private void adjustTerrain(GameObject building){
+		Terrain terrain = Terrain.activeTerrain;
 
+		//Calculate length and width of the mesh in Terrain Coordinates
+		Vector3 size = building.GetComponentInChildren<MeshRenderer>().bounds.size;
+		size = Math.translateVector3ToTerrainCoordinate(size, Terrain.activeTerrain);
+		float width = size.x;
+		float length = size.z;
+
+		//Translate the position in a Terrainposition
+		Vector3 pos = Math.translateVector3ToTerrainCoordinate(building.transform.position, Terrain.activeTerrain);
+
+		//Modify the heightmap
+		float height = terrain.terrainData.GetHeight((int)(pos.x-width/2), (int)(pos.z-length/2));
+		float[,] heightmap = terrain.terrainData.GetHeights((int)pos.x, (int)pos.z, (int)width, (int)length);
+		for(int x=0; x<heightmap.GetLength(0); x++){
+			for(int z=0; z<heightmap.GetLength(1); z++){
+				heightmap[x, z] = height/terrain.terrainData.size.y;
+			}
+		}
+		terrain.terrainData.SetHeights((int)(pos.x-width/2), (int)(pos.z-length/2), heightmap);
 	}
+
 
 	//Enable/Disable the colliders of the building
 	private void enableColliders(bool b){

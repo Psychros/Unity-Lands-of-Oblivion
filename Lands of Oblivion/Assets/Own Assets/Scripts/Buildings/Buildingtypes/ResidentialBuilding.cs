@@ -19,7 +19,6 @@ public class ResidentialBuilding : Building {
 
 	public override void finishBuilding(){
 		//Spawn new Inhabitants
-		print (inhabitants.Length);
 		for(int i=0; i<inhabitants.Length; i++){
 			inhabitants[i] = Instantiate(NPCManager.instance.humanModel);
 
