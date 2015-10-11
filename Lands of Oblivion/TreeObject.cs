@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-class TreeObject{
+class TreeObject {
     private Boolean leftChildSet = false;
     private Boolean rightChildSet = false;
     private readonly int x;
@@ -13,6 +13,8 @@ class TreeObject{
     private readonly int length;
     private TreeObject leftChild;
     private TreeObject rightChild;
+
+    public Boolean LeftChildSet { get; private set; }
     
     public TreeObject(int x, int y, int width, int length){
         this.x = x;
