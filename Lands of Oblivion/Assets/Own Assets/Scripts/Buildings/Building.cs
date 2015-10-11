@@ -17,6 +17,8 @@ public class Building : MonoBehaviour {
 	public List<Cost> costs = new List<Cost>();
 	public float buildingtimeForOneRessource = 3;		//Time in seconds
 	public float height = 0;
+	public float minHeight = 11;
+	public float maxHeight = 30;
 
 
 

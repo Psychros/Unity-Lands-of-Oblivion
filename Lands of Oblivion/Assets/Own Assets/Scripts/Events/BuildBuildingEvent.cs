@@ -22,6 +22,7 @@ public class BuildBuildingEvent : UserEvent {
 
 					enableColliders(false);
 					SetBuildingPositionController.instance.building = building;
+					SetBuildingPositionController.instance.buildingScript = building.GetComponent<Building>();
 				}
 			} 
 			catch(Exception e){
@@ -30,6 +31,7 @@ public class BuildBuildingEvent : UserEvent {
 		} else
 		{
 			SetBuildingPositionController.instance.building = null;
+			SetBuildingPositionController.instance.buildingScript = null;
 
 			if(building != null){
 				enableColliders(true);
