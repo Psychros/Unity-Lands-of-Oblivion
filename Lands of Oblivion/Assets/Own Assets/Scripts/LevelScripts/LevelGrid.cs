@@ -9,11 +9,11 @@ class LevelGrid{
     private const int AMOUNT_CHUNKS_LOADED = 9;
     private readonly float width;
     private readonly float length;
-    private readonly float terX;
-    private readonly float terY;
+    private readonly float absX;
+    private readonly float absY;
     private float widthRect;
     private float lengthRect;
-    private RasterContainer[,] raster;
+    private Chunk[,] grid;
 
 
  //   int x = e.getX();
@@ -21,34 +21,72 @@ class LevelGrid{
  //   x = (x - UNBENUTZTEPIXELVONLINKS) / BREITERECHTECKE;
  //y = (y - UNBENUTZTEPIXELVONOBEN) / HÖHERECHTECKE;
 
-    public LevelGrid(Terrain ter) {
-        Vector3 tempVec = ter.transform.position;
-        this.width = ter.terrainData.size.x;
-        this.length = ter.terrainData.size.y;
-        this.terX = tempVec.x;
-        this.terY = tempVec.y;
-        initRaster(calcRectsWidth(this.width), calcRectsLength(this.length));
+    public LevelGrid(float initX, float initY, float width, float length)
+    {
+        this.width = width;
+        this.length = length;
+        this.absX = initX;
+        this.absY = initY;
+        this.grid = new Chunk[calcRectsWidth(width), calcRectsLength(length)];
+        initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
+    }
+    
+    public LevelGrid(Terrain ter) : this(ter.transform.position.x,
+                                         ter.transform.position.y,
+                                         ter.terrainData.size.x  ,
+                                         ter.terrainData.size.y  ){ }
+
+    public List<GameObject>[] getComponentsOfChunk(float x, float y)//, int chunks = 9) //TODO
+    {
+        int column = calcColumn(x);
+        int row = calcRow(y);
+        List<GameObject>[] array = new List<GameObject>[9];
+
+        for(int i = 0; i < 9; i++)
+        {
+            for (int j = -1; j < 1; j++)
+            {
+                if (row + j < 0) continue;
+                for (int k = -1; k < 1; k++)
+                {
+                    if (column + k < 0) continue;
+                    array[i] = grid[column + j, row + k].list;
+                }
+            }
+        }
+
+        return array;
     }
 
-    private void initRaster(int rectsWidth, int rectsLength) {
-        raster = new RasterContainer[rectsWidth, rectsLength];
-
-        for (int i = 0; i < rectsWidth; i++)
+    private void initGrid(GameObject actObj)
+    {
+        if (actObj.GetComponent<MeshFilter>().mesh != null)
         {
-            for (int j = 0; j < rectsLength; j++)
+            int x = calcColumn(actObj.transform.position.x);
+            int y = calcRow(actObj.transform.position.y);
+
+            if (grid[x, y] == null)
             {
-                raster[i,j] = initContainer(i, j);
+                grid[x, y] = new Chunk();
             }
+            grid[x, y].add(actObj);
+        }
+
+        foreach (Transform trans in actObj.transform)
+        {
+            initGrid(trans.gameObject);
         }
     }
 
-    private RasterContainer initContainer(int i, int j)
+    private int calcColumn(float x)
     {
-        //TODO dividing the GameObjects in current szene in RasterContainers
-
-        return null;
+        return (int)(x / widthRect);
     }
 
+    private int calcRow(float y)
+    {
+        return (int)(y / lengthRect);
+    }
 
 
     private int calcRectsWidth(float totalWidth)
