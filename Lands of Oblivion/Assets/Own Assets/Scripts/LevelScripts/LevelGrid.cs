@@ -35,23 +35,22 @@ class LevelGrid{
                                          ter.transform.position.y,
                                          ter.terrainData.size.x  ,
                                          ter.terrainData.size.y  ){ }
-    
+
     public List<GameObject>[] getComponentsOfChunk(float x, float y)//, int chunks = 9) //TODO
     {
         int column = calcColumn(x);
         int row = calcRow(y);
+        int i = 0;
         List<GameObject>[] array = new List<GameObject>[9];
 
-        for(int i = 0; i < 9; i++)
+
+        for (int j = -1; j < 1; j++)
         {
-            for (int j = -1; j < 1; j++)
+            if (row + j < 0) continue;
+            for (int k = -1; k < 1; k++)
             {
-                if (row + j < 0) continue;
-                for (int k = -1; k < 1; k++)
-                {
-                    if (column + k < 0) continue;
-                    array[i] = grid[column + j, row + k].list;
-                }
+                if (column + k < 0) continue;
+                array[i++] = grid[column + j, row + k].list;
             }
         }
 
