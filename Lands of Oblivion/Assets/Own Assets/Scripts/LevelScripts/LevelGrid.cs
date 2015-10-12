@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-class LevelRaster{
+class LevelGrid{
     private const int MAXIMUM_SIZE_SQUARE = 75;
     private const int AMOUNT_CHUNKS_LOADED = 9;
     private readonly float width;
@@ -21,7 +21,7 @@ class LevelRaster{
  //   x = (x - UNBENUTZTEPIXELVONLINKS) / BREITERECHTECKE;
  //y = (y - UNBENUTZTEPIXELVONOBEN) / HÖHERECHTECKE;
 
-    public LevelRaster(Terrain ter) {
+    public LevelGrid(Terrain ter) {
         Vector3 tempVec = ter.transform.position;
         this.width = ter.terrainData.size.x;
         this.length = ter.terrainData.size.y;

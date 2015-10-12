@@ -5,11 +5,11 @@ using System.Text;
 using UnityEngine;
 
 
-class RasterContainer
+class GridContainer
 {
     public List<GameObject> list { get { return new List<GameObject>(list); } private set { list = value; } }
 
-    public RasterContainer(List<GameObject> list)
+    public GridContainer(List<GameObject> list)
     {
         this.list = new List<GameObject>();
 
@@ -19,13 +19,13 @@ class RasterContainer
         }
     }
 
-    public RasterContainer(GameObject obj)
+    public GridContainer(GameObject obj)
     {
         this.list = new List<GameObject>();
         this.list.Add(obj);
     }
 
-    public RasterContainer()
+    public GridContainer()
     {
         this.list = new List<GameObject>();
     }
