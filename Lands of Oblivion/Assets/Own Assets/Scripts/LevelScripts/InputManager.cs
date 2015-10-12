@@ -94,18 +94,20 @@ public class InputManager : MonoBehaviour {
 	}
 
 	public void switchToMenu(Canvas menu, bool showInGame){
-		isMenu = !isMenu;
-		if(isMenu){
-			if(!showInGame)
-				inGameCanvas.enabled = false;
+		if(menu == currentMenu || currentMenu == null){
+			isMenu = !isMenu;
+			if(isMenu){
+				if(!showInGame)
+					inGameCanvas.enabled = false;
 
-			menu.enabled = true;
-			currentMenu = menu;
-			
-		} else {
-			inGameCanvas.enabled = true;
-			currentMenu.enabled = false;
-			currentMenu = null;
+				menu.enabled = true;
+				currentMenu = menu;
+				
+			} else {
+				inGameCanvas.enabled = true;
+				currentMenu.enabled = false;
+				currentMenu = null;
+			}
 		}
 	}
 }
