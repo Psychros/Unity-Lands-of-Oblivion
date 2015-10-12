@@ -13,7 +13,7 @@ class LevelGrid{
     private readonly float terY;
     private float widthRect;
     private float lengthRect;
-    private RasterContainer[,] raster;
+    private GridContainer[,] raster;
 
 
  //   int x = e.getX();
@@ -31,7 +31,7 @@ class LevelGrid{
     }
 
     private void initRaster(int rectsWidth, int rectsLength) {
-        raster = new RasterContainer[rectsWidth, rectsLength];
+        raster = new GridContainer[rectsWidth, rectsLength];
 
         for (int i = 0; i < rectsWidth; i++)
         {
@@ -42,7 +42,7 @@ class LevelGrid{
         }
     }
 
-    private RasterContainer initContainer(int i, int j)
+    private GridContainer initContainer(int i, int j)
     {
         //TODO dividing the GameObjects in current szene in RasterContainers
 

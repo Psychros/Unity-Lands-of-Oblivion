@@ -32,15 +32,12 @@ class GridContainer
 
     public Boolean add(GameObject obj)
     {
-        if (!this.list.Contains(obj) && obj.)
+        /*if (!this.list.Contains(obj) && obj.)
         {
             this.list.Add(obj);
             return true;
-        }
-        else
-        {
-            return false;
-        }
+        }*/
+        
+	    return false;
     }
-
 }
