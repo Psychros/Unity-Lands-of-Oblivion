@@ -32,15 +32,11 @@ class Chunk
 
     public Boolean add(GameObject obj)
     {
-<<<<<<< HEAD:Lands of Oblivion/Assets/Own Assets/Scripts/LevelScripts/Chunk.cs
         if (!this.list.Contains(obj) && obj.GetComponent<MeshFilter>().mesh != null)
-=======
-        /*if (!this.list.Contains(obj) && obj.)
->>>>>>> origin/master:Lands of Oblivion/Assets/Own Assets/Scripts/LevelScripts/GridContainer.cs
         {
             this.list.Add(obj);
             return true;
-        }*/
+        }
         
 	    return false;
     }
