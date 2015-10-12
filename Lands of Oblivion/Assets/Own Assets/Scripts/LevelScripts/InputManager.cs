@@ -18,6 +18,7 @@ public class InputManager : MonoBehaviour {
 	public Canvas buildmenuCanvas;
 	public Canvas pausemenuCanvas;
 	public Canvas storemenuCanvas;
+	public Canvas terrainEditorCanvas;
 
 	//All KeyCodes
 	public KeyCode cutTree			 = KeyCode.Mouse0;
@@ -27,9 +28,10 @@ public class InputManager : MonoBehaviour {
 	public KeyCode buildmenu 		 = KeyCode.F;
 	public KeyCode pausemenu 		 = KeyCode.Escape;
 	public KeyCode storemenu 		 = KeyCode.Tab;
+	public KeyCode terrainEditor     = KeyCode.T;
 
 
-	
+
 	void Start () {
 		instance = this;
 	}
@@ -72,6 +74,11 @@ public class InputManager : MonoBehaviour {
 		//Storemenu
 		if(Input.GetKeyDown(storemenu)){
 			switchToMenu(storemenuCanvas, false);
+		}
+
+		//TerrainEditor
+		if(Input.GetKeyDown(terrainEditor)){
+			switchToMenu(terrainEditorCanvas, false);
 		}
 	}
 
