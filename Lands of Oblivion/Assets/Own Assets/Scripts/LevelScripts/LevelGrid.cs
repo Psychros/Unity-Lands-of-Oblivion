@@ -13,7 +13,11 @@ class LevelGrid{
     private readonly float absY;
     private float widthRect;
     private float lengthRect;
+<<<<<<< HEAD
     private Chunk[,] grid;
+=======
+    private GridContainer[,] raster;
+>>>>>>> origin/master
 
 
  //   int x = e.getX();
@@ -36,11 +40,16 @@ class LevelGrid{
                                          ter.terrainData.size.x  ,
                                          ter.terrainData.size.y  ){ }
 
+<<<<<<< HEAD
     public List<GameObject>[] getComponentsOfChunk(float x, float y)//, int chunks = 9) //TODO
     {
         int column = calcColumn(x);
         int row = calcRow(y);
         List<GameObject>[] array = new List<GameObject>[9];
+=======
+    private void initRaster(int rectsWidth, int rectsLength) {
+        raster = new GridContainer[rectsWidth, rectsLength];
+>>>>>>> origin/master
 
         for(int i = 0; i < 9; i++)
         {
@@ -58,7 +67,11 @@ class LevelGrid{
         return array;
     }
 
+<<<<<<< HEAD
     private void initGrid(GameObject actObj)
+=======
+    private GridContainer initContainer(int i, int j)
+>>>>>>> origin/master
     {
         if (actObj.GetComponent<MeshFilter>().mesh != null)
         {
