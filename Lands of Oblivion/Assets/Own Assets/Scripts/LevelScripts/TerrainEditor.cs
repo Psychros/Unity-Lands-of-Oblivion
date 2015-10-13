@@ -8,6 +8,9 @@ public class TerrainEditor : MonoBehaviour {
 	public static TerrainEditor instance = null;
 	public Text currentHeight;
 	public Text selectedHeight;
+	public int selectedTerrainHeight = 13;
+	public int maxHeight = 30;
+	public int minHeight = 11;
 
 	private Terrain terrain;
 	public Terrain Terrain{

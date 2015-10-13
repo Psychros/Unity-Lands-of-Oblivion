@@ -29,6 +29,8 @@ public class InputManager : MonoBehaviour {
 	public KeyCode pausemenu 		 = KeyCode.Escape;
 	public KeyCode storemenu 		 = KeyCode.Tab;
 	public KeyCode terrainEditor     = KeyCode.T;
+	public KeyCode terrainHeightUp   = KeyCode.Keypad1;
+	public KeyCode terrainHeightDown = KeyCode.Keypad2;
 
 
 
@@ -85,6 +87,18 @@ public class InputManager : MonoBehaviour {
 				TerrainEditor.instance.Terrain = Terrain.activeTerrain;
 			else
 				TerrainEditor.instance.Terrain = null;
+		}
+
+		//Selected TerrainHeight up
+		if(Input.GetKeyDown(terrainHeightUp)){
+			if(TerrainEditor.instance.selectedTerrainHeight < TerrainEditor.instance.maxHeight)
+				TerrainEditor.instance.selectedTerrainHeight++;
+		}
+
+		//Selected TerrainHeight down
+		if(Input.GetKeyDown(terrainHeightDown)){
+			if(TerrainEditor.instance.selectedTerrainHeight > TerrainEditor.instance.minHeight)
+				TerrainEditor.instance.selectedTerrainHeight--;
 		}
 	}
 
