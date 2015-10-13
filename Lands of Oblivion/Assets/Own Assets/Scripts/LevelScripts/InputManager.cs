@@ -79,6 +79,12 @@ public class InputManager : MonoBehaviour {
 		//TerrainEditor
 		if(Input.GetKeyDown(terrainEditor)){
 			switchToMenu(terrainEditorCanvas, false);
+
+			//Activates the TerrainEditor
+			if(currentMenu == terrainEditorCanvas)
+				TerrainEditor.instance.Terrain = Terrain.activeTerrain;
+			else
+				TerrainEditor.instance.Terrain = null;
 		}
 	}
 
