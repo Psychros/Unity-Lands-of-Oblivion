@@ -257,17 +257,6 @@ Material:
         first:
           name: _Displacement
         second: {r: 6.6371665, g: 20.3539829, b: -1, a: -.681415975}
-<<<<<<< HEAD
-      data:
-        first:
-          name: _ShoreTiling
-        second: {r: 1, g: 1, b: .100000001, a: .100000001}
-      data:
-        first:
-          name: _BumpMap_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
-=======
->>>>>>> origin/master
       data:
         first:
           name: _ShoreTiling
@@ -382,8 +371,6 @@ Material:
         second: {r: .100000001, g: .100000001, b: .00999999978, a: .00999999978}
       data:
         first:
-<<<<<<< HEAD
-=======
           name: _ReflectiveColorCube_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
@@ -396,7 +383,6 @@ Material:
         second: {r: .505434752, g: .505434752, b: .505434752, a: .5}
       data:
         first:
->>>>>>> origin/master
           name: _DisplacementXz
         second: {r: .649999917, g: -2.92037153, b: 1.65999985, a: -3.93630457}
       data:
