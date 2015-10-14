@@ -11,5 +11,9 @@ public class Math : MonoBehaviour
 
 		return pos;
 	}
+
+	public static float translateHeightToTerrainHeight(float height, Terrain terrain){
+		return height/terrain.terrainData.size.y;
+	}
 }
 

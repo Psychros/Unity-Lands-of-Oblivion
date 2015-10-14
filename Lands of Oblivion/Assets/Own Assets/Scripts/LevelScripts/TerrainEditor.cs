@@ -69,4 +69,12 @@ public class TerrainEditor : MonoBehaviour {
 		Destroy(wireframeCube);
 		wireframeCube = null;
 	}
+
+	public void editTerrain(){
+		Vector3 terrainPosition = Math.translateVector3ToTerrainCoordinate(pos, terrain);
+		float[,] height = new float[1, 1];
+		height[0, 0] = Math.translateHeightToTerrainHeight(selectedTerrainHeight, terrain);
+
+		terrain.terrainData.SetHeights((int)terrainPosition.x, (int)terrainPosition.z, height);
+	}
 }

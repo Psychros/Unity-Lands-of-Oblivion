@@ -24,6 +24,7 @@ public class InputManager : MonoBehaviour {
 	public KeyCode cutTree			 = KeyCode.Mouse0;
 	public KeyCode placeBuilding 	 = KeyCode.Mouse1;
 	public KeyCode stopPlaceBuilding = KeyCode.Mouse0;
+	public KeyCode editTerrain 		 = KeyCode.Mouse0;
 
 	public KeyCode buildmenu 		 = KeyCode.F;
 	public KeyCode pausemenu 		 = KeyCode.Escape;
@@ -103,6 +104,12 @@ public class InputManager : MonoBehaviour {
 				TerrainEditor.instance.selectedTerrainHeight--;
 				TerrainEditor.instance.selectedHeight.text = "" + TerrainEditor.instance.selectedTerrainHeight;
 			}
+		}
+
+		//Edit terrain
+		if(Input.GetKey(editTerrain)){
+			if(TerrainEditor.instance.Terrain != null)
+				TerrainEditor.instance.editTerrain();
 		}
 	}
 
