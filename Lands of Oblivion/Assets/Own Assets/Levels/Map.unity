@@ -149,8 +149,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 6253189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 548.344666, y: -690.741699, z: 825.992004}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1000, y: -690.741699, z: 1000}
+  m_LocalScale: {x: .300000012, y: 1, z: .300000012}
   m_Children:
   - {fileID: 326549438}
   - {fileID: 663905374}
@@ -35146,8 +35146,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663905372}
-  m_LocalRotation: {x: .067448169, y: .00538597815, z: .000365755841, w: -.997708201}
-  m_LocalPosition: {x: -46.0631714, y: 460.314026, z: -1367.78662}
+  m_LocalRotation: {x: -.118216276, y: .0104257371, z: .00124082644, w: .992932379}
+  m_LocalPosition: {x: -1695.04443, y: 322.804016, z: -5116.17725}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6253190}
@@ -53961,6 +53961,14 @@ Prefab:
     - target: {fileID: 404486, guid: 8f686d5f5ccfeee4aa02987472090069, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474906, guid: 8f686d5f5ccfeee4aa02987472090069, type: 2}
+      propertyPath: terrainHeightUp
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474906, guid: 8f686d5f5ccfeee4aa02987472090069, type: 2}
+      propertyPath: terrainHeightDown
+      value: 121
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f686d5f5ccfeee4aa02987472090069, type: 2}
@@ -78178,6 +78186,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHeight: {fileID: 2027303217}
   selectedHeight: {fileID: 1276913445}
+  selectedTerrainHeight: 13
+  maxHeight: 30
+  minHeight: 11
+  wireframeCubePrefab: {fileID: 188314, guid: 16c354ff395e1be448b24b960c4c1f28, type: 2}
 --- !u!1 &1338359328
 GameObject:
   m_ObjectHideFlags: 0

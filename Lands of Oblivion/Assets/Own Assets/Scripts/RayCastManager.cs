@@ -20,4 +20,22 @@ public class RayCastManager : MonoBehaviour {
 
 		return Physics.RaycastAll(position, direction, distance);;
 	}
+
+	//returns Vector3.zero if there is no point
+	public static Vector3 getTerrainPosition(float distance, float height1, float height2){
+		RaycastHit[] hits = RayCastManager.startRayCastAllHits(distance);
+		
+		foreach(RaycastHit hit in hits){
+			if(hit.collider.transform.gameObject.tag == "Terrain" && hit.point.y >= height1 && hit.point.y <= height2){
+				return hit.point;
+				break;
+			}
+		}
+
+		return Vector3.zero;
+	}
+
+	public static Vector3 getTerrainPosition(float distance){
+		return getTerrainPosition(distance, 0, 1000000);
+	}
 }

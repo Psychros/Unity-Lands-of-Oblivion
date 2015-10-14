@@ -84,9 +84,9 @@ public class InputManager : MonoBehaviour {
 
 			//Activates the TerrainEditor
 			if(currentMenu == terrainEditorCanvas)
-				TerrainEditor.instance.Terrain = Terrain.activeTerrain;
+				TerrainEditor.instance.activateTerrainEditor();
 			else
-				TerrainEditor.instance.Terrain = null;
+				TerrainEditor.instance.deactivateTerrainEditor();
 		}
 
 		//Selected TerrainHeight up

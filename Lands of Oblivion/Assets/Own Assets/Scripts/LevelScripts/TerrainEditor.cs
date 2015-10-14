@@ -11,6 +11,7 @@ public class TerrainEditor : MonoBehaviour {
 	public int selectedTerrainHeight = 13;
 	public int maxHeight = 30;
 	public int minHeight = 11;
+	public GameObject wireframeCubePrefab;
 
 	private Terrain terrain;
 	public Terrain Terrain{
@@ -18,23 +19,54 @@ public class TerrainEditor : MonoBehaviour {
 		set{terrain = value;}
 	}
 
+	private Vector3 pos;
+	private bool canEditTerrain = false;
+	private GameObject wireframeCube = null;
+
+
 	// Use this for initialization
 	void Start () {
 		instance = this;
+		selectedHeight.text = "" + selectedTerrainHeight;
 	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
 		if(terrain != null){
-			//Shows the current TerrainHeight at the selected point
-			RaycastHit hit = RayCastManager.startRayCast(10f);
-
-			try{
-				if(hit.collider.transform.gameObject.tag == "Terrain")
-					currentHeight.text = "" + hit.point.y;
-			} catch(NullReferenceException e){
-				currentHeight.text = "0";
-			}
+			showCurrentTerrainHeight();
+			setCubePosition();
 		}
+	}
+
+
+	//Shows the current TerrainHeight at the selected point
+	void showCurrentTerrainHeight(){
+		Vector3 position = RayCastManager.getTerrainPosition(20);
+		currentHeight.text = "" + position.y;
+		pos = position;
+
+		if(position.y >= minHeight && position.y <= maxHeight){
+			canEditTerrain = true;
+		} else {
+			canEditTerrain = false;
+		}
+	}
+
+	void setCubePosition(){
+		if(canEditTerrain && wireframeCube != null){
+			wireframeCube.transform.position = pos;
+		}
+	}
+
+	public void activateTerrainEditor(){
+		terrain = Terrain.activeTerrain;
+		wireframeCube = Instantiate(wireframeCubePrefab);
+	}
+
+	public void deactivateTerrainEditor(){
+		terrain = null;
+		Destroy(wireframeCube);
+		wireframeCube = null;
 	}
 }
