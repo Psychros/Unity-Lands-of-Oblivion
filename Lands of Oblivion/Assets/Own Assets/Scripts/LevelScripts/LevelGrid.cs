@@ -15,12 +15,6 @@ class LevelGrid{
     public float heightRect { get; private set; }
     private Chunk[,] grid;
 
-
- //   int x = e.getX();
- //   int y = e.getY();
- //   x = (x - UNBENUTZTEPIXELVONLINKS) / BREITERECHTECKE;
- //y = (y - UNBENUTZTEPIXELVONOBEN) / HÖHERECHTECKE;
-
     public LevelGrid(float initX, float initY, float width, float height)
     {
         this.width = width;
@@ -37,8 +31,8 @@ class LevelGrid{
 
     public List<GameObject>[] getComponentsOfChunk(float x, float y)//, int chunks = 9) //TODO
     {
-        int column = Math.floatToGridColumn(x, widthRect);
-        int row = Math.floatToGridRow(y, heightRect);
+        int column = Math.floatToGridColumn(x - absX, widthRect);
+        int row = Math.floatToGridRow(y - absY, heightRect);
         int i = 0;
         List<GameObject>[] array = new List<GameObject>[9];
 
