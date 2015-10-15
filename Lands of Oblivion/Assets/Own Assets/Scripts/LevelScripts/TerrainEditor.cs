@@ -77,4 +77,9 @@ public class TerrainEditor : MonoBehaviour {
 
 		terrain.terrainData.SetHeights((int)terrainPosition.x, (int)terrainPosition.z, height);
 	}
+
+	public void editSelectedHeight(int value){
+		selectedTerrainHeight += value;
+		selectedHeight.text = "" + TerrainEditor.instance.selectedTerrainHeight;
+	}
 }

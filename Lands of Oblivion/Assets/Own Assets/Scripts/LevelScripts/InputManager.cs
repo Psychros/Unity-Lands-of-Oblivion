@@ -12,6 +12,8 @@ public class InputManager : MonoBehaviour {
 	public  bool isMenu = false;
 	public Canvas currentMenu;
 	private bool isPause = false;
+	private float timer = 0;
+	private float timerTime = 0.2f;
 
 	//All menupanels
 	public Canvas inGameCanvas;
@@ -93,16 +95,36 @@ public class InputManager : MonoBehaviour {
 		//Selected TerrainHeight up
 		if(Input.GetKeyDown(terrainHeightUp)){
 			if(TerrainEditor.instance.selectedTerrainHeight < TerrainEditor.instance.maxHeight){
-				TerrainEditor.instance.selectedTerrainHeight++;
-				TerrainEditor.instance.selectedHeight.text = "" + TerrainEditor.instance.selectedTerrainHeight;
+				TerrainEditor.instance.editSelectedHeight(1);
+				timer = 0;
+			}
+		}
+		if(Input.GetKey(terrainHeightUp)){
+			if(TerrainEditor.instance.selectedTerrainHeight < TerrainEditor.instance.maxHeight){
+				timer += Time.deltaTime;
+
+				if(timer >= timerTime){
+					TerrainEditor.instance.editSelectedHeight(1);
+					timer = 0;
+				}
 			}
 		}
 
 		//Selected TerrainHeight down
 		if(Input.GetKeyDown(terrainHeightDown)){
 			if(TerrainEditor.instance.selectedTerrainHeight > TerrainEditor.instance.minHeight){
-				TerrainEditor.instance.selectedTerrainHeight--;
-				TerrainEditor.instance.selectedHeight.text = "" + TerrainEditor.instance.selectedTerrainHeight;
+				TerrainEditor.instance.editSelectedHeight(-1);
+				timer = 0;
+			}
+		}
+		if(Input.GetKey(terrainHeightDown)){
+			if(TerrainEditor.instance.selectedTerrainHeight > TerrainEditor.instance.minHeight){
+				timer += Time.deltaTime;
+
+				if(timer >= timerTime){
+					TerrainEditor.instance.editSelectedHeight(-1);
+					timer = 0;
+				}
 			}
 		}
 
