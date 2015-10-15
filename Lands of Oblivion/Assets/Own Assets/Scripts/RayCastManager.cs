@@ -28,7 +28,6 @@ public class RayCastManager : MonoBehaviour {
 		foreach(RaycastHit hit in hits){
 			if(hit.collider.transform.gameObject.tag == "Terrain" && hit.point.y >= height1 && hit.point.y <= height2){
 				return hit.point;
-				break;
 			}
 		}
 
