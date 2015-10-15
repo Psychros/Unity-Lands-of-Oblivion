@@ -15,5 +15,15 @@ public class Math : MonoBehaviour
 	public static float translateHeightToTerrainHeight(float height, Terrain terrain){
 		return height/terrain.terrainData.size.y;
 	}
+
+    public static int floatToGridColumn(float x, float widthGridUnit)
+    {
+        return (int)(x / widthGridUnit);
+    }
+
+    public static int floatToGridRow(float y, float heightGridUnit)
+    {
+        return (int)(y / heightGridUnit);
+    }
 }
 

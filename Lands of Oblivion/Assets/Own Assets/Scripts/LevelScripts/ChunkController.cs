@@ -14,14 +14,29 @@ public class ChunkController : MonoBehaviour {
             this.player = GameObject.Find(Constants.NamePlayer);
         } catch (Exception e)
         {
-            Debug.Log("Fatal error Occurred while trying to load data");
+            Debug.Log("Fatal error Occurred while trying to load data. Fix it or go to hell.");
+        }
+        initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
+	}
+
+    private void initGrid(GameObject actObj)
+    {
+        if (actObj.GetComponent<MeshFilter>().mesh != null)
+        {
+            int x = Math.floatToGridColumn(actObj.transform.position.x, grid.widthRect);
+            int y = Math.floatToGridRow(actObj.transform.position.y, grid.heightRect);
+
+            this.grid.add(x, y, actObj);
         }
 
-        //deleteAllMeshs();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        foreach (Transform trans in actObj.transform)
+        {
+            initGrid(trans.gameObject);
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
 	    //update Meshs
 	}
 }

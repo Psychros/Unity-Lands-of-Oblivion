@@ -8,11 +8,11 @@ class LevelGrid{
     private const int MAXIMUM_SIZE_SQUARE = 75;
     private const int AMOUNT_CHUNKS_LOADED = 9;
     private readonly float width;
-    private readonly float length;
+    private readonly float height;
     private readonly float absX;
     private readonly float absY;
-    private float widthRect;
-    private float lengthRect;
+    public float widthRect { get; private set; }
+    public float heightRect { get; private set; }
     private Chunk[,] grid;
 
 
@@ -21,14 +21,13 @@ class LevelGrid{
  //   x = (x - UNBENUTZTEPIXELVONLINKS) / BREITERECHTECKE;
  //y = (y - UNBENUTZTEPIXELVONOBEN) / HÖHERECHTECKE;
 
-    public LevelGrid(float initX, float initY, float width, float length)
+    public LevelGrid(float initX, float initY, float width, float height)
     {
         this.width = width;
-        this.length = length;
+        this.height = height;
         this.absX = initX;
         this.absY = initY;
-        this.grid = new Chunk[calcRectsWidth(width), calcRectsLength(length)];
-        initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
+        this.grid = new Chunk[calcRectsWidth(width), calcRectsLength(height)];
     }
     
     public LevelGrid(Terrain ter) : this(ter.transform.position.x,
@@ -38,8 +37,8 @@ class LevelGrid{
 
     public List<GameObject>[] getComponentsOfChunk(float x, float y)//, int chunks = 9) //TODO
     {
-        int column = calcColumn(x);
-        int row = calcRow(y);
+        int column = Math.floatToGridColumn(x, widthRect);
+        int row = Math.floatToGridRow(y, heightRect);
         int i = 0;
         List<GameObject>[] array = new List<GameObject>[9];
 
@@ -56,37 +55,20 @@ class LevelGrid{
 
         return array;
     }
-    
-    private void initGrid(GameObject actObj)
+
+    public Boolean add(int x, int y, GameObject addedGameObject)
     {
-        if (actObj.GetComponent<MeshFilter>().mesh != null)
+        Boolean returned = false;
+
+        if (grid[x,y] != null)
         {
-            int x = calcColumn(actObj.transform.position.x);
-            int y = calcRow(actObj.transform.position.y);
-
-            if (grid[x, y] == null)
-            {
-                grid[x, y] = new Chunk();
-            }
-            grid[x, y].add(actObj);
+            grid[x, y] = new Chunk();
+            returned = true;
         }
+        grid[x, y].add(addedGameObject);
 
-        foreach (Transform trans in actObj.transform)
-        {
-            initGrid(trans.gameObject);
-        }
+        return returned;
     }
-
-    private int calcColumn(float x)
-    {
-        return (int)(x / widthRect);
-    }
-
-    private int calcRow(float y)
-    {
-        return (int)(y / lengthRect);
-    }
-
 
     private int calcRectsWidth(float totalWidth)
     {
@@ -105,12 +87,12 @@ class LevelGrid{
     private int calcRectsLength(float totalLength)
     {
         int divider = 0;
-        this.lengthRect = float.MaxValue;
+        this.heightRect = float.MaxValue;
 
-        while (this.lengthRect > MAXIMUM_SIZE_SQUARE)
+        while (this.heightRect > MAXIMUM_SIZE_SQUARE)
         {
             divider++;
-            this.lengthRect = totalLength / divider;
+            this.heightRect = totalLength / divider;
         }
 
         return divider;
