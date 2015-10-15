@@ -16,12 +16,15 @@ public class ChunkController : MonoBehaviour {
         {
             Debug.Log("Fatal error occured: " + e.Message + "/nGo to hell.");
         }
+        Debug.Log("Trying to init grid");
         initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
 	}
 
+    int temp = 0;
     private void initGrid(GameObject actObj)
     {
-        if (actObj.GetComponent<MeshFilter>().mesh != null)
+        Debug.Log(++temp);
+        if (actObj.GetComponent<MeshFilter>() != null)
         {
             int x = Math.floatToGridColumn(actObj.transform.position.x, grid.widthRect);
             int y = Math.floatToGridRow(actObj.transform.position.y, grid.heightRect);
