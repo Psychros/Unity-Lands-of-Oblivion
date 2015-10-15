@@ -21,7 +21,7 @@ public class TerrainEditor : MonoBehaviour {
 
 	private Vector3 pos;
 	private bool canEditTerrain = false;
-	private GameObject wireframeCube = null;
+	private GameObject cube = null;
 
 
 	// Use this for initialization
@@ -54,20 +54,22 @@ public class TerrainEditor : MonoBehaviour {
 	}
 
 	void setCubePosition(){
-		if(canEditTerrain && wireframeCube != null){
-			wireframeCube.transform.position = pos;
+		if(canEditTerrain && cube != null){
+			cube.transform.position = pos;
 		}
 	}
 
 	public void activateTerrainEditor(){
 		terrain = Terrain.activeTerrain;
-		wireframeCube = Instantiate(wireframeCubePrefab);
+		cube = Instantiate(wireframeCubePrefab);
 	}
 
 	public void deactivateTerrainEditor(){
+		terrain.ApplyDelayedHeightmapModification(); 
+
 		terrain = null;
-		Destroy(wireframeCube);
-		wireframeCube = null;
+		Destroy(cube);
+		cube = null;
 	}
 
 	public void editTerrain(){
@@ -75,7 +77,7 @@ public class TerrainEditor : MonoBehaviour {
 		float[,] height = new float[1, 1];
 		height[0, 0] = Math.translateHeightToTerrainHeight(selectedTerrainHeight, terrain);
 
-		terrain.terrainData.SetHeights((int)terrainPosition.x, (int)terrainPosition.z, height);
+        terrain.terrainData.SetHeightsDelayLOD((int)terrainPosition.x, (int)terrainPosition.z, height);
 	}
 
 	public void editSelectedHeight(int value){
