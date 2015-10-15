@@ -14,7 +14,7 @@ public class ChunkController : MonoBehaviour {
             this.player = GameObject.Find(Constants.NamePlayer);
         } catch (Exception e)
         {
-            Debug.Log("Fatal error Occurred while trying to load data. Fix it or go to hell.");
+            Debug.Log("Fatal error occured: " + e.Message + "/nGo to hell.");
         }
         initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
 	}
