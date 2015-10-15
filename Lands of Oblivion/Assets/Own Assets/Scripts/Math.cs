@@ -25,5 +25,14 @@ public class Math : MonoBehaviour
     {
         return (int)(y / heightGridUnit);
     }
+
+	public static int round(float value){
+		float decimalPlaces = value - (int)value;
+		if(decimalPlaces >= 0.5f)
+			return ((int) value + 1);
+		else
+			return (int) value;
+
+	}
 }
 
