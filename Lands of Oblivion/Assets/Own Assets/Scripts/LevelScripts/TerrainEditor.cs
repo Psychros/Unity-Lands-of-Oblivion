@@ -77,7 +77,7 @@ public class TerrainEditor : MonoBehaviour {
 		float[,] height = new float[1, 1];
 		height[0, 0] = Math.translateHeightToTerrainHeight(selectedTerrainHeight, terrain);
 
-        terrain.terrainData.SetHeightsDelayLOD((int)terrainPosition.x, (int)terrainPosition.z, height);
+		terrain.terrainData.SetHeightsDelayLOD(Math.round(terrainPosition.x), Math.round(terrainPosition.z), height);
 	}
 
 	public void editSelectedHeight(int value){

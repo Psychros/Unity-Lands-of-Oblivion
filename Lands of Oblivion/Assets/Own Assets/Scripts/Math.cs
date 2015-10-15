@@ -12,19 +12,23 @@ public class Math : MonoBehaviour
 		return pos;
 	}
 
+
 	public static float translateHeightToTerrainHeight(float height, Terrain terrain){
 		return height/terrain.terrainData.size.y;
 	}
+
 
     public static int floatToGridColumn(float x, float widthGridUnit)
     {
         return (int)(x / widthGridUnit);
     }
 
+
     public static int floatToGridRow(float y, float heightGridUnit)
     {
         return (int)(y / heightGridUnit);
     }
+
 
 	public static int round(float value){
 		float decimalPlaces = value - (int)value;
@@ -33,6 +37,15 @@ public class Math : MonoBehaviour
 		else
 			return (int) value;
 
+	}
+
+
+	public static Vector3 roundVector3(Vector3 v){
+		int x = round (v.x);
+		int y = round (v.y);
+		int z = round (v.z);
+
+		return new Vector3(x, y, z);
 	}
 }
 
