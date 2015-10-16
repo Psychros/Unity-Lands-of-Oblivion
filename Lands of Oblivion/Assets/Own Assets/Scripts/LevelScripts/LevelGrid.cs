@@ -54,7 +54,7 @@ class LevelGrid{
     {
         Boolean returned = false;
 
-        if (grid[x,y] != null)
+        if (grid[x,y] == null)
         {
             grid[x, y] = new Chunk();
             returned = true;
