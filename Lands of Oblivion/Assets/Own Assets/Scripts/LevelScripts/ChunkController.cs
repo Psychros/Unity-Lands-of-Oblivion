@@ -24,7 +24,13 @@ public class ChunkController : MonoBehaviour {
     private void initGrid(GameObject actObj)
     {
         Debug.Log(++temp);
-        if (actObj.GetComponent<MeshFilter>() != null)
+        //Nö
+        Mesh tempMesh = actObj.GetComponent<Mesh>();
+
+        //Ebenfalls nö
+        MeshFilter tempFilt = actObj.GetComponent<MeshFilter>();
+
+        if (actObj.GetComponent<Mesh>() != null)
         {
             int x = Math.floatToGridColumn(actObj.transform.position.x, grid.widthRect);
             int y = Math.floatToGridRow(actObj.transform.position.y, grid.heightRect);
