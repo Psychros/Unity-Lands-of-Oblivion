@@ -28,7 +28,7 @@ public class TerrainToolkitEditor : Editor {
 	int i;
 	int n;
 	
-	public override void OnInspectorGUI() {
+	public override void OnInspectorGUI(){
 		EditorGUIUtility.LookLikeControls();
 		TerrainToolkit terrain = (TerrainToolkit) target as TerrainToolkit;
 		if (!terrain.gameObject) {
@@ -161,12 +161,12 @@ public class TerrainToolkitEditor : Editor {
 				GUI.skin = terrain.guiSkin;
 				if (GUI.Button(buttonRect, "Generate Voronoi Features")) {
 					// Undo...
-					Terrain ter = (Terrain) terrain.GetComponent(typeof(Terrain));
-					if (ter == null) {
+					Terrain tempTer = (Terrain) terrain.GetComponent(typeof(Terrain));
+					if (tempTer == null) {
 						return;
 					}
-					TerrainData terData = ter.terrainData;
-					Undo.RegisterUndo(terData, "Terrain Generator");
+					TerrainData tempTerData = tempTer.terrainData;
+					Undo.RegisterUndo(tempTerData, "Terrain Generator");
 					TerrainToolkit.GeneratorProgressDelegate generatorProgressDelegate = new TerrainToolkit.GeneratorProgressDelegate(updateGeneratorProgress);
 					terrain.generateTerrain(generatorProgressDelegate);
 					EditorUtility.ClearProgressBar();
@@ -223,12 +223,12 @@ public class TerrainToolkitEditor : Editor {
 				GUI.skin = terrain.guiSkin;
 				if (GUI.Button(buttonRect, "Generate Fractal Terrain")) {
 					// Undo...
-					Terrain ter = (Terrain) terrain.GetComponent(typeof(Terrain));
-					if (ter == null) {
+					Terrain tempTer = (Terrain) terrain.GetComponent(typeof(Terrain));
+					if (tempTer == null) {
 						return;
 					}
-					TerrainData terData = ter.terrainData;
-					Undo.RegisterUndo(terData, "Terrain Generator");
+					TerrainData tempTerData = tempTer.terrainData;
+					Undo.RegisterUndo(tempTerData, "Terrain Generator");
 					TerrainToolkit.GeneratorProgressDelegate generatorProgressDelegate = new TerrainToolkit.GeneratorProgressDelegate(updateGeneratorProgress);
 					terrain.generateTerrain(generatorProgressDelegate);
 					EditorUtility.ClearProgressBar();
@@ -293,12 +293,12 @@ public class TerrainToolkitEditor : Editor {
 				GUI.skin = terrain.guiSkin;
 				if (GUI.Button(buttonRect, "Generate Perlin Terrain")) {
 					// Undo...
-					Terrain ter = (Terrain) terrain.GetComponent(typeof(Terrain));
-					if (ter == null) {
+					Terrain tempTer = (Terrain) terrain.GetComponent(typeof(Terrain));
+					if (tempTer == null) {
 						return;
 					}
-					TerrainData terData = ter.terrainData;
-					Undo.RegisterUndo(terData, "Terrain Generator");
+					TerrainData tempTerData = tempTer.terrainData;
+					Undo.RegisterUndo(tempTerData, "Terrain Generator");
 					TerrainToolkit.GeneratorProgressDelegate generatorProgressDelegate = new TerrainToolkit.GeneratorProgressDelegate(updateGeneratorProgress);
 					terrain.generateTerrain(generatorProgressDelegate);
 					EditorUtility.ClearProgressBar();
@@ -326,12 +326,12 @@ public class TerrainToolkitEditor : Editor {
 				GUI.skin = terrain.guiSkin;
 				if (GUI.Button(buttonRect, "Smooth Terrain")) {
 					// Undo...
-					Terrain ter = (Terrain) terrain.GetComponent(typeof(Terrain));
-					if (ter == null) {
+					Terrain tempTer = (Terrain) terrain.GetComponent(typeof(Terrain));
+					if (tempTer == null) {
 						return;
 					}
-					TerrainData terData = ter.terrainData;
-					Undo.RegisterUndo(terData, "Smooth Terrain");
+					TerrainData tempTerData = tempTer.terrainData;
+					Undo.RegisterUndo(tempTerData, "Smooth Terrain");
 					TerrainToolkit.GeneratorProgressDelegate generatorProgressDelegate = new TerrainToolkit.GeneratorProgressDelegate(updateGeneratorProgress);
 					terrain.generateTerrain(generatorProgressDelegate);
 					EditorUtility.ClearProgressBar();
@@ -363,12 +363,12 @@ public class TerrainToolkitEditor : Editor {
 				GUI.skin = terrain.guiSkin;
 				if (GUI.Button(buttonRect, "Normalise Terrain")) {
 					// Undo...
-					Terrain ter = (Terrain) terrain.GetComponent(typeof(Terrain));
-					if (ter == null) {
+					Terrain tempTer = (Terrain) terrain.GetComponent(typeof(Terrain));
+					if (tempTer == null) {
 						return;
 					}
-					TerrainData terData = ter.terrainData;
-					Undo.RegisterUndo(terData, "Normalise Terrain");
+					TerrainData tempTerData = tempTer.terrainData;
+					Undo.RegisterUndo(tempTerData, "Normalise Terrain");
 					TerrainToolkit.GeneratorProgressDelegate generatorProgressDelegate = new TerrainToolkit.GeneratorProgressDelegate(updateGeneratorProgress);
 					terrain.generateTerrain(generatorProgressDelegate);
 					EditorUtility.ClearProgressBar();
@@ -456,12 +456,12 @@ public class TerrainToolkitEditor : Editor {
 				GUI.skin = terrain.guiSkin;
 				if (GUI.Button(buttonRect, "Apply thermal erosion")) {
 					// Undo
-					Terrain ter = (Terrain) terrain.GetComponent(typeof(Terrain));
-					if (ter == null) {
+					Terrain tempTer = (Terrain) terrain.GetComponent(typeof(Terrain));
+					if (tempTer == null) {
 						return;
 					}
-					TerrainData terData = ter.terrainData;
-					Undo.RegisterUndo(terData, "Terrain Erosion");
+					TerrainData tempTerData = tempTer.terrainData;
+					Undo.RegisterUndo(tempTerData, "Terrain Erosion");
 					// Start time...
 					DateTime startTime = DateTime.Now;
 					TerrainToolkit.ErosionProgressDelegate erosionProgressDelegate = new TerrainToolkit.ErosionProgressDelegate(updateErosionProgress);
@@ -665,12 +665,12 @@ public class TerrainToolkitEditor : Editor {
 				GUI.skin = terrain.guiSkin;
 				if (GUI.Button(buttonRect, "Apply hydraulic erosion")) {
 					// Undo
-					Terrain ter = (Terrain) terrain.GetComponent(typeof(Terrain));
-					if (ter == null) {
+					Terrain tempTer = (Terrain) terrain.GetComponent(typeof(Terrain));
+					if (tempTer == null) {
 						return;
 					}
-					TerrainData terData = ter.terrainData;
-					Undo.RegisterUndo(terData, "Terrain Erosion");
+					TerrainData tempTerData = tempTer.terrainData;
+					Undo.RegisterUndo(tempTerData, "Terrain Erosion");
 					// Start time...
 					DateTime startTime = DateTime.Now;
 					TerrainToolkit.ErosionProgressDelegate erosionProgressDelegate = new TerrainToolkit.ErosionProgressDelegate(updateErosionProgress);
@@ -742,12 +742,12 @@ public class TerrainToolkitEditor : Editor {
 				GUI.skin = terrain.guiSkin;
 				if (GUI.Button(buttonRect, "Apply tidal erosion")) {
 					// Undo
-					Terrain ter = (Terrain) terrain.GetComponent(typeof(Terrain));
-					if (ter == null) {
+					Terrain tempTer = (Terrain) terrain.GetComponent(typeof(Terrain));
+					if (tempTer == null) {
 						return;
 					}
-					TerrainData terData = ter.terrainData;
-					Undo.RegisterUndo(terData, "Terrain Erosion");
+					TerrainData tempTerData = tempTer.terrainData;
+					Undo.RegisterUndo(tempTerData, "Terrain Erosion");
 					// Start time...
 					DateTime startTime = DateTime.Now;
 					TerrainToolkit.ErosionProgressDelegate erosionProgressDelegate = new TerrainToolkit.ErosionProgressDelegate(updateErosionProgress);
@@ -827,12 +827,12 @@ public class TerrainToolkitEditor : Editor {
 				GUI.skin = terrain.guiSkin;
 				if (GUI.Button(buttonRect, "Apply wind erosion")) {
 					// Undo
-					Terrain ter = (Terrain) terrain.GetComponent(typeof(Terrain));
-					if (ter == null) {
+					Terrain tempTer = (Terrain) terrain.GetComponent(typeof(Terrain));
+					if (tempTer == null) {
 						return;
 					}
-					TerrainData terData = ter.terrainData;
-					Undo.RegisterUndo(terData, "Terrain Erosion");
+					TerrainData tempTerData = tempTer.terrainData;
+					Undo.RegisterUndo(tempTerData, "Terrain Erosion");
 					// Start time...
 					DateTime startTime = DateTime.Now;
 					TerrainToolkit.ErosionProgressDelegate erosionProgressDelegate = new TerrainToolkit.ErosionProgressDelegate(updateErosionProgress);
