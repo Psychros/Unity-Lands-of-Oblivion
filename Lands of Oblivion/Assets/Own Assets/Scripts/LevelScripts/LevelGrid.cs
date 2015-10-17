@@ -39,14 +39,21 @@ class LevelGrid{
 
         for (int j = -1; j < 1; j++)
         {
-            if (column + j < 0) continue;
-            for (int k = -1; k < 1; k++)
+            if (column + j >= 0)
             {
-                if (row + k < 0) continue;
-                array[i++] = grid[column + j, row + k].list;
+                for (int k = -1; k < 1; k++)
+                {
+                    if (row + k >= 0)
+                    {
+                        Chunk tempChunk = grid[column + j, row + k];
+                        if (tempChunk != null)
+                        {
+                            array[i++] = grid[column + j, row + k].list;
+                        }
+                    }
+                }
             }
         }
-
         return array;
     }
 
