@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class ChunkController : MonoBehaviour {
     LevelGrid grid;
     GameObject player;
+    Chunk[] displayedChunks;
 
 	// Use this for initialization
 	void Start () {
@@ -37,9 +38,21 @@ public class ChunkController : MonoBehaviour {
             initGrid(trans.gameObject);
         }
     }
+
     // Update is called once per frame
     void Update () {
-        
+        Vector3 vec = player.transform.position;
+
+        List<GameObject>[] comps = this.grid.getComponentsOfChunk(vec.x, vec.y);
+
+        foreach(List<GameObject> list in comps)
+        {
+            if (list == null) continue;
+            foreach(GameObject obj in list)
+            {
+                if (!obj.activeInHierarchy) obj.SetActive(true);
+            }
+        }
 
 	    //update Meshs
 	}

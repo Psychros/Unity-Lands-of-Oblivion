@@ -39,10 +39,10 @@ class LevelGrid{
 
         for (int j = -1; j < 1; j++)
         {
-            if (row + j < 0) continue;
+            if (column + j < 0) continue;
             for (int k = -1; k < 1; k++)
             {
-                if (column + k < 0) continue;
+                if (row + k < 0) continue;
                 array[i++] = grid[column + j, row + k].list;
             }
         }
