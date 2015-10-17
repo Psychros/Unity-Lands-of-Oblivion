@@ -20,6 +20,7 @@ public class ChunkController : MonoBehaviour {
         }
         initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
 	}
+
     
     private void initGrid(GameObject actObj)
     {
