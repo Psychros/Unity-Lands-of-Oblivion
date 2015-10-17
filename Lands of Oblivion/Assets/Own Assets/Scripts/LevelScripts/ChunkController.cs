@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 public class ChunkController : MonoBehaviour {
     LevelGrid grid;
@@ -16,21 +17,14 @@ public class ChunkController : MonoBehaviour {
         {
             Debug.Log("Fatal error occured: " + e.Message + "/nGo to hell.");
         }
-        Debug.Log("Trying to init grid");
+        Debug.Log("Failing to init grid");
         initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
 	}
     
     private void initGrid(GameObject actObj)
     {
-        //Nö
-        //Mesh tempMesh = actObj.GetComponent<Mesh>();
 
-        ////Ebenfalls nö
-        //MeshFilter tempFilt = actObj.GetComponent<MeshFilter>();
-
-        //Mesh tempMesh2 = actObj.GetComponentInChildren<Mesh>();
-
-        MeshFilter tempFilt2 = actObj.GetComponentInChildren<MeshFilter>();
+        MeshFilter tempFilt2 = actObj.GetComponent<MeshFilter>();
 
 
         if (actObj.GetComponent<MeshFilter>() != null)
@@ -39,9 +33,10 @@ public class ChunkController : MonoBehaviour {
             int y = Math.floatToGridRow(actObj.transform.position.y, grid.heightRect);
 
             this.grid.add(x, y, actObj);
+            actObj.SetActive(false);
+            counter++;
         }
 
-        actObj.SetActive(false);
 
         foreach (Transform trans in actObj.transform)
         {
