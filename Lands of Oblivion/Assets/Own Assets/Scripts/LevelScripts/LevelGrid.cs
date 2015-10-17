@@ -29,12 +29,12 @@ class LevelGrid{
                                          ter.terrainData.size.x  ,
                                          ter.terrainData.size.y  ){ }
 
-    public List<GameObject>[] getComponentsOfChunk(float x, float y)//, int chunks = 9) //TODO
+    public Chunk[] getComponentsOfChunk(float x, float y)//, int chunks = 9) //TODO
     {
         int column = Math.floatToGridColumn(x - absX, widthRect);
         int row = Math.floatToGridRow(y - absY, heightRect);
         int i = 0;
-        List<GameObject>[] array = new List<GameObject>[9];
+        Chunk[] chunks = new Chunk[9];
 
 
         for (int j = -1; j < 1; j++)
@@ -48,13 +48,13 @@ class LevelGrid{
                         Chunk tempChunk = grid[column + j, row + k];
                         if (tempChunk != null)
                         {
-                            array[i++] = grid[column + j, row + k].list;
+                            chunks[i++] = grid[column + j, row + k];
                         }
                     }
                 }
             }
         }
-        return array;
+        return chunks;
     }
 
     public Boolean add(int x, int y, GameObject addedGameObject)
