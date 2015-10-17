@@ -4,9 +4,10 @@ using System;
 using System.Collections.Generic;
 
 public class ChunkController : MonoBehaviour {
-    LevelGrid grid;
-    GameObject player;
-    Chunk[] displayedChunks;
+    private LevelGrid grid;
+    private GameObject player;
+    private Chunk[] displayedChunks;
+    private Boolean initialized = false;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,7 @@ public class ChunkController : MonoBehaviour {
             Debug.Log("Fatal error occured: " + e.Message + "\nGo to hell.");
         }
         initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
+        initialized = true;
 	}
 
     
@@ -40,21 +42,44 @@ public class ChunkController : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
-    void Update () {
-        Vector3 vec = player.transform.position;
-
-        List<GameObject>[] comps = this.grid.getComponentsOfChunk(vec.x, vec.y);
-
-        foreach(List<GameObject> list in comps)
+    private void enableNewChunks(Chunk[] chunks)
+    {
+        foreach (Chunk chunk in chunks)
         {
-            if (list == null) continue;
-            foreach(GameObject obj in list)
+            if (chunk != null)
             {
-                if (!obj.activeInHierarchy) obj.SetActive(true);
+                foreach (GameObject obj in chunk.list)
+                {
+                    if (!obj.activeInHierarchy) obj.SetActive(true);
+                }
             }
         }
+    }
 
-	    //update Meshs
-	}
+    private void disableUnusedChunks(Chunk[] chunks)
+    {
+        foreach (Chunk tempChunk in chunks)
+        {
+            if (!Util.contains<Chunk, Chunk>(tempChunk, displayedChunks) && tempChunk != null)
+            {
+                foreach(GameObject obj in tempChunk.list)
+                {
+                    obj.SetActive(false);
+                }
+            }
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
+        if (initialized == false) return;
+        Vector3 vec = player.transform.position;
+
+        Chunk[] chunks = this.grid.getComponentsOfChunk(vec.x, vec.y);
+
+        enableNewChunks(chunks);
+        disableUnusedChunks(chunks);
+
+        this.displayedChunks = chunks;
+    }
 }
