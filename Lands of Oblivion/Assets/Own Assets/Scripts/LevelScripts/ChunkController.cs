@@ -15,18 +15,13 @@ public class ChunkController : MonoBehaviour {
             this.player = GameObject.Find(Constants.NamePlayer);
         } catch (Exception e)
         {
-            Debug.Log("Fatal error occured: " + e.Message + "/nGo to hell.");
+            Debug.Log("Fatal error occured: " + e.Message + "\nGo to hell.");
         }
-        Debug.Log("Failing to init grid");
         initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
 	}
     
     private void initGrid(GameObject actObj)
     {
-
-        MeshFilter tempFilt2 = actObj.GetComponent<MeshFilter>();
-
-
         if (actObj.GetComponent<MeshFilter>() != null)
         {
             int x = Math.floatToGridColumn(actObj.transform.position.x, grid.widthRect);
@@ -34,7 +29,6 @@ public class ChunkController : MonoBehaviour {
 
             this.grid.add(x, y, actObj);
             actObj.SetActive(false);
-            counter++;
         }
 
 
@@ -43,9 +37,10 @@ public class ChunkController : MonoBehaviour {
             initGrid(trans.gameObject);
         }
     }
-
     // Update is called once per frame
     void Update () {
+        
+
 	    //update Meshs
 	}
 }
