@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NPC : MonoBehaviour {
+public class NPC : Pathfinding {
 
 	private NavMeshAgent nav = null;
 
@@ -9,24 +9,23 @@ public class NPC : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		nav = GetComponent<NavMeshAgent>();
 		NPCManager.instance.addNPC(this);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(nav != null){
-			if(!nav.hasPath && workPlace == null){
-				calculateRandomDestination();
-			}
-			//Is only executed if the npc is refered to a workBuilding an lets the workBuilding work
-			else if(workPlace != null && Vector3.Distance(transform.position, workPlace.transform.position) < 0.5f){	//Is the NPC at the workplace?
-				workPlace.worker = gameObject;
-				this.enabled = false;
-			}
-		} else {
-			nav = GetComponent<NavMeshAgent>();
+		if(Path.Count == 0 && workPlace == null){
+			calculateRandomDestination();
 		}
+
+		//Is only executed if the npc is refered to a workBuilding an lets the workBuilding work
+		else if(workPlace != null && Vector3.Distance(transform.position, workPlace.transform.position) < 0.5f){	//Is the NPC at the workplace?
+			workPlace.worker = gameObject;
+			this.enabled = false;
+		}
+
+        if(Path.Count > 0)
+            Move();
 	}
 
 
@@ -44,6 +43,6 @@ public class NPC : MonoBehaviour {
 		    y = terrain.SampleHeight(new Vector3(x, 0, z));
 		}
 		
-		nav.SetDestination(new Vector3(x, y, z));
+		FindPath(transform.position, new Vector3(x, y, z));
 	}
 }
