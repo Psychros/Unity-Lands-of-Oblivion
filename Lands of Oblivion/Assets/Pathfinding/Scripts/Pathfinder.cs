@@ -921,5 +921,16 @@ public class Pathfinder : MonoBehaviour
         return returnList;
     }
 
+    //Actualizes the height for a specific Node
+    public void editNode(int x, int y)
+    {
+        RaycastHit hit;
+        Vector3 direction = Vector3.up;
+        Vector3 position = new Vector3(x, -1, y);
+        Physics.Raycast(position, direction, out hit, 300);
+
+        Map[x, y].yCoord = hit.point.y;
+    }
+
     #endregion
 }

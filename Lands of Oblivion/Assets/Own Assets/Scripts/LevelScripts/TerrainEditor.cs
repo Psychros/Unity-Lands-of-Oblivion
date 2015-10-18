@@ -78,6 +78,7 @@ public class TerrainEditor : MonoBehaviour {
 		height[0, 0] = Math.translateHeightToTerrainHeight(selectedTerrainHeight, terrain);
 
 		terrain.terrainData.SetHeightsDelayLOD(Math.round(terrainPosition.x), Math.round(terrainPosition.z), height);
+        Pathfinder.Instance.editNode(Math.round(terrainPosition.x), Math.round(terrainPosition.z));
 	}
 
 	public void editSelectedHeight(int value){
