@@ -27,9 +27,9 @@ public class ChunkController : MonoBehaviour {
         if (actObj.GetComponent<MeshFilter>() != null)
         {
             int x = Math.floatToGridColumn(actObj.transform.position.x, grid.widthRect);
-            int y = Math.floatToGridRow(actObj.transform.position.y, grid.heightRect);
+            int z = Math.floatToGridRow(actObj.transform.position.z, grid.heightRect);
 
-            this.grid.add(x, y, actObj);
+            this.grid.add(x, z, actObj);
             actObj.SetActive(false);
         }
 
