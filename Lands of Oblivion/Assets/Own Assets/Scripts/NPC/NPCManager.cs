@@ -130,7 +130,7 @@ public class NPCManager : MonoBehaviour {
 			freeWorkBuildings[0].worker = freePeople[0].gameObject;
 
 			//The npc walks to his workplace
-			freePeople[0].GetComponent<NavMeshAgent>().SetDestination(freeWorkBuildings[0].transform.position);
+			freePeople[0].FindPath(freePeople[0].transform.position, freeWorkBuildings[0].transform.position);
 			freePeople[0].workPlace = freeWorkBuildings[0];
 
 			//Remove the instances from the lists

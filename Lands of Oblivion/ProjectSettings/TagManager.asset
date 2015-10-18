@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Terrain
   - Tree
+  - Waypoint
+  - WPPathfinder
+  - NPC
   layers:
   - Default
   - TransparentFX
