@@ -26,7 +26,7 @@ public class BuildBuildingEvent : UserEvent {
 				}
 			} 
 			catch(Exception e){
-				Debug.LogError("No building selected!");
+				Debug.LogError("No building selected! " + e.Message);
 			}
 		} else
 		{

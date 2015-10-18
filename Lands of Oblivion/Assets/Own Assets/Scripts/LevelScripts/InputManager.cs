@@ -5,11 +5,13 @@ using System;
 public class InputManager : MonoBehaviour {
 
 	public static InputManager instance = null;
+    public static long count = 0;
 
 	public Transform playerTransform = null;
 	public Terrain terrain;
 	public GameObject ui;
-	public  bool isMenu = false;
+	private  bool _isMenu = false;
+    public bool isMenu { get { return _isMenu; } set { _isMenu = value; } }
 	public Canvas currentMenu;
 	private bool isPause = false;
 	private float timer = 0;
@@ -38,11 +40,13 @@ public class InputManager : MonoBehaviour {
 
 
 	void Start () {
-		instance = this;
-	}
-	
+        count++;
+        InputManager.instance = this;
+        Debug.Log(count);
+    }
 
-	void Update () {
+
+    void Update () {
 		//Cut tree
 		if(Input.GetKeyDown(cutTree)){
 			CutTreeEvent userEvent = new CutTreeEvent();
