@@ -8,8 +8,7 @@ class Util
 {
     public static Boolean contains<T, U>(T obj, U[] array)
     {
-        if (obj == null && array == null) return true;
-        if (obj == null || array == null) return false;
+        if (array == null) return false;
         Boolean returned = false;
         foreach (U u in array)
         {

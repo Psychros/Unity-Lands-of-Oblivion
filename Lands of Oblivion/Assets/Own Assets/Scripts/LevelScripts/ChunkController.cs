@@ -7,7 +7,6 @@ public class ChunkController : MonoBehaviour {
     private LevelGrid grid;
     private GameObject player;
     private Chunk[] displayedChunks;
-    private Boolean initialized = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +19,6 @@ public class ChunkController : MonoBehaviour {
             Debug.Log("Fatal error occured: " + e.Message + "\nGo to hell.");
         }
         initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
-        initialized = true;
 	}
 
     
@@ -55,9 +53,15 @@ public class ChunkController : MonoBehaviour {
             }
         }
     }
-
+    long count = 0;
     private void disableUnusedChunks(Chunk[] chunks)
     {
+        //if (count > 400)
+        //{
+        //    Debug.Log("titten");
+        //    Debug.Log("doppeltitten");
+        //}
+        //Debug.Log(count);
         foreach (Chunk tempChunk in chunks)
         {
             if (!Util.contains<Chunk, Chunk>(tempChunk, displayedChunks) && tempChunk != null)
@@ -72,10 +76,11 @@ public class ChunkController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (initialized == false) return;
+        count++;
+        if (this.grid == null) return;
         Vector3 vec = player.transform.position;
 
-        Chunk[] chunks = this.grid.getComponentsOfChunk(vec.x, vec.y);
+        Chunk[] chunks = this.grid.getComponentsOfChunk(vec.x, vec.z);
 
         enableNewChunks(chunks);
         disableUnusedChunks(chunks);

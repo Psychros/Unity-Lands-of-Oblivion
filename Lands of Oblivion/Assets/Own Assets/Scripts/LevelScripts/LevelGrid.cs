@@ -27,7 +27,7 @@ class LevelGrid{
     public LevelGrid(Terrain ter) : this(ter.transform.position.x,
                                          ter.transform.position.y,
                                          ter.terrainData.size.x  ,
-                                         ter.terrainData.size.y  ){ }
+                                         ter.terrainData.size.z  ){ }
 
     public Chunk[] getComponentsOfChunk(float x, float y)//, int chunks = 9) //TODO
     {
@@ -37,11 +37,11 @@ class LevelGrid{
         Chunk[] chunks = new Chunk[9];
 
 
-        for (int j = -1; j < 1; j++)
+        for (int j = -1; j < 2; j++)
         {
             if (column + j >= 0)
             {
-                for (int k = -1; k < 1; k++)
+                for (int k = -1; k < 2; k++)
                 {
                     if (row + k >= 0)
                     {
