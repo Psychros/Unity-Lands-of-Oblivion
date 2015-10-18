@@ -20,6 +20,7 @@ public class Pathfinding : MonoBehaviour
         if (PathType == PathfinderType.GridBased)
         {
             Pathfinder.Instance.InsertInQueue(startPosition, endPosition, SetList);
+            rotateNPCToWalkDirection();
         }
         else if (PathType == PathfinderType.WaypointBased)
         {
@@ -51,6 +52,7 @@ public class Pathfinding : MonoBehaviour
             if (Vector3.Distance(transform.position, Path[0]) < 0.4F)
             {
                 Path.RemoveAt(0);
+                rotateNPCToWalkDirection();
             }
         }
     }
@@ -86,6 +88,12 @@ public class Pathfinding : MonoBehaviour
                 gameObject.SendMessage("GetJSPath", arr);
             }
 		}
+    }
+
+    public void rotateNPCToWalkDirection()
+    {
+        if (Path.Count > 0)
+            transform.LookAt(Path[0]);
     }
 }
 	
