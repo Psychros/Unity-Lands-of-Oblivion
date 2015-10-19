@@ -72,12 +72,24 @@ public class ChunkController : MonoBehaviour {
         //        }
         //    }
         //}
-        Chunk[] unusedChunks = Util.getDifferences<Chunk>(displayedChunks, chunks);
+
+
+        System.Object[] unusedChunks = Util.getDifferences(displayedChunks, chunks);
+
         if (unusedChunks != null)
         {
             if (unusedChunks.Length > 0)
             {
-                Debug.Log("titten");
+                foreach (Chunk actChunk in unusedChunks)
+                {
+                    if (actChunk != null)
+                    {
+                        foreach (GameObject obj in actChunk.list)
+                        {
+                            obj.SetActive(false);
+                        }
+                    }
+                }
             }
         }
     }

@@ -21,23 +21,26 @@ class Util
         return returned;
     }
 
-    public static T[] getDifferences<T>(T[] array1, T[] array2)
+    public static  Identifyable[] getDifferences(Identifyable[] array1, Identifyable[] array2)
     {
         if (array1 == null || array2 == null) return null;
-        List<T> tempList = new List<T>();
+        List<Identifyable> tempList = new List<Identifyable>();
+        Boolean tempBool;
 
-        foreach (T tempT1 in array1)
+        foreach (Identifyable temp1 in array1)
         {
-            if (tempT1 != null)
+            tempBool = false;
+            if (temp1 != null)
             {
-                foreach (T tempT2 in array2)
+                foreach (Identifyable temp2 in array2)
                 {
-                    if (tempT1.GetHashCode() == tempT2.GetHashCode())
+                    if (temp2 != null && temp1.id == temp2.id)
                     {
-                        tempList.Add(tempT1);
+                        tempBool = true;
                         break;
                     }
                 }
+                if (!tempBool) tempList.Add(temp1);
             }
         }
         return tempList.ToArray();
