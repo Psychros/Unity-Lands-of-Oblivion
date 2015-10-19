@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 
+
 public class TerrainEditor : MonoBehaviour {
 
 	public static TerrainEditor instance { get; private set; }
@@ -12,6 +13,7 @@ public class TerrainEditor : MonoBehaviour {
 	public int maxHeight = 30;
 	public int minHeight = 11;
 	public GameObject wireframeCubePrefab;
+    public float editSpeed = 1f;
 
 	private Terrain terrain;
 	public Terrain Terrain{
@@ -65,8 +67,6 @@ public class TerrainEditor : MonoBehaviour {
 	}
 
 	public void deactivateTerrainEditor(){
-		terrain.ApplyDelayedHeightmapModification(); 
-
 		terrain = null;
 		Destroy(cube);
 		cube = null;
@@ -75,11 +75,31 @@ public class TerrainEditor : MonoBehaviour {
 	public void editTerrain(){
 		Vector3 terrainPosition = Math.translateVector3ToTerrainCoordinate(pos, terrain);
 		float[,] height = new float[1, 1];
-		height[0, 0] = Math.translateHeightToTerrainHeight(selectedTerrainHeight, terrain);
+        float newHeight = Math.translateHeightToTerrainHeight(selectedTerrainHeight, terrain);
 
-		terrain.terrainData.SetHeightsDelayLOD(Math.round(terrainPosition.x), Math.round(terrainPosition.z), height);
+        if (height[0, 0] > newHeight)
+        {
+            height[0, 0] = height[0, 0] - Time.deltaTime * editSpeed;
+
+            if (height[0, 0] < newHeight)
+                height[0, 0] = newHeight;
+        }
+        else if (height[0, 0] < newHeight)
+        {
+            height[0, 0] = height[0, 0] + Time.deltaTime * editSpeed;
+
+            if (height[0, 0] > newHeight)
+                height[0, 0] = newHeight;
+        }
+
+        terrain.terrainData.SetHeightsDelayLOD(Math.round(terrainPosition.x), Math.round(terrainPosition.z), height);
         Pathfinder.Instance.editNode(Math.round(terrainPosition.x), Math.round(terrainPosition.z));
 	}
+
+    public void stopEditing()
+    {
+        terrain.ApplyDelayedHeightmapModification();
+    }
 
 	public void editSelectedHeight(int value){
 		selectedTerrainHeight += value;

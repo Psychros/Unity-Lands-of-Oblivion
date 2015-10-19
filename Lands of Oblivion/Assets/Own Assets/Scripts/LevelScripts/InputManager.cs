@@ -137,7 +137,12 @@ public class InputManager : MonoBehaviour {
 			if(TerrainEditor.instance.Terrain != null)
 				TerrainEditor.instance.editTerrain();
 		}
-	}
+        if (Input.GetKeyUp(editTerrain))
+        {
+            if (TerrainEditor.instance.Terrain != null)
+                TerrainEditor.instance.stopEditing();
+        }
+    }
 
 
 	public void toggleTimeScale(){
