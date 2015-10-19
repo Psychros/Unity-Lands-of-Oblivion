@@ -4,7 +4,7 @@ using System;
 
 public class InputManager : MonoBehaviour {
 
-	public static InputManager instance = null;
+	public static InputManager instance { get; private set; }
     public static long count = 0;
 
 	public Transform playerTransform = null;

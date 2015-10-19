@@ -5,7 +5,7 @@ using System;
 
 public class TerrainEditor : MonoBehaviour {
 
-	public static TerrainEditor instance = null;
+	public static TerrainEditor instance { get; private set; }
 	public Text currentHeight;
 	public Text selectedHeight;
 	public int selectedTerrainHeight = 13;
