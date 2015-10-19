@@ -62,14 +62,22 @@ public class ChunkController : MonoBehaviour {
         //    Debug.Log("doppeltitten");
         //}
         //Debug.Log(count);
-        foreach (Chunk tempChunk in chunks)
+        //foreach (Chunk tempChunk in chunks)
+        //{
+        //    if (!Util.contains<Chunk, Chunk>(tempChunk, displayedChunks) && tempChunk != null)
+        //    {
+        //        foreach(GameObject obj in tempChunk.list)
+        //        {
+        //            obj.SetActive(false);
+        //        }
+        //    }
+        //}
+        Chunk[] unusedChunks = Util.getDifferences<Chunk>(displayedChunks, chunks);
+        if (unusedChunks != null)
         {
-            if (!Util.contains<Chunk, Chunk>(tempChunk, displayedChunks) && tempChunk != null)
+            if (unusedChunks.Length > 0)
             {
-                foreach(GameObject obj in tempChunk.list)
-                {
-                    obj.SetActive(false);
-                }
+                Debug.Log("titten");
             }
         }
     }
