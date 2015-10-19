@@ -6,15 +6,20 @@ using UnityEngine;
 
 
 
-class Chunk
+class Chunk : Identifyable
 {
     private List<GameObject> prvList;
+    public override long id { get; protected set; }
+    private static long count = 0;
 
     public List<GameObject> list { get { return new List<GameObject>(prvList); } }
 
     public Chunk(List<GameObject> list)
     {
         this.prvList= new List<GameObject>();
+
+        this.id = Chunk.count;
+        Chunk.count++;
 
         foreach (GameObject tempObj in list)
         {
@@ -24,12 +29,16 @@ class Chunk
 
     public Chunk(GameObject obj)
     {
+        this.id = count;
+        count++;
         this.prvList = new List<GameObject>();
         this.add(obj);
     }
 
     public Chunk()
     {
+        this.id = count;
+        count++;
         this.prvList = new List<GameObject>();
     }
 
@@ -40,7 +49,6 @@ class Chunk
             this.prvList.Add(obj);
             return true;
         }
-        
 	    return false;
     }
 }

@@ -7,7 +7,6 @@ public class ChunkController : MonoBehaviour {
     private LevelGrid grid;
     private GameObject player;
     private Chunk[] displayedChunks;
-    private Boolean initialized = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +19,6 @@ public class ChunkController : MonoBehaviour {
             Debug.Log("Fatal error occured: " + e.Message + "\nGo to hell.");
         }
         initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
-        initialized = true;
 	}
 
     
@@ -29,9 +27,9 @@ public class ChunkController : MonoBehaviour {
         if (actObj.GetComponent<MeshFilter>() != null)
         {
             int x = Math.floatToGridColumn(actObj.transform.position.x, grid.widthRect);
-            int y = Math.floatToGridRow(actObj.transform.position.y, grid.heightRect);
+            int z = Math.floatToGridRow(actObj.transform.position.z, grid.heightRect);
 
-            this.grid.add(x, y, actObj);
+            this.grid.add(x, z, actObj);
             actObj.SetActive(false);
         }
 
@@ -55,16 +53,42 @@ public class ChunkController : MonoBehaviour {
             }
         }
     }
-
+    long count = 0;
     private void disableUnusedChunks(Chunk[] chunks)
     {
-        foreach (Chunk tempChunk in chunks)
+        //if (count > 400)
+        //{
+        //    Debug.Log("titten");
+        //    Debug.Log("doppeltitten");
+        //}
+        //Debug.Log(count);
+        //foreach (Chunk tempChunk in chunks)
+        //{
+        //    if (!Util.contains<Chunk, Chunk>(tempChunk, displayedChunks) && tempChunk != null)
+        //    {
+        //        foreach(GameObject obj in tempChunk.list)
+        //        {
+        //            obj.SetActive(false);
+        //        }
+        //    }
+        //}
+
+
+        System.Object[] unusedChunks = Util.getDifferences(displayedChunks, chunks);
+
+        if (unusedChunks != null)
         {
-            if (!Util.contains<Chunk, Chunk>(tempChunk, displayedChunks) && tempChunk != null)
+            if (unusedChunks.Length > 0)
             {
-                foreach(GameObject obj in tempChunk.list)
+                foreach (Chunk actChunk in unusedChunks)
                 {
-                    obj.SetActive(false);
+                    if (actChunk != null)
+                    {
+                        foreach (GameObject obj in actChunk.list)
+                        {
+                            obj.SetActive(false);
+                        }
+                    }
                 }
             }
         }
@@ -72,10 +96,11 @@ public class ChunkController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (initialized == false) return;
+        count++;
+        if (this.grid == null) return;
         Vector3 vec = player.transform.position;
 
-        Chunk[] chunks = this.grid.getComponentsOfChunk(vec.x, vec.y);
+        Chunk[] chunks = this.grid.getComponentsOfChunk(vec.x, vec.z);
 
         enableNewChunks(chunks);
         disableUnusedChunks(chunks);
