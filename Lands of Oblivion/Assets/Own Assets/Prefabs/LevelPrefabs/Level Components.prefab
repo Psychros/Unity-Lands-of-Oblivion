@@ -365,6 +365,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &118918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 458652}
+  - 114: {fileID: 11416750}
+  m_Layer: 0
+  m_Name: CunkController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &121064
 GameObject:
   m_ObjectHideFlags: 1
@@ -1634,7 +1650,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 471476}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!4 &414756
 Transform:
   m_ObjectHideFlags: 1
@@ -1658,7 +1674,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 471476}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!4 &419600
 Transform:
   m_ObjectHideFlags: 1
@@ -1675,7 +1691,7 @@ Transform:
   - {fileID: 22486974}
   - {fileID: 22417946}
   m_Father: {fileID: 471476}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &434998
 Transform:
   m_ObjectHideFlags: 1
@@ -1687,7 +1703,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 471476}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &435310
 Transform:
   m_ObjectHideFlags: 1
@@ -1699,7 +1715,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 471476}
-  m_RootOrder: 4
+  m_RootOrder: 5
+--- !u!4 &458652
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 521.486206, y: 27.308754, z: -523.579773}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 471476}
+  m_RootOrder: 0
 --- !u!4 &466288
 Transform:
   m_ObjectHideFlags: 1
@@ -1711,7 +1739,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 471476}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!4 &471476
 Transform:
   m_ObjectHideFlags: 1
@@ -1722,6 +1750,7 @@ Transform:
   m_LocalPosition: {x: 1109.86609, y: 59.8076782, z: 1029.2854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 458652}
   - {fileID: 419600}
   - {fileID: 22484996}
   - {fileID: 434998}
@@ -2169,6 +2198,20 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &11416750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48af7c38aa6cf13458dc5b1e07f0aff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  terrain: {fileID: 0}
+  staticObjects: {fileID: 0}
 --- !u!114 &11416752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3067,7 +3110,6 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   terrain: {fileID: 0}
   ui: {fileID: 199660}
-  isMenu: 0
   currentMenu: {fileID: 0}
   inGameCanvas: {fileID: 22391732}
   buildmenuCanvas: {fileID: 22399826}
@@ -8036,7 +8078,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 471476}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: -122.672729, y: 221.376892}
