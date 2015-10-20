@@ -9,7 +9,7 @@ public class ChunkController : MonoBehaviour {
     public GameObject staticObjects;
 
     private LevelGrid grid;
-    private Chunk[] displayedChunks;
+    private Chunk[] displayedChunks; 
 
 	// Use this for initialization
 	void Start () {
