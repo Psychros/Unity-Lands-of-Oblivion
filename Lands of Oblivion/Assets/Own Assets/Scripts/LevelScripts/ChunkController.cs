@@ -4,21 +4,17 @@ using System;
 using System.Collections.Generic;
 
 public class ChunkController : MonoBehaviour {
+    public Transform playerTransform;
+    public Terrain terrain;
+    public GameObject staticObjects;
+
     private LevelGrid grid;
-    private GameObject player;
     private Chunk[] displayedChunks;
 
 	// Use this for initialization
 	void Start () {
-        try
-        {
-            this.grid = new LevelGrid(GameObject.Find("Terrain").GetComponent<Terrain>());
-            this.player = GameObject.Find(Constants.NamePlayer);
-        } catch (Exception e)
-        {
-            Debug.Log("Fatal error occured: " + e.Message + "\nGo to hell.");
-        }
-        initGrid(GameObject.Find(Constants.NameStaticGameObjectsContainer));
+        this.grid = new LevelGrid(terrain);
+        initGrid(staticObjects);
 	}
 
     
@@ -56,24 +52,6 @@ public class ChunkController : MonoBehaviour {
     long count = 0;
     private void disableUnusedChunks(Chunk[] chunks)
     {
-        //if (count > 400)
-        //{
-        //    Debug.Log("titten");
-        //    Debug.Log("doppeltitten");
-        //}
-        //Debug.Log(count);
-        //foreach (Chunk tempChunk in chunks)
-        //{
-        //    if (!Util.contains<Chunk, Chunk>(tempChunk, displayedChunks) && tempChunk != null)
-        //    {
-        //        foreach(GameObject obj in tempChunk.list)
-        //        {
-        //            obj.SetActive(false);
-        //        }
-        //    }
-        //}
-
-
         System.Object[] unusedChunks = Util.getDifferences(displayedChunks, chunks);
 
         if (unusedChunks != null)
@@ -98,7 +76,7 @@ public class ChunkController : MonoBehaviour {
     void Update () {
         count++;
         if (this.grid == null) return;
-        Vector3 vec = player.transform.position;
+        Vector3 vec = playerTransform.position;
 
         Chunk[] chunks = this.grid.getComponentsOfChunk(vec.x, vec.z);
 
