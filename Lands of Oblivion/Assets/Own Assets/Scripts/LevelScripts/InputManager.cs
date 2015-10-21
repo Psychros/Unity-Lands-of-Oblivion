@@ -42,7 +42,6 @@ public class InputManager : MonoBehaviour {
 	void Start () {
         count++;
         InputManager.instance = this;
-        Debug.Log(count);
     }
 
 

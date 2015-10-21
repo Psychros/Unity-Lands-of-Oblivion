@@ -13,7 +13,7 @@ public class TerrainEditor : MonoBehaviour {
 	public int maxHeight = 30;
 	public int minHeight = 11;
 	public GameObject wireframeCubePrefab;
-    public float editSpeed = 1f;
+    public float editSpeed = 0.01f;
 
 	private Terrain terrain;
 	public Terrain Terrain{
@@ -75,21 +75,28 @@ public class TerrainEditor : MonoBehaviour {
 	public void editTerrain(){
 		Vector3 terrainPosition = Math.translateVector3ToTerrainCoordinate(pos, terrain);
 		float[,] height = new float[1, 1];
+        height[0, 0] = terrain.terrainData.GetHeight(Math.round(terrainPosition.x), Math.round(terrainPosition.z));
+        height[0, 0] = Math.translateHeightToTerrainHeight(height[0, 0], terrain);
         float newHeight = Math.translateHeightToTerrainHeight(selectedTerrainHeight, terrain);
+   
 
         if (terrain.terrainData.GetHeight(Math.round(terrainPosition.x), Math.round(terrainPosition.z)) > newHeight)
         {
             height[0, 0] -= Math.translateHeightToTerrainHeight(Time.deltaTime * editSpeed, terrain);
 
             if (height[0, 0] < newHeight)
+            {
                 height[0, 0] = newHeight;
-        }
+            }
+            }
         else if (height[0, 0] < newHeight)
         {
             height[0, 0] += Math.translateHeightToTerrainHeight(Time.deltaTime * editSpeed, terrain);
 
             if (height[0, 0] > newHeight)
+            {
                 height[0, 0] = newHeight;
+            }
         }
 
         terrain.terrainData.SetHeightsDelayLOD(Math.round(terrainPosition.x), Math.round(terrainPosition.z), height);
