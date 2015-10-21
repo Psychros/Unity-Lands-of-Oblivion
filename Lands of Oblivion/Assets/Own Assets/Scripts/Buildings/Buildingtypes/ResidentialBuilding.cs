@@ -11,11 +11,6 @@ public class ResidentialBuilding : Building {
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		base.Update();
-	}
 
 	public override void finishBuilding(){
 		//Spawn new Inhabitants

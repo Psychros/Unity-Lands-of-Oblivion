@@ -49,8 +49,8 @@ public class InputManager : MonoBehaviour {
     void Update () {
 		//Cut tree
 		if(Input.GetKeyDown(cutTree)){
-			CutTreeEvent userEvent = new CutTreeEvent();
-			userEvent.execute();
+			CutTreeEvent userEvent = gameObject.AddComponent<CutTreeEvent>();
+            userEvent.execute();
 		}
 
 		//Place building

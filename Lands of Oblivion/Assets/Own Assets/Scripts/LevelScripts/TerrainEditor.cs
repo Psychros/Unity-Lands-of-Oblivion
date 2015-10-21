@@ -77,16 +77,16 @@ public class TerrainEditor : MonoBehaviour {
 		float[,] height = new float[1, 1];
         float newHeight = Math.translateHeightToTerrainHeight(selectedTerrainHeight, terrain);
 
-        if (height[0, 0] > newHeight)
+        if (terrain.terrainData.GetHeight(Math.round(terrainPosition.x), Math.round(terrainPosition.z)) > newHeight)
         {
-            height[0, 0] = height[0, 0] - Time.deltaTime * editSpeed;
+            height[0, 0] -= Math.translateHeightToTerrainHeight(Time.deltaTime * editSpeed, terrain);
 
             if (height[0, 0] < newHeight)
                 height[0, 0] = newHeight;
         }
         else if (height[0, 0] < newHeight)
         {
-            height[0, 0] = height[0, 0] + Time.deltaTime * editSpeed;
+            height[0, 0] += Math.translateHeightToTerrainHeight(Time.deltaTime * editSpeed, terrain);
 
             if (height[0, 0] > newHeight)
                 height[0, 0] = newHeight;

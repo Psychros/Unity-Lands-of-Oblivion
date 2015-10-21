@@ -2,9 +2,6 @@
 using System.Collections;
 
 public class NPC : Pathfinding {
-
-	private NavMeshAgent nav = null;
-
 	public WorkBuilding workPlace = null;
 
 	// Use this for initialization
