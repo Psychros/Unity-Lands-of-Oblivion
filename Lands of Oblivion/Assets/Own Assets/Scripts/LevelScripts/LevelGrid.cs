@@ -11,6 +11,8 @@ class LevelGrid{
     private readonly float height;
     private readonly float absX;
     private readonly float absY;
+    private readonly int rectsWidth;
+    private readonly int rectsHeight;
     public float widthRect { get; private set; }
     public float heightRect { get; private set; }
     private Chunk[,] grid;
@@ -21,7 +23,9 @@ class LevelGrid{
         this.height = height;
         this.absX = initX;
         this.absY = initY;
-        this.grid = new Chunk[calcRectsWidth(width), calcRectsLength(height)];
+        this.rectsWidth = calcRectsWidth(width);
+        this.rectsHeight = calcRectsHeight(height);
+        this.grid = new Chunk[rectsWidth, rectsHeight];
     }
     
     public LevelGrid(Terrain ter) : this(ter.transform.position.x,
@@ -39,11 +43,11 @@ class LevelGrid{
 
         for (int j = -1; j < 2; j++)
         {
-            if (column + j >= 0)
+            if (column + j >= 0 && column + j < rectsWidth)
             {
                 for (int k = -1; k < 2; k++)
                 {
-                    if (row + k >= 0)
+                    if (row + k >= 0 && row + k < rectsHeight)
                     {
                         Chunk tempChunk = grid[column + j, row + k];
                         if (tempChunk != null)
@@ -59,6 +63,7 @@ class LevelGrid{
 
     public Boolean add(int x, int y, GameObject addedGameObject)
     {
+        if (x >= rectsWidth || y >= rectsHeight) throw new IllegalArgumentException("Object to be added is out of grid");
         Boolean returned = false;
 
         if (grid[x,y] == null)
@@ -85,7 +90,7 @@ class LevelGrid{
         return divider;
     }
 
-    private int calcRectsLength(float totalLength)
+    private int calcRectsHeight(float totalHeight)
     {
         int divider = 0;
         this.heightRect = float.MaxValue;
@@ -93,7 +98,7 @@ class LevelGrid{
         while (this.heightRect > MAXIMUM_SIZE_SQUARE)
         {
             divider++;
-            this.heightRect = totalLength / divider;
+            this.heightRect = totalHeight / divider;
         }
 
         return divider;
