@@ -22,6 +22,7 @@ public class TerrainEditor : MonoBehaviour {
 	}
 
 	private Vector3 pos;
+    private float dirt = 0;             //Dirt is needed for raising up the terrain
 	private bool canEditTerrain = false;
 	private GameObject cube = null;
 
