@@ -78,9 +78,9 @@ public class TerrainEditor : MonoBehaviour {
         height[0, 0] = terrain.terrainData.GetHeight(Math.round(terrainPosition.x), Math.round(terrainPosition.z));
         height[0, 0] = Math.translateHeightToTerrainHeight(height[0, 0], terrain);
         float newHeight = Math.translateHeightToTerrainHeight(selectedTerrainHeight, terrain);
-   
 
-        if (terrain.terrainData.GetHeight(Math.round(terrainPosition.x), Math.round(terrainPosition.z)) > newHeight)
+        //Sink the terrain
+        if (height[0, 0] > newHeight)
         {
             height[0, 0] -= Math.translateHeightToTerrainHeight(Time.deltaTime * editSpeed, terrain);
 
@@ -88,10 +88,12 @@ public class TerrainEditor : MonoBehaviour {
             {
                 height[0, 0] = newHeight;
             }
-            }
+        }
+        //Raise the terrain
         else if (height[0, 0] < newHeight)
         {
             height[0, 0] += Math.translateHeightToTerrainHeight(Time.deltaTime * editSpeed, terrain);
+            print("Hallo");
 
             if (height[0, 0] > newHeight)
             {
