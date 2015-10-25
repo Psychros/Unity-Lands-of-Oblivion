@@ -7,28 +7,31 @@ using System;
 public class TerrainEditor : MonoBehaviour {
 
 	public static TerrainEditor instance { get; private set; }
-	public Text currentHeight;
+
+    public GameObject wireframeCubePrefab;
+    public Text currentHeight;
 	public Text selectedHeight;
-	public int selectedTerrainHeight = 13;
+    public Text dirtText;
+
+    public int selectedTerrainHeight = 13;
 	public int maxHeight = 30;
 	public int minHeight = 11;
-	public GameObject wireframeCubePrefab;
     public float editSpeed = 0.01f;
 
 	private Terrain terrain;
-	public Terrain Terrain{
-		get{return terrain;}
-		set{terrain = value;}
-	}
-
 	private Vector3 pos;
     private float dirt = 0;             //Dirt is needed for raising up the terrain
 	private bool canEditTerrain = false;
 	private GameObject cube = null;
 
+    public Terrain Terrain
+    {
+        get { return terrain; }
+        set { terrain = value; }
+    }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		instance = this;
 		selectedHeight.text = "" + selectedTerrainHeight;
 	}
@@ -83,22 +86,32 @@ public class TerrainEditor : MonoBehaviour {
         //Sink the terrain
         if (height[0, 0] > newHeight)
         {
-            height[0, 0] -= Math.translateHeightToTerrainHeight(Time.deltaTime * editSpeed, terrain);
+            float distance = Time.deltaTime * editSpeed;
+            height[0, 0] -= Math.translateHeightToTerrainHeight(distance, terrain);
 
             if (height[0, 0] < newHeight)
             {
                 height[0, 0] = newHeight;
             }
+            else
+            {
+                editDirt(distance);
+            }
         }
         //Raise the terrain
         else if (height[0, 0] < newHeight)
         {
-            height[0, 0] += Math.translateHeightToTerrainHeight(Time.deltaTime * editSpeed, terrain);
-            print("Hallo");
+            float distance = Time.deltaTime * editSpeed;
+            height[0, 0] += Math.translateHeightToTerrainHeight(distance, terrain);
 
-            if (height[0, 0] > newHeight)
+            if (dirt >= distance)
             {
-                height[0, 0] = newHeight;
+                editDirt(-distance);
+
+                if (height[0, 0] > newHeight)
+                {
+                    height[0, 0] = newHeight;
+                }
             }
         }
 
@@ -113,6 +126,15 @@ public class TerrainEditor : MonoBehaviour {
 
 	public void editSelectedHeight(int value){
 		selectedTerrainHeight += value;
-		selectedHeight.text = "" + TerrainEditor.instance.selectedTerrainHeight;
+		selectedHeight.text = "" + selectedTerrainHeight;
 	}
+
+    public void editDirt(float value)
+    {
+        dirt += value;
+        if (dirt < 0)
+            dirt = 0;
+
+        dirtText.text = "" + dirt;
+    }
 }
