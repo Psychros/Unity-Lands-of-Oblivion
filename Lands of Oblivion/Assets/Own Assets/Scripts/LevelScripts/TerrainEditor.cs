@@ -49,7 +49,7 @@ public class TerrainEditor : MonoBehaviour {
 	//Shows the current TerrainHeight at the selected point
 	void showCurrentTerrainHeight(){
 		Vector3 position = RayCastManager.getTerrainPosition(20);
-		currentHeight.text = "" + position.y;
+		currentHeight.text = "" + position.y.ToString("0.00");
 		pos = position;
 
 		if(position.y >= minHeight && position.y <= maxHeight){
@@ -135,6 +135,6 @@ public class TerrainEditor : MonoBehaviour {
         if (dirt < 0)
             dirt = 0;
 
-        dirtText.text = "" + dirt;
+        dirtText.text = "" + dirt.ToString("0.00");
     }
 }
