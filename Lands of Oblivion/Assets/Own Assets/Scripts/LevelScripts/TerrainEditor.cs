@@ -106,11 +106,13 @@ public class TerrainEditor : MonoBehaviour {
 
             if (dirt >= distance)
             {
-                editDirt(-distance);
-
                 if (height[0, 0] > newHeight)
                 {
                     height[0, 0] = newHeight;
+                }
+                else
+                {
+                    editDirt(-distance);
                 }
             }
         }
