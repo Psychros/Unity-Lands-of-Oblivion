@@ -6,7 +6,7 @@ public class BuildBuildingEvent : UserEvent {
 
 	private static GameObject building;
 
-	public void execute(){
+	public override void execute(){
 		if(SetBuildingPositionController.instance.building == null)
 		{
 			//Get the position where the player is looking at the terrain

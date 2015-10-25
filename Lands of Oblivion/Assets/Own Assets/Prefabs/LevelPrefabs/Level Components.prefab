@@ -1267,6 +1267,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &178622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 416682}
+  - 114: {fileID: 11406414}
+  m_Layer: 0
+  m_Name: Pathfinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &180230
 GameObject:
   m_ObjectHideFlags: 1
@@ -1663,6 +1679,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 22453538}
   m_RootOrder: 1
+--- !u!4 &416682
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 887.588257, y: -537.287781, z: 1913.62244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 471476}
+  m_RootOrder: 8
 --- !u!4 &417444
 Transform:
   m_ObjectHideFlags: 1
@@ -1747,7 +1775,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1109.86609, y: 59.8076782, z: 1029.2854}
+  m_LocalPosition: {x: 519.359375, y: 619.216553, z: -591.008423}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 458652}
@@ -1758,6 +1786,7 @@ Transform:
   - {fileID: 435310}
   - {fileID: 417444}
   - {fileID: 406076}
+  - {fileID: 416682}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &495736
@@ -1896,6 +1925,33 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &11406414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4acf42fa4d81a498faec7fa36593cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tilesize: 1
+  MaxFalldownHeight: 3
+  ClimbLimit: .5
+  HeuristicAggression: 0
+  HighestPoint: 30
+  LowestPoint: 10
+  MapStartPosition: {x: 0, y: 0}
+  MapEndPosition: {x: 2000, y: 2000}
+  DisallowedTags:
+  - Tree
+  IgnoreTags:
+  - Player
+  - NPC
+  MoveDiagonal: 1
+  DrawMapInEditor: 0
+  CheckFullTileSize: 0
 --- !u!114 &11407098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5354,6 +5410,7 @@ MonoBehaviour:
   maxHeight: 30
   minHeight: 11
   wireframeCubePrefab: {fileID: 188314, guid: 16c354ff395e1be448b24b960c4c1f28, type: 2}
+  editSpeed: .00999999978
 --- !u!114 &11484168
 MonoBehaviour:
   m_ObjectHideFlags: 1
