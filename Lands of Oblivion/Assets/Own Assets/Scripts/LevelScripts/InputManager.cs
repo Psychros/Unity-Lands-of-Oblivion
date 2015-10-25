@@ -48,8 +48,7 @@ public class InputManager : MonoBehaviour {
     void Update () {
 		//Cut tree
 		if(Input.GetKeyDown(cutTree)){
-			CutTreeEvent userEvent = gameObject.AddComponent<CutTreeEvent>();
-            userEvent.execute();
+            testForInteractableObject(2);
 		}
 
 		//Place building
@@ -143,6 +142,30 @@ public class InputManager : MonoBehaviour {
         }
     }
 
+
+    public void testForInteractableObject(float distance)
+    {
+        try
+        {
+            //Test for a tree in front of the player with a raycast 
+            RaycastHit hit = RayCastManager.startRayCast(distance);
+
+            //Remove a tree if the player is forward of one
+            Collider coll = hit.collider;
+            if (coll != null)
+            {
+
+                GameObject hitObj = coll.transform.parent.gameObject;
+                Interactable script = hitObj.GetComponent<Interactable>();
+
+                if (script != null)
+                {
+                    script.interact();
+                }
+            }
+        }
+        catch (NullReferenceException e) { }
+    }
 
 	public void toggleTimeScale(){
 		isPause = !isPause;

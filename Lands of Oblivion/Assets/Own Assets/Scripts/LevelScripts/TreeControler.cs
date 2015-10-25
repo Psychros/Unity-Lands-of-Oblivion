@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class TreeControler : MonoBehaviour
+public class TreeControler : MonoBehaviour, Interactable
 {
 	public int lives = 3;
 	public int fallSpeed = 8;
@@ -12,6 +12,11 @@ public class TreeControler : MonoBehaviour
 		rigidBody = GetComponent<Rigidbody>();
 		rigidBody.isKinematic = true;	//The tree is an static object
 	}
+
+    public void interact()
+    {
+        removeLife();
+    }
 
 
 	//Catch the tree and remove one life
