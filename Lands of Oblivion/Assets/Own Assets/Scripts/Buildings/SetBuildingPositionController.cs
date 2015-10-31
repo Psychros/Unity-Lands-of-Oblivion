@@ -7,6 +7,8 @@ public class SetBuildingPositionController : MonoBehaviour {
 	public GameObject building = null;
 	public Building buildingScript = null;
 
+    private float toleranceValue = 0.01f;
+
 	// Use this for initialization
 	void Start () {
 		instance = this;
@@ -17,11 +19,11 @@ public class SetBuildingPositionController : MonoBehaviour {
         //The building follows the mouse
         if (building != null)
         {
-            //if (testTerrainForFlatness()) { 
+            if (testTerrainForFlatness()) { 
                 Vector3 pos = RayCastManager.getTerrainPosition(200, buildingScript.minHeight, buildingScript.maxHeight);
                 if (pos != Vector3.zero)
                     building.transform.position = pos;
-            //}
+            }
 		}
 	}
 
@@ -29,6 +31,7 @@ public class SetBuildingPositionController : MonoBehaviour {
     {
         Renderer[] renderer = building.GetComponentsInChildren<Renderer>();
         float height = Math.translateHeightToTerrainHeight(building.transform.position.y, Terrain.activeTerrain);
+
 
         foreach (Renderer r in renderer)
         {
@@ -41,7 +44,8 @@ public class SetBuildingPositionController : MonoBehaviour {
             {
                 for (int z = 0; z < heightmap.GetLength(1); z++)
                 {
-                    if (heightmap[x, z] != height)
+                    float delta = Math.delta(height, heightmap[x, z]);
+                    if (delta > toleranceValue)
                     {
                         return false;
                     }

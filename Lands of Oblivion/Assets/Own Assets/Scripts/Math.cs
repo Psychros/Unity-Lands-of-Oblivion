@@ -47,5 +47,13 @@ public class Math : MonoBehaviour
 
 		return new Vector3(x, y, z);
 	}
+
+    public static float delta(float x, float y)
+    {
+        if (x > y)
+            return x - y;
+        else
+            return y - x;
+    }
 }
 
