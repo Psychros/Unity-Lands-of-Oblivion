@@ -6,6 +6,4 @@ using System.Text;
 abstract class Identifyable
 {
     public abstract long id { get; protected set; }
-
-    //public virtual void doit();
 }
