@@ -7,7 +7,7 @@ public class SetBuildingPositionController : MonoBehaviour {
 	public GameObject building = null;
 	public Building buildingScript = null;
 
-    private float toleranceValue = 0.01f;
+    private float toleranceValue = 0.007f;
 
 	// Use this for initialization
 	void Start () {
@@ -19,35 +19,50 @@ public class SetBuildingPositionController : MonoBehaviour {
         //The building follows the mouse
         if (building != null)
         {
-            if (testTerrainForFlatness()) { 
-                Vector3 pos = RayCastManager.getTerrainPosition(200, buildingScript.minHeight, buildingScript.maxHeight);
-                if (pos != Vector3.zero)
-                    building.transform.position = pos;
+            Vector3 pos = RayCastManager.getTerrainPosition(200, buildingScript.minHeight, buildingScript.maxHeight);
+
+            //Vector3.zero is the return value of RayCastManager.getTerrainPosition if there is no value
+            if (pos != Vector3.zero & pos.y == BuildBuildingEvent.START_HEIGHT)
+            {
+                building.transform.position = new Vector3(pos.x, BuildBuildingEvent.START_HEIGHT, pos.z);
+            }
+
+            if (testTerrainForFlatness(pos)) {
+                building.transform.position = new Vector3(pos.x, pos.y, pos.z);
             }
 		}
 	}
 
-    bool testTerrainForFlatness()
+    bool testTerrainForFlatness(Vector3 v)
     {
         Renderer[] renderer = building.GetComponentsInChildren<Renderer>();
-        float height = Math.translateHeightToTerrainHeight(building.transform.position.y, Terrain.activeTerrain);
+        Vector3 buildingPos = Math.translateVector3ToTerrainCoordinate(v, Terrain.activeTerrain);
+        float height = Math.translateHeightToTerrainHeight(Terrain.activeTerrain.terrainData.GetHeight((int)buildingPos.x, (int)buildingPos.z), Terrain.activeTerrain);
 
 
+        //Test all objects of the building
         foreach (Renderer r in renderer)
         {
             Vector3 pos = Math.translateVector3ToTerrainCoordinate(r.bounds.center, Terrain.activeTerrain);
             Vector3 size = Math.translateVector3ToTerrainCoordinate(r.bounds.size, Terrain.activeTerrain);
 
             //Test the heights of the heightmap for equwality
-            float[,] heightmap = Terrain.activeTerrain.terrainData.GetHeights(Math.round(pos.x - (size.x / 2)), Math.round(pos.z - (size.z / 2)), Math.round(size.x), Math.round(size.z));
-            for (int x = 0; x < heightmap.GetLength(0); x++)
+            int xPos = Math.round(pos.x - (size.x / 2));
+            int zPos = Math.round(pos.z - (size.z / 2));
+
+            //The building must be within the terrainborders
+            if (xPos > 0 && zPos > 0 && (xPos + (size.x / 2)) < Terrain.activeTerrain.terrainData.size.x && (zPos + (size.z / 2)) < Terrain.activeTerrain.terrainData.size.z)
             {
-                for (int z = 0; z < heightmap.GetLength(1); z++)
+                float[,] heightmap = Terrain.activeTerrain.terrainData.GetHeights(xPos, zPos, Math.round(size.x), Math.round(size.z));
+                for (int x = 0; x < heightmap.GetLength(0); x++)
                 {
-                    float delta = Math.delta(height, heightmap[x, z]);
-                    if (delta > toleranceValue)
+                    for (int z = 0; z < heightmap.GetLength(1); z++)
                     {
-                        return false;
+                        float delta = Math.delta(height, heightmap[x, z]);
+                        if (delta > toleranceValue)
+                        {
+                            return false;
+                        }
                     }
                 }
             }
