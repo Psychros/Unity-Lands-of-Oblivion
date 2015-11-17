@@ -36,14 +36,16 @@ public class SetBuildingPositionController : MonoBehaviour {
     bool testTerrainForFlatness(Vector3 v)
     {
         Renderer[] renderer = building.GetComponentsInChildren<Renderer>();
-        Vector3 buildingPos = Math.translateVector3ToTerrainCoordinate(v, Terrain.activeTerrain);
-        float height = Math.translateHeightToTerrainHeight(Terrain.activeTerrain.terrainData.GetHeight((int)buildingPos.x, (int)buildingPos.z), Terrain.activeTerrain);
+        Vector3 mousePos = Math.translateVector3ToTerrainCoordinate(v, Terrain.activeTerrain);
+        Vector3 buildingPos = Math.translateVector3ToTerrainCoordinate(building.transform.position, Terrain.activeTerrain);
+        float height = Math.translateHeightToTerrainHeight(Terrain.activeTerrain.terrainData.GetHeight((int)mousePos.x, (int)mousePos.z), Terrain.activeTerrain);
 
 
         //Test all objects of the building
         foreach (Renderer r in renderer)
         {
-            Vector3 pos = Math.translateVector3ToTerrainCoordinate(r.bounds.center, Terrain.activeTerrain);
+            Vector3 rendererPos = Math.translateVector3ToTerrainCoordinate(r.bounds.center, Terrain.activeTerrain);
+            Vector3 pos = mousePos + (rendererPos - buildingPos);
             Vector3 size = Math.translateVector3ToTerrainCoordinate(r.bounds.size, Terrain.activeTerrain);
 
             //Test the heights of the heightmap for equwality
