@@ -42,6 +42,7 @@ public class InputManager : MonoBehaviour {
 	void Start () {
         count++;
         InputManager.instance = this;
+        Cursor.visible = false;
     }
 
 
@@ -66,7 +67,7 @@ public class InputManager : MonoBehaviour {
 
 		//Buildmenu
 		if(Input.GetKeyDown(buildmenu)){
-			switchToMenu(buildmenuCanvas, false);
+			switchToMenu(buildmenuCanvas, false, true);
 			if(isMenu){
 				BuildmenuManager.instance.activeMenu = null;
 			}
@@ -74,18 +75,18 @@ public class InputManager : MonoBehaviour {
 
 		//Pausemenu
 		if(Input.GetKeyDown(pausemenu)){
-			switchToMenu(pausemenuCanvas, false);
+			switchToMenu(pausemenuCanvas, false, true);
 			toggleTimeScale();
 		}
 
 		//Storemenu
 		if(Input.GetKeyDown(storemenu)){
-			switchToMenu(storemenuCanvas, false);
+			switchToMenu(storemenuCanvas, false, false);
 		}
 
 		//TerrainEditor
 		if(Input.GetKeyDown(terrainEditor)){
-			switchToMenu(terrainEditorCanvas, false);
+			switchToMenu(terrainEditorCanvas, false, false);
 
 			//Activates the TerrainEditor
 			if(currentMenu == terrainEditorCanvas)
@@ -177,21 +178,24 @@ public class InputManager : MonoBehaviour {
 		}
 	}
 
-	public void switchToMenu(Canvas menu, bool showInGame){
+	public void switchToMenu(Canvas menu, bool showInGame, bool showMouse){
 		if(menu == currentMenu || currentMenu == null){
 			isMenu = !isMenu;
 			if(isMenu){
 				if(!showInGame)
 					inGameCanvas.enabled = false;
+                if(showMouse)
+                    Cursor.visible = true;
 
-				menu.enabled = true;
+                menu.enabled = true;
 				currentMenu = menu;
 				
 			} else {
 				inGameCanvas.enabled = true;
 				currentMenu.enabled = false;
 				currentMenu = null;
-			}
+                Cursor.visible = false;
+            }
 		}
 	}
 }

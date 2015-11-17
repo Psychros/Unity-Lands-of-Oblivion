@@ -4,7 +4,7 @@ using System.Collections;
 public class PausemenuController : MonoBehaviour {
 
 	public void continueGame(){
-		InputManager.instance.switchToMenu(InputManager.instance.pausemenuCanvas, false);
+		InputManager.instance.switchToMenu(InputManager.instance.pausemenuCanvas, false, true);
 	}
 
 	public void startmenu(){

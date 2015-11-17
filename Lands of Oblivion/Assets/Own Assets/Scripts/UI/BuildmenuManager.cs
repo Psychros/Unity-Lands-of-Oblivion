@@ -11,10 +11,10 @@ public class BuildmenuManager : MonoBehaviour {
 
 	public void selectBuilding(string building){
 		if(activeMenu != null){
-			InputManager.instance.switchToMenu(activeMenu, false);
+			InputManager.instance.switchToMenu(activeMenu, false, true);
 			activeMenu = null;
 		} else{
-			InputManager.instance.switchToMenu(InputManager.instance.buildmenuCanvas, false);
+			InputManager.instance.switchToMenu(InputManager.instance.buildmenuCanvas, false, true);
 		}
 
 		BuildingManager.instance.selectedBuilding = building;
