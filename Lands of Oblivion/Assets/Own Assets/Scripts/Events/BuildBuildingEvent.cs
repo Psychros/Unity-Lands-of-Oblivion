@@ -5,8 +5,9 @@ using System.Collections;
 public class BuildBuildingEvent : UserEvent {
 
 	private static GameObject building;
+    public static float START_HEIGHT = -500;
 
-	public override void execute(){
+    public override void execute(){
 		if(SetBuildingPositionController.instance.building == null)
 		{
 			//Get the position where the player is looking at the terrain
@@ -17,7 +18,7 @@ public class BuildBuildingEvent : UserEvent {
 			try{
 				if(hit.transform.gameObject.tag == "Terrain"){		
 					building = createSelectedBuilding();
-					building.transform.position = hit.point;
+					building.transform.position = new Vector3(hit.point.x, START_HEIGHT, hit.point.z);
 
 
 					enableColliders(false);
@@ -33,9 +34,10 @@ public class BuildBuildingEvent : UserEvent {
 			SetBuildingPositionController.instance.building = null;
 			SetBuildingPositionController.instance.buildingScript = null;
 
-			if(building != null){
+			if(building != null & building.transform.position.y != START_HEIGHT)
+            {
 				enableColliders(true);
-				adjustTerrain(building);
+				//adjustTerrain(building);
 				building.GetComponent<Building>().build();
 			}
 		}
@@ -63,6 +65,7 @@ public class BuildBuildingEvent : UserEvent {
 				heightmap[x, z] = height/terrain.terrainData.size.y;
 			}
 		}
+        Debug.Log("X:" + (int)(pos.x - width / 2) + "  Y:" + (int)(pos.z - length / 2));
 		terrain.terrainData.SetHeights((int)(pos.x-width/2), (int)(pos.z-length/2), heightmap);
 	}
 

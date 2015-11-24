@@ -17,6 +17,11 @@ public class Math : MonoBehaviour
 		return height/terrain.terrainData.size.y;
 	}
 
+    public static float translateTerrainHeightToHeight(float terrainHeight, Terrain terrain)
+    {
+        return terrainHeight * terrain.terrainData.size.y;
+    }
+
 
     public static int floatToGridColumn(float x, float widthGridUnit)
     {
@@ -47,5 +52,13 @@ public class Math : MonoBehaviour
 
 		return new Vector3(x, y, z);
 	}
+
+    public static float delta(float x, float y)
+    {
+        if (x > y)
+            return x - y;
+        else
+            return y - x;
+    }
 }
 
