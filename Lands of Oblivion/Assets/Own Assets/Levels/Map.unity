@@ -1967,7 +1967,7 @@ GameObject:
   - 222: {fileID: 33052067}
   - 114: {fileID: 33052066}
   m_Layer: 0
-  m_Name: StoreSize Image
+  m_Name: Store Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2508,10 +2508,11 @@ RectTransform:
   - {fileID: 1762022509}
   - {fileID: 285252191}
   - {fileID: 861424581}
-  - {fileID: 1138781684}
   - {fileID: 952239145}
+  - {fileID: 1138781684}
   - {fileID: 1545968068}
   - {fileID: 1558374798}
+  - {fileID: 1152512026}
   m_Father: {fileID: 90415964}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -32819,7 +32820,7 @@ GameObject:
   - 222: {fileID: 615412426}
   - 114: {fileID: 615412425}
   m_Layer: 0
-  m_Name: Image
+  m_Name: InfoBox Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35645,7 +35646,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663905372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3213.41089, y: 331.69696, z: -3834.00464}
+  m_LocalPosition: {x: -1719.1438, y: 481.372498, z: -5181.63477}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6253190}
@@ -48311,7 +48312,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &861424580
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52899,7 +52900,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39161240}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 295, y: -30}
@@ -66323,7 +66324,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39161240}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 350, y: -33}
@@ -66360,7 +66361,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 0
 --- !u!222 &1138781686
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -67240,6 +67241,73 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.66893554
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1152512025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1152512026}
+  - 222: {fileID: 1152512028}
+  - 114: {fileID: 1152512027}
+  m_Layer: 0
+  m_Name: HairCross
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1152512026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1152512025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 39161240}
+  m_RootOrder: 9
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1152512027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1152512025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: dac1bdabcfb26c14b8567353e02c6edc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1152512028
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1152512025}
 --- !u!1 &1154246517
 GameObject:
   m_ObjectHideFlags: 0
@@ -72284,7 +72352,7 @@ MonoBehaviour:
   points: 0
   basePoints: 10
   maxMorality: 200
-  moralityText: {fileID: 0}
+  moralityText: {fileID: 1558374799}
   time: 30
   level0:
   - ressource: 50
@@ -91219,7 +91287,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: '0
+
+'
 --- !u!222 &1558374800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -102146,7 +102216,7 @@ GameObject:
   - 222: {fileID: 1762022511}
   - 114: {fileID: 1762022510}
   m_Layer: 0
-  m_Name: StoreSize Text
+  m_Name: Store Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102200,7 +102270,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: '0
+
+'
 --- !u!222 &1762022511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -105722,10 +105794,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSize: 10
-  storeText: {fileID: 0}
-  woodText: {fileID: 0}
+  storeText: {fileID: 1762022510}
+  woodText: {fileID: 861424579}
   woodText2: {fileID: 0}
-  stoneText: {fileID: 0}
+  stoneText: {fileID: 1138781685}
   stoneText2: {fileID: 0}
 --- !u!1 &1831061729
 GameObject:
