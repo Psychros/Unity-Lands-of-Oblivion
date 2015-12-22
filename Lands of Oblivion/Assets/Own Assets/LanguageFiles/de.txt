@@ -7,39 +7,9 @@ Startmenu.QuitGame		        = Spiel beenden
 /*
  * Buildmenu 
  */
-Buildmenu.Title    			    = Baumenü
-Buildmenu.ButtonStore			= Lager
-Buildmenu.ButtonHouses			= Häuser
-Buildmenu.ButtonFood			= Nahrung
-Buildmenu.ButtonMaterials		= Baumaterial
-Buildmenu.ButtonProducts		= Waren
-Buildmenu.ButtonCivil			= Zivil
-Buildmenu.ButtonNothing			= Nichts
-
-//Stores
-Buildmenu.ButtonStoreHouse  	= Lagerhaus
-
-//Houses
-Buildmenu.ButtonFarmHouse   	= Bauernhaus
-Buildmenu.ButtonCitizensHouse   = Bürgerhaus
-Buildmenu.ButtonMerchantsHouse	= Kaufmannshaus
-Buildmenu.ButtonNobleVilla		= Adelige Villa
-
-//Foodbuildings
-Buildmenu.ButtonFisher			= Fischer
-Buildmenu.ButtonFountain		= Brunnen
-Buildmenu.ButtonCropFarm		= Getreidefarm
-Buildmenu.ButtonHopsFarm		= Hopfenfarm
-Buildmenu.ButtonBrewery			= Brauerei
-Buildmenu.ButtonMill			= Mühle
-Buildmenu.ButtonBakery			= Bäckerei
-Buildmenu.ButtonPigFarm			= Schweinefarm
-
-//Workbuildings
-Buildmenu.ButtonWoodcutter  	= Holzfäller
-
-//Civil buildings
-Buildmenu.ButtonChurch 			= Kirche
+Buildmenu.BuildingDescription.Costs      = Kosten:
+Buildmenu.BuildingDescription.Product    = Produkt:
+Buildmenu.BuildingDescription.Ressources = Ressourcen:
 
 
 /*
@@ -48,3 +18,9 @@ Buildmenu.ButtonChurch 			= Kirche
 Pausemenu.Continue				= Fortsetzen
 Pausemenu.Startmenu				= Startmenü
 Pausemenu.QuitGame				= Beenden
+
+
+/*
+ * Buildings
+ */
+Building.StoreHouse = Lagerhaus

@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 416104}
   - 33: {fileID: 3356892}
   - 23: {fileID: 2360750}
-  - 208: {fileID: 20860604}
   - 114: {fileID: 11490608}
   - 65: {fileID: 6561248}
   - 65: {fileID: 6512780}
@@ -51,7 +50,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -102,27 +103,19 @@ MonoBehaviour:
   costs:
   - ressource: 0
     number: 6
+  description:
+    name: 
+    costWood: 0
+    costStone: 0
+    productImage: {fileID: 0}
   buildingtimeForOneRessource: 3
   height: 7
+  minHeight: 11
+  maxHeight: 30
   ressource: 50
   productionTime: 10
   number: 2
   worker: {fileID: 0}
---- !u!208 &20860604
-NavMeshObstacle:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131158}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 2.22900009, y: 2.28800011, z: 1.70900011}
-  m_MoveThreshold: .100000001
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 1.02700007, y: .527999997, z: 1.70900011}
-  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -73,7 +73,8 @@ public class InputManager : MonoBehaviour {
 			if(isMenu){
 				BuildmenuManager.instance.activeMenu = null;
 			}
-		}
+            toggleTimeScale();
+        }
 
 		//Pausemenu
 		if(Input.GetKeyDown(pausemenu)){
