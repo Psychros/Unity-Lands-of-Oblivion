@@ -57,6 +57,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
 
+        public MouseLook MouseLook
+        {
+            get { return m_MouseLook; }
+            set { m_MouseLook = value; }
+        }
 
         // Update is called once per frame
         private void Update()

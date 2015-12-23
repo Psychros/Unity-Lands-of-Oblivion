@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 using System;
 
 public class InputManager : MonoBehaviour {
@@ -12,7 +13,8 @@ public class InputManager : MonoBehaviour {
 	public GameObject ui;
 	private  bool _isMenu = false;
     public bool isMenu { get { return _isMenu; } set { _isMenu = value; } }
-	private bool isPause = false;
+	private bool isPause = false;   
+
 	private float timer = 0;
 	private float timerTime = 0.2f;
 
@@ -176,10 +178,23 @@ public class InputManager : MonoBehaviour {
 
 		if(isPause){
 			Time.timeScale = 0;
-		} else {
+
+            FirstPersonController fps = playerTransform.gameObject.GetComponentInParent<FirstPersonController>();
+            fps.MouseLook.XSensitivity = 0.1f;
+            fps.MouseLook.YSensitivity = 0.1f;
+        } else {
 			Time.timeScale = 1;
-		}
+
+            FirstPersonController fps = playerTransform.gameObject.GetComponentInParent<FirstPersonController>();
+            fps.MouseLook.XSensitivity = 2f;
+            fps.MouseLook.YSensitivity = 2f;
+        }
 	}
+
+    public void freezePlayer()
+    {
+
+    }
 
     //The GameObject should be a Panel
 	public void switchToMenu(GameObject menu, bool showInGame, bool showMouse){
