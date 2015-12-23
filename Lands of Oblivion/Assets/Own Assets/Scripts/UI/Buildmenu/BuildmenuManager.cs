@@ -19,6 +19,7 @@ public class BuildmenuManager : MonoBehaviour {
     public Text ressource1Text;
 
     private GameObject currentProductionChain = null;   //Save the productionchain that it can be disabled later
+    private Building selectedBuilding = null;           //Current building in the building description
 
     public BuildmenuManager()
     {
@@ -29,48 +30,32 @@ public class BuildmenuManager : MonoBehaviour {
      
 	}
 
-	public void selectBuilding(string building){
-		if(activeMenu != null){
-			InputManager.instance.switchToMenu(activeMenu, false, true);
-			activeMenu = null;
-		} else{
-			InputManager.instance.switchToMenu(InputManager.instance.buildmenuPanel, false, true);
-		}
+    public void selectBuilding()
+    {
+        //Select the building
+        BuildingManager.instance.selectedBuilding = selectedBuilding;
 
-		BuildingManager.instance.selectedBuilding = building;
-	}
-
-
-	public void switchToSubmenu(GameObject subMenu){
-		//Disable old menu
-		if(activeMenu == null)
-			InputManager.instance.buildmenuPanel.GetComponent<Canvas>().enabled = false;
-		else
-			activeMenu.GetComponent<Canvas>().enabled = false;
-
-		subMenu.GetComponent<Canvas>().enabled   = true;
-		this.activeMenu = subMenu;
-		InputManager.instance.CurrentMenu = activeMenu;
-	}
-
-
-	public void switchToRootmenu(GameObject rootMenu){	
-		activeMenu.SetActive(false);
-        rootMenu.SetActive(true);
-        activeMenu = rootMenu;
-		InputManager.instance.CurrentMenu = activeMenu;
-	}
+        //Close the buildmenu
+        InputManager.instance.switchToMenu(InputManager.instance.buildmenuPanel, false, true);
+        BuildmenuManager.instance.activeMenu = null;
+        InputManager.instance.toggleTimeScale();
+    }
 
     /*
      * Show the building description
      */
     public void showBuildingDescription(Building building)
     {
+        //Enable the building description
         buildingDescription.SetActive(true);
 
+        //Actualize the texts and images
         buildingName.text = Localizer.Instance.GetText("Building." + building.name);
         showCosts(building);
         showProduct(building);
+
+        //Save the selection
+        selectedBuilding = building;
     }
 
 

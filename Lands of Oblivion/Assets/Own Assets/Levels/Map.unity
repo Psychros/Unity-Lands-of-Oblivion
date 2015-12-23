@@ -36768,7 +36768,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663905372}
   m_LocalRotation: {x: -.00749992998, y: 0, z: 0, w: .999971867}
-  m_LocalPosition: {x: -1651.57019, y: 461.953827, z: -4609.87402}
+  m_LocalPosition: {x: -1730.41394, y: 464.331665, z: -5502.98779}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6253190}
@@ -62210,7 +62210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1068128027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -63014,7 +63014,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1074359708}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1791512753}
+        m_MethodName: selectBuilding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1074359708
@@ -118242,12 +118253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a3acd5b721f62408c4ff8045b78350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedBuilding: 
-  storeHouse: {fileID: 131104, guid: 9767c41eabf8bf0449eb62f9fe0db16a, type: 2}
-  woodenHouse: {fileID: 103946, guid: c513567be878a1c468230480245eff0c, type: 2}
-  woodcutter: {fileID: 110508, guid: 1faa4d16f15ed73449f33fb0750a1760, type: 2}
-  church: {fileID: 160286, guid: 9ed00382288bdfa48a4ee9ba694e0d01, type: 2}
-  fisher: {fileID: 131158, guid: a83135459f834a04297fca5e55b47d89, type: 2}
+  selectedBuilding: {fileID: 0}
 --- !u!1 &2023920394
 GameObject:
   m_ObjectHideFlags: 0
