@@ -119,15 +119,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   costs:
-  - ressource: 0
+  - ressource: 1
     number: 5
   buildingtimeForOneRessource: 3
   height: 55
   minHeight: 11
   maxHeight: 30
-  ressource: 800
+  product: 800
+  ressource: 0
+  numberProduct: 1
+  numberRessource: 1
   productionTime: 10
-  number: 1
   worker: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
@@ -188,6 +190,14 @@ Prefab:
       propertyPath: buildingPrefab
       value: 
       objectReference: {fileID: 160286}
+    - target: {fileID: 0}
+      propertyPath: product
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: costs.Array.data[0].ressource
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 160286}

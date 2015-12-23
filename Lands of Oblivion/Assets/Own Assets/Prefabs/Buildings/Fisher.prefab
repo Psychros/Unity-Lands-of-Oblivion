@@ -101,20 +101,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   costs:
-  - ressource: 0
+  - ressource: 1
     number: 6
-  description:
-    name: 
-    costWood: 0
-    costStone: 0
-    productImage: {fileID: 0}
   buildingtimeForOneRessource: 3
   height: 7
   minHeight: 11
   maxHeight: 30
-  ressource: 50
+  product: 50
+  ressource: 0
+  numberProduct: 2
+  numberRessource: 0
   productionTime: 10
-  number: 2
   worker: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
@@ -134,6 +131,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: height
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: product
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: numberProduct
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: numberRessource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ressource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: costs.Array.data[0].ressource
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

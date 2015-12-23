@@ -109,14 +109,28 @@ public class BuildmenuManager : MonoBehaviour {
     {
         if(building is WorkBuilding)
         {
+            WorkBuilding b = (WorkBuilding)building;
+
             productText.enabled = true;
             product1Image.enabled = true;
             product1Text.enabled = true;
 
-            WorkBuilding b = (WorkBuilding)building;
+            product1Image.sprite = RessourceManager.Instance.getSprite(b.product);
+            product1Text.text    = b.numberProduct.ToString();
 
-            product1Image.sprite = RessourceManager.Instance.getSprite(b.ressource);
-            product1Text.text    = b.number.ToString();
+            if((int)b.ressource != (int)Ressources.None)
+            {
+                ressourceText.enabled = true;
+                ressource1Image.enabled = true;
+                ressource1Text.enabled = true;
+
+                ressource1Image.sprite = RessourceManager.Instance.getSprite(b.ressource);
+                ressource1Text.text    = b.numberRessource.ToString();
+            } else {
+                ressourceText.enabled = false;
+                ressource1Image.enabled = false;
+                ressource1Text.enabled = false;
+            }
         } else {
             productText.enabled = false;
             product1Image.enabled = false;

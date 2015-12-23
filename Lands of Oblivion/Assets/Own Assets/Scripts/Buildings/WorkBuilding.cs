@@ -3,11 +3,13 @@ using System.Collections;
 
 public class WorkBuilding : Building {
 
-	public Ressources ressource;
-	public float productionTime;
-	public int number = 1;
+	public Ressources product;
+    public Ressources ressource;
+	public int numberProduct = 1;
+    public int numberRessource = 1;
+    public float productionTime;
 
-	private float timerRessources = 0;
+    private float timerRessources = 0;
 
 	public GameObject worker = null;
 
@@ -30,18 +32,28 @@ public class WorkBuilding : Building {
 		NPCManager.instance.addWorkBuilding(this);
 	}
 
-	//Produce the product every in productionTime seconds
+	/*
+     *Produce the product every in productionTime seconds
+     */
 	protected void produce(){
 		timerRessources += Time.deltaTime;
 
 		if(worker != null){
 			if(timerRessources >= productionTime){
-				GlobalStore.instance.addRessources(ressource, number);
-				timerRessources = 0;
+                if (((int)ressource == (int)Ressources.None) || (numberRessource <= GlobalStore.instance.getNumberOfRessource(ressource))){
 
-				//The morality has an influence on the productionTime
-				float time = productionTime/(NPCManager.instance.Morality/100f);
-				timerRessources = productionTime - time;
+                    //Remove ressource
+                    if(((int)ressource != (int)Ressources.None))
+                        GlobalStore.instance.addRessources(ressource, -numberRessource);
+
+                    //Add Product
+                    GlobalStore.instance.addRessources(product, numberProduct);
+                    timerRessources = 0;
+
+                    //The morality has an influence on the productionTime
+                    float time = productionTime / (NPCManager.instance.Morality / 100f);
+                    timerRessources = productionTime - time;
+                }
 			}
 		}
 	}
