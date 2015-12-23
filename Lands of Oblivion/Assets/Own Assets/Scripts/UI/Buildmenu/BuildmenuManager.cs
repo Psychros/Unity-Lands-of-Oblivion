@@ -18,6 +18,8 @@ public class BuildmenuManager : MonoBehaviour {
     public Image ressource1Image;
     public Text ressource1Text;
 
+    private GameObject currentProductionChain = null;   //Save the productionchain that it can be disabled later
+
     public BuildmenuManager()
     {
         instance = this;
@@ -59,6 +61,9 @@ public class BuildmenuManager : MonoBehaviour {
 		InputManager.instance.CurrentMenu = activeMenu;
 	}
 
+    /*
+     * Show the building description
+     */
     public void showBuildingDescription(Building building)
     {
         buildingDescription.SetActive(true);
@@ -139,5 +144,23 @@ public class BuildmenuManager : MonoBehaviour {
             ressource1Image.enabled = false;
             ressource1Text.enabled = false;
         }
+    }
+
+
+    /*
+     *
+     */
+     public void showProductionChain(GameObject productionChain)
+    {
+        //Disable the current production chain
+        if(currentProductionChain != null)
+            currentProductionChain.SetActive(false);
+
+        //Enable the new production chain
+        productionChain.SetActive(true);
+        currentProductionChain = productionChain;
+
+        //Disable the building description
+        buildingDescription.SetActive(false);
     }
 }

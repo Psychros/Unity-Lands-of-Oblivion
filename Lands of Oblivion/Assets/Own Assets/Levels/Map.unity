@@ -29224,7 +29224,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 534182849}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1791512753}
+        m_MethodName: showProductionChain
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1830815979}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &534182849
@@ -36757,7 +36768,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663905372}
   m_LocalRotation: {x: -.00749992998, y: 0, z: 0, w: .999971867}
-  m_LocalPosition: {x: -1781.77161, y: 464.573608, z: -5189.5918}
+  m_LocalPosition: {x: -1816.45667, y: 474.275146, z: -5327.67529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6253190}
@@ -54324,7 +54335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &954331278
 RectTransform:
   m_ObjectHideFlags: 0
@@ -105534,7 +105545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1791512750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -108773,7 +108784,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1845037062}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1791512753}
+        m_MethodName: showProductionChain
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 954331277}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1845037062
@@ -119971,7 +119993,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2058721635}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1791512753}
+        m_MethodName: showProductionChain
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1730836560}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2058721635
