@@ -23,5 +23,6 @@ Pausemenu.QuitGame				= Beenden
 /*
  * Buildings
  */
-Building.StoreHouse = Lagerhaus
-Building.Fisher     = Fischer
+Building.StoreHouse   = Lagerhaus
+Building.Fisher       = Fischer
+Building.WoodenHouse  = Holzhaus
