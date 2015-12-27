@@ -118,6 +118,7 @@ public class TerrainEditor : MonoBehaviour {
             }
         }
 
+        //make the change visible
         terrain.terrainData.SetHeightsDelayLOD(Math.round(terrainPosition.x), Math.round(terrainPosition.z), height);
         Pathfinder.Instance.editNode(Math.round(terrainPosition.x), Math.round(terrainPosition.z));
 	}
