@@ -17,6 +17,8 @@ public class Pathfinding : MonoBehaviour
 
     public void FindPath(Vector3 startPosition, Vector3 endPosition)
     {
+        Debug.Log(PathType);
+
         if (PathType == PathfinderType.GridBased)
         {
             Pathfinder.Instance.InsertInQueue(startPosition, endPosition, SetList);
