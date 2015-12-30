@@ -27,7 +27,7 @@ public class BuildBuildingEvent : UserEvent {
 				}
 			} 
 			catch(Exception e){
-				Debug.LogError("No building selected! " + e.Message);
+
 			}
 		} else
 		{
@@ -80,28 +80,6 @@ public class BuildBuildingEvent : UserEvent {
 
 
 	public GameObject createSelectedBuilding(){
-		GameObject building = null;
-
-		switch(BuildingManager.instance.selectedBuilding){
-			//Stores
-			case "storehouse": 	 	 building = Instantiate(BuildingManager.instance.storeHouse); break;
-
-			//Houses	
-			case "farmhouse":	 	 building = Instantiate(BuildingManager.instance.woodenHouse); break;
-			case "citizensHouse":	 building = Instantiate(BuildingManager.instance.woodenHouse); break;
-			case "merchantsHouse":   building = Instantiate(BuildingManager.instance.woodenHouse); break;
-			case "nobleVilla": 		 building = Instantiate(BuildingManager.instance.woodenHouse); break;
-
-			//Food buildings
-			case "fisher": 			 building = Instantiate(BuildingManager.instance.fisher); break;
-
-			//Work buildings
-			case "woodcutter":  	 building = Instantiate(BuildingManager.instance.woodcutter); break;
-
-			//Civil buildings
-			case "church":  		 building = Instantiate(BuildingManager.instance.church); break;
-		}
-
-		return building;
+        return Instantiate(BuildingManager.instance.selectedBuilding.gameObject);
 	}
 }

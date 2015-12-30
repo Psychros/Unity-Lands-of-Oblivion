@@ -145,6 +145,6 @@ public class NPCManager : MonoBehaviour {
 	
 
 	public void actualizeNPCText(){
-		moralityText.text = freePeople.Count + "/" + numberPeople + " (" + morality + "%)";
+		moralityText.text =  morality + "%";
 	}
 }

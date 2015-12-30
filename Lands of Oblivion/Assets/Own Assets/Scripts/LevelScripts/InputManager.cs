@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 using System;
 
 public class InputManager : MonoBehaviour {
@@ -12,17 +13,20 @@ public class InputManager : MonoBehaviour {
 	public GameObject ui;
 	private  bool _isMenu = false;
     public bool isMenu { get { return _isMenu; } set { _isMenu = value; } }
-	public Canvas currentMenu;
-	private bool isPause = false;
+	private bool isPause = false;   
+
 	private float timer = 0;
 	private float timerTime = 0.2f;
 
-	//All menupanels
-	public Canvas inGameCanvas;
-	public Canvas buildmenuCanvas;
-	public Canvas pausemenuCanvas;
-	public Canvas storemenuCanvas;
-	public Canvas terrainEditorCanvas;
+    //All menupanels
+    private GameObject currentMenu;
+    public GameObject CurrentMenu { get { return currentMenu; } set { currentMenu = value;}  }
+
+    public GameObject inGamePanel;
+	public GameObject buildmenuPanel;
+	public GameObject pausemenuPanel;
+	public GameObject storemenuPanel;
+	public GameObject terrainEditorPanel;
 
 	//All KeyCodes
 	public KeyCode cutTree			 = KeyCode.Mouse0;
@@ -67,29 +71,30 @@ public class InputManager : MonoBehaviour {
 
 		//Buildmenu
 		if(Input.GetKeyDown(buildmenu)){
-			switchToMenu(buildmenuCanvas, false, true);
+			switchToMenu(buildmenuPanel, false, true);
 			if(isMenu){
 				BuildmenuManager.instance.activeMenu = null;
 			}
-		}
+            toggleTimeScale();
+        }
 
 		//Pausemenu
 		if(Input.GetKeyDown(pausemenu)){
-			switchToMenu(pausemenuCanvas, false, true);
+			switchToMenu(pausemenuPanel, false, true);
 			toggleTimeScale();
 		}
 
 		//Storemenu
 		if(Input.GetKeyDown(storemenu)){
-			switchToMenu(storemenuCanvas, false, false);
+			switchToMenu(storemenuPanel, false, false);
 		}
 
 		//TerrainEditor
 		if(Input.GetKeyDown(terrainEditor)){
-			switchToMenu(terrainEditorCanvas, false, false);
+			switchToMenu(terrainEditorPanel, false, false);
 
 			//Activates the TerrainEditor
-			if(currentMenu == terrainEditorCanvas)
+			if(currentMenu == terrainEditorPanel)
 				TerrainEditor.instance.activateTerrainEditor();
 			else
 				TerrainEditor.instance.deactivateTerrainEditor();
@@ -173,27 +178,41 @@ public class InputManager : MonoBehaviour {
 
 		if(isPause){
 			Time.timeScale = 0;
-		} else {
+
+            FirstPersonController fps = playerTransform.gameObject.GetComponentInParent<FirstPersonController>();
+            fps.MouseLook.XSensitivity = 0.1f;
+            fps.MouseLook.YSensitivity = 0.1f;
+        } else {
 			Time.timeScale = 1;
-		}
+
+            FirstPersonController fps = playerTransform.gameObject.GetComponentInParent<FirstPersonController>();
+            fps.MouseLook.XSensitivity = 2f;
+            fps.MouseLook.YSensitivity = 2f;
+        }
 	}
 
-	public void switchToMenu(Canvas menu, bool showInGame, bool showMouse){
+    public void freezePlayer()
+    {
+
+    }
+
+    //The GameObject should be a Panel
+	public void switchToMenu(GameObject menu, bool showInGame, bool showMouse){
 		if(menu == currentMenu || currentMenu == null){
 			isMenu = !isMenu;
 			if(isMenu){
-				if(!showInGame)
-					inGameCanvas.enabled = false;
+                if (!showInGame)
+                    inGamePanel.SetActive(false);
                 if(showMouse)
                     Cursor.visible = true;
 
-                menu.enabled = true;
-				currentMenu = menu;
+                menu.SetActive(true);
+                currentMenu = menu;
 				
 			} else {
-				inGameCanvas.enabled = true;
-				currentMenu.enabled = false;
-				currentMenu = null;
+                inGamePanel.SetActive(true);
+                currentMenu.SetActive(false);
+                currentMenu = null;
                 Cursor.visible = false;
             }
 		}

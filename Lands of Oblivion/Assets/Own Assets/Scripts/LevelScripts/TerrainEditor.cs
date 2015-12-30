@@ -102,10 +102,11 @@ public class TerrainEditor : MonoBehaviour {
         else if (height[0, 0] < newHeight)
         {
             float distance = Time.deltaTime * editSpeed;
-            height[0, 0] += Math.translateHeightToTerrainHeight(distance, terrain);
 
             if (dirt >= distance)
             {
+                height[0, 0] += Math.translateHeightToTerrainHeight(distance, terrain);
+
                 if (height[0, 0] > newHeight)
                 {
                     height[0, 0] = newHeight;
@@ -117,6 +118,7 @@ public class TerrainEditor : MonoBehaviour {
             }
         }
 
+        //make the change visible
         terrain.terrainData.SetHeightsDelayLOD(Math.round(terrainPosition.x), Math.round(terrainPosition.z), height);
         Pathfinder.Instance.editNode(Math.round(terrainPosition.x), Math.round(terrainPosition.z));
 	}

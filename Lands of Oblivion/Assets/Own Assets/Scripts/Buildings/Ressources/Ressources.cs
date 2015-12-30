@@ -2,8 +2,11 @@
 using System.Collections;
 
 public enum Ressources{
+    //None
+    None = 0,
+
 	//Building material
-	Wood = 0, Stone = 1, Clay = 2, ClayBrick = 3, 
+	Wood = 1, Stone = 2, Clay = 3, ClayBrick = 4, 
 	
 	//Food
 	Fish = 50, Water = 51, Crop = 52, Hops = 53, Beer = 54,  Flour = 55, Breath = 56, Pig = 57, Milk = 58, 

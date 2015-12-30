@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 416104}
   - 33: {fileID: 3356892}
   - 23: {fileID: 2360750}
-  - 208: {fileID: 20860604}
   - 114: {fileID: 11490608}
   - 65: {fileID: 6561248}
   - 65: {fileID: 6512780}
@@ -51,7 +50,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -100,29 +101,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   costs:
-  - ressource: 0
+  - ressource: 1
     number: 6
   buildingtimeForOneRessource: 3
   height: 7
-  ressource: 50
+  minHeight: 11
+  maxHeight: 30
+  product: 50
+  ressource: 0
+  numberProduct: 2
+  numberRessource: 0
   productionTime: 10
-  number: 2
   worker: {fileID: 0}
---- !u!208 &20860604
-NavMeshObstacle:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131158}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 2.22900009, y: 2.28800011, z: 1.70900011}
-  m_MoveThreshold: .100000001
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 1.02700007, y: .527999997, z: 1.70900011}
-  m_TimeToStationary: .5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -141,6 +131,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: height
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: product
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: numberProduct
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: numberRessource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ressource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: costs.Array.data[0].ressource
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
