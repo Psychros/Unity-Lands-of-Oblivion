@@ -35924,7 +35924,6 @@ CapsuleCollider:
   m_Height: 3.27496266
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
-
 --- !u!1 &647385461
 GameObject:
   m_ObjectHideFlags: 0
@@ -35954,16 +35953,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1736091318}
-  - {fileID: 1277846332}
-  - {fileID: 2027303216}
-  - {fileID: 1486211262}
-  - {fileID: 1276913444}
-  - {fileID: 485818751}
   - {fileID: 1764652849}
   - {fileID: 1209738882}
-  m_Father: {fileID: 989912975}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -36026,7 +36019,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-
 --- !u!1 &647616031
 GameObject:
   m_ObjectHideFlags: 0
@@ -37217,10 +37209,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663905372}
-
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1779.28955, y: 409.955322, z: -6572.38086}
-
+  m_LocalRotation: {x: .0414136872, y: .887659132, z: .0814482048, w: -.451345205}
+  m_LocalPosition: {x: 1018.66821, y: 688.934937, z: -1179.87097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6253190}
@@ -73543,7 +73533,7 @@ RectTransform:
   m_LocalScale: {x: 1.39999998, y: 1.45877028, z: 1}
   m_Children: []
   m_Father: {fileID: 647385462}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 75, y: -157}
@@ -81903,11 +81893,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wireframeCubePrefab: {fileID: 188314, guid: 16c354ff395e1be448b24b960c4c1f28, type: 2}
-
-  currentHeight: {fileID: 2027303217}
-  selectedHeight: {fileID: 1276913445}
+  currentHeight: {fileID: 0}
+  selectedHeight: {fileID: 0}
   dirtText: {fileID: 1209738883}
-
   selectedTerrainHeight: 13
   maxHeight: 30
   minHeight: 11
@@ -105707,7 +105695,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 647385462}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 15, y: -145}
