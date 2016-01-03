@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Scharfes_Metall
+  m_Name: Klinge_Text
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 5
@@ -19,14 +19,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: c3229f476df581041a10b95e226ea1f8, type: 3}
+          m_Texture: {fileID: 2800000, guid: 6cf8465315b232c49a9d03a13e0d2a8f, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: d95dfea31847ec04481a51e0aa0cdb18, type: 3}
+          m_Texture: {fileID: 2800000, guid: 0b37c745769500f4687a27f0d6004761, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -93,10 +93,6 @@ Material:
         second: .5
       data:
         first:
-          name: _Shininess
-        second: .133000001
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -106,7 +102,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .187999994
+        second: .5
       data:
         first:
           name: _BumpScale
@@ -130,7 +126,7 @@ Material:
       data:
         first:
           name: _Metallic
-        second: .189999998
+        second: 0
     m_Colors:
       data:
         first:
@@ -140,7 +136,3 @@ Material:
         first:
           name: _Color
         second: {r: .800000012, g: .800000012, b: .800000012, a: 1}
-      data:
-        first:
-          name: _SpecColor
-        second: {r: .5, g: .5, b: .5, a: 1}

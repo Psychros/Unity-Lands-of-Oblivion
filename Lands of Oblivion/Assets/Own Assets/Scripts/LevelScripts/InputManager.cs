@@ -18,6 +18,8 @@ public class InputManager : MonoBehaviour {
 	private float timer = 0;
 	private float timerTime = 0.2f;
 
+    public AxeController axeController;
+
     //All menupanels
     private GameObject currentMenu;
     public GameObject CurrentMenu { get { return currentMenu; } set { currentMenu = value;}  }
@@ -42,7 +44,6 @@ public class InputManager : MonoBehaviour {
 	public KeyCode terrainHeightDown = KeyCode.X;
 
 
-
 	void Start () {
         count++;
         InputManager.instance = this;
@@ -53,7 +54,7 @@ public class InputManager : MonoBehaviour {
     void Update () {
 		//Cut tree
 		if(Input.GetKeyDown(cutTree)){
-            testForInteractableObject(2);
+            axeController.triggerCut();
 		}
 
 		//Place building
