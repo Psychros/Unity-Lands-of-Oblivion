@@ -10,7 +10,6 @@ public class AxeController : MonoBehaviour {
     //Timer for the short waitTime
     private bool hasClicked = false;
     private float timerClicked = 0;
-    public float timeClicked = 0.5f;
 
     void Start () {
         //Search the right animator
@@ -19,26 +18,12 @@ public class AxeController : MonoBehaviour {
         {
             if (a.name.Equals("Axe"))
                 anim = a;
-        }
-	}
+        } 
+    }
 	
 
 	void Update () {
         timer  += Time.deltaTime;
-
-        //Cut the tree after the animation
-        if (hasClicked)
-        {
-            timerClicked += Time.deltaTime;
-
-            if(timerClicked >= timeClicked)
-            {
-                timerClicked = 0;
-                hasClicked = false;
-
-                InputManager.instance.testForInteractableObject(2);
-            }
-        }
 	}
 
     //Start the cutAnimation and cut the tree
@@ -50,5 +35,10 @@ public class AxeController : MonoBehaviour {
             timer = 0;
             hasClicked = true;
         }
+    }
+
+    public void cutTree()
+    {
+        InputManager.instance.testForInteractableObject(2);
     }
 }
