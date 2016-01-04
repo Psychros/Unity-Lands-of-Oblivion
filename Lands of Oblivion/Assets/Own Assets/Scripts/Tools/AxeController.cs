@@ -4,12 +4,6 @@ using System.Collections;
 public class AxeController : MonoBehaviour {
 
     private Animator anim;
-    private float timer = 0.8f;
-    public float reloadTime = 0.6f;
-
-    //Timer for the short waitTime
-    private bool hasClicked = false;
-    private float timerClicked = 0;
 
     void Start () {
         //Search the right animator
@@ -23,18 +17,19 @@ public class AxeController : MonoBehaviour {
 	
 
 	void Update () {
-        timer  += Time.deltaTime;
+
 	}
 
     //Start the cutAnimation and cut the tree
     public void triggerCut()
     {
-        if (timer >= reloadTime)
-        {
-            anim.SetTrigger("Cut");
-            timer = 0;
-            hasClicked = true;
-        }
+        anim.SetBool("isCut", true);
+    }
+
+    //Start the cutAnimation and cut the tree
+    public void resetCut()
+    {
+        anim.SetBool("isCut", false);
     }
 
     public void cutTree()
