@@ -18835,7 +18835,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ed684234c39659c46a7f6dc103c76668, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34143,7 +34143,7 @@ Transform:
   - {fileID: 1698867297}
   - {fileID: 294769209}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &618367640
 GameObject:
   m_ObjectHideFlags: 0
@@ -37156,8 +37156,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663905372}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2640.14014, y: 352.298218, z: -3762.54761}
+  m_LocalRotation: {x: .0614093244, y: .0410123654, z: .00252567697, w: -.997266531}
+  m_LocalPosition: {x: -1778.63318, y: 610.274902, z: -3368.6438}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6253190}
@@ -41388,6 +41388,56 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.51925111
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &726595972
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2097660564}
+    m_Modifications:
+    - target: {fileID: 400004, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -22.6809998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8545c35fe58a8fa43847bbdeb7d0cead, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &726646116
 GameObject:
   m_ObjectHideFlags: 0
@@ -48325,7 +48375,7 @@ Transform:
   - {fileID: 703491324}
   - {fileID: 1599185102}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &837294542
 GameObject:
   m_ObjectHideFlags: 0
@@ -81935,6 +81985,10 @@ CapsuleCollider:
   m_Height: 3.86840105
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1340389149 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 4ec0094cea6874d4296a8ff83d72f06b, type: 3}
+  m_PrefabInternal: {fileID: 726595972}
 --- !u!1 &1341285474
 GameObject:
   m_ObjectHideFlags: 0
@@ -96321,9 +96375,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icons:
   - name: Wood
-    prefab: {fileID: 2800000, guid: 91a0e6c6598f30d4094f51fe2449d8e4, type: 3}
+    prefab: {fileID: 2800000, guid: 01eda2ac0d3307e458d7be21854942aa, type: 3}
   - name: Stone
-    prefab: {fileID: 2800000, guid: c7bbeebc03e26374fb96488a274d46cc, type: 3}
+    prefab: {fileID: 2800000, guid: 7623405bde32379439f4cd36febc7637, type: 3}
+  - name: Apple
+    prefab: {fileID: 2800000, guid: ed684234c39659c46a7f6dc103c76668, type: 3}
   - name: Fish
     prefab: {fileID: 2800000, guid: ad58eca5aa189664988b98c18e001334, type: 3}
 --- !u!1 &1599357826
@@ -123167,6 +123223,34 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.60304093
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2097660563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2097660564}
+  m_Layer: 0
+  m_Name: Windmill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2097660564
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097660563}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 424.377991, y: 14.9490004, z: 263.624847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1340389149}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1 &2098375216
 GameObject:
   m_ObjectHideFlags: 0

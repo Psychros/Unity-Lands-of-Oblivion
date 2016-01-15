@@ -53,7 +53,7 @@ public class InputManager : MonoBehaviour {
 
     void Update () {
 		//Cut tree
-		if(Input.GetKeyDown(cutTree)){
+		if(Input.GetKeyDown(cutTree) && !isPause){
             axeController.triggerCut();
 		}
 
