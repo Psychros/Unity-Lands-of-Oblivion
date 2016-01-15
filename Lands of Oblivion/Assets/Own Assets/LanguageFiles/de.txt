@@ -26,3 +26,4 @@ Pausemenu.QuitGame				= Beenden
 Building.StoreHouse   = Lagerhaus
 Building.Fisher       = Fischer
 Building.WoodenHouse  = Holzhaus
+Building.Windmill	  = Windmühle

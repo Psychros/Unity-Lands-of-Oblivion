@@ -25,3 +25,4 @@ Pausemenu.QuitGame				= Quit Game
 Building.StoreHouse   = Store House
 Building.Fisher       = Fisher
 Building.WoodenHouse  = Wooden House
+Building.Windmill	  = Windmill
