@@ -46,7 +46,6 @@ public class BuildmenuManager : MonoBehaviour {
      */
     public void showBuildingDescription(Building building)
     {
-        Debug.Log("Hallo");
         //Enable the building description
         buildingDescription.SetActive(true);
 
