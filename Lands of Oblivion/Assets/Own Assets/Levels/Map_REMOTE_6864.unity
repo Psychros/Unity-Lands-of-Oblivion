@@ -12854,6 +12854,78 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.23243451
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &246761787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 246761788}
+  - 222: {fileID: 246761790}
+  - 114: {fileID: 246761789}
+  m_Layer: 0
+  m_Name: Flour Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &246761788
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 246761787}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1020287542}
+  m_RootOrder: 7
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 48, y: -106}
+  m_SizeDelta: {x: 100, y: 55}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &246761789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 246761787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 30
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &246761790
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 246761787}
 --- !u!1 &248109499
 GameObject:
   m_ObjectHideFlags: 0
@@ -37310,8 +37382,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663905372}
-  m_LocalRotation: {x: .00321147591, y: .996670008, z: .0643749759, w: -.0499453507}
-  m_LocalPosition: {x: -815.580017, y: 666.971497, z: -2635.57251}
+  m_LocalRotation: {x: -.105626933, y: .111330763, z: .0119452532, w: .988081872}
+  m_LocalPosition: {x: -1944.14795, y: 385.227112, z: -4933.70215}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6253190}
@@ -38590,7 +38662,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 59c974364fe8bd34389d40d4f3132178, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 716ef2dd815bfd041a4a2812a43504d9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -56084,7 +56156,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -17, y: -37.4000015}
+  m_AnchoredPosition: {x: -17, y: -35}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &975094185
@@ -59594,6 +59666,8 @@ RectTransform:
   - {fileID: 1785020704}
   - {fileID: 1596041370}
   - {fileID: 1667593728}
+  - {fileID: 1763820518}
+  - {fileID: 246761788}
   m_Father: {fileID: 669544307}
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
@@ -96604,6 +96678,8 @@ MonoBehaviour:
     prefab: {fileID: 2800000, guid: ed684234c39659c46a7f6dc103c76668, type: 3}
   - name: Fish
     prefab: {fileID: 2800000, guid: ad58eca5aa189664988b98c18e001334, type: 3}
+  - name: Flour
+    prefab: {fileID: 2800000, guid: 716ef2dd815bfd041a4a2812a43504d9, type: 3}
 --- !u!1 &1599357826
 GameObject:
   m_ObjectHideFlags: 0
@@ -105741,6 +105817,73 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.65763068
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1763820517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1763820518}
+  - 222: {fileID: 1763820520}
+  - 114: {fileID: 1763820519}
+  m_Layer: 0
+  m_Name: Flour Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1763820518
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763820517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1020287542}
+  m_RootOrder: 6
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -17.0000153, y: -100}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1763820519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763820517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 716ef2dd815bfd041a4a2812a43504d9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1763820520
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1763820517}
 --- !u!1 &1763848252
 GameObject:
   m_ObjectHideFlags: 0
@@ -109427,6 +109570,7 @@ MonoBehaviour:
   woodText2: {fileID: 1785020705}
   stoneText: {fileID: 1138781685}
   stoneText2: {fileID: 1667593729}
+  flourText: {fileID: 246761789}
 --- !u!1 &1830815979
 GameObject:
   m_ObjectHideFlags: 0

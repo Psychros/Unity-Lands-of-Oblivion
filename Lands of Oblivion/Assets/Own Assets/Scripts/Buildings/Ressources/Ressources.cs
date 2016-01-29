@@ -9,7 +9,7 @@ public enum Ressources{
 	Wood = 1, Stone = 2, 
 	
 	//Food
-	Apple = 50, Fish = 51,
+	Apple = 50, Fish = 51, Crop=52, Flour=53,
 
 	//Goods 
 

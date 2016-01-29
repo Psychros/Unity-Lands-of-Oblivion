@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Windmill : Building {
+public class Windmill : WorkBuilding {
 
     public override void finishBuilding()
     {

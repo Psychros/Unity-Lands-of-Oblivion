@@ -18,13 +18,14 @@ public class GlobalStore : MonoBehaviour {
     public Text woodText2;
     public Text stoneText;
     public Text stoneText2;
-
+    public Text flourText;
 
     public void Start(){
 		instance = this;
 		addSize(startSize);
 		addRessources(Ressources.Wood, 10);
-	}
+        addRessources(Ressources.Flour, 7);
+    }
 
 	public int getNumberOfRessource(Ressources id) {
 		return ressources[(int)id];
@@ -69,6 +70,9 @@ public class GlobalStore : MonoBehaviour {
 				stoneText.text = "" + getNumberOfRessource(id);
                 stoneText2.text = "" + getNumberOfRessource(id);
                 break;
-		}
+            case Ressources.Flour:
+                flourText.text = "" + getNumberOfRessource(id);
+                break;
+        }
 	}
 }

@@ -38,11 +38,9 @@ public class RessourceManager : MonoBehaviour {
     //Get a Ressourcesprite
     public Sprite getSprite(Ressources r)
     {
-        if ((int)r == (int)Ressources.Wood)
-            return getSprite("Wood");
-        else if ((int)r == (int)Ressources.Fish)
-            return getSprite("Fish");
-
-        return null;
+        if (r != (int)Ressources.None)
+            return getSprite(r.ToString());
+        else
+            return null;
     }
 }

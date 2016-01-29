@@ -94,7 +94,7 @@ public class BuildmenuManager : MonoBehaviour {
     }
 
 
-    //Show the product
+    //Show the product and the ressources
     private void showProduct(Building building)
     {
         if(building is WorkBuilding)
