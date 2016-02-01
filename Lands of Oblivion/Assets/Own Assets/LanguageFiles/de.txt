@@ -24,6 +24,17 @@ Pausemenu.QuitGame				= Beenden
  * Buildings
  */
 Building.StoreHouse   = Lagerhaus
+Building.Woodcutter   = Holzfäller
+Building.AppleOrchard = Apfelplantage
 Building.Fisher       = Fischer
 Building.WoodenHouse  = Holzhaus
 Building.Windmill	  = Windmühle
+
+/*
+ * Ressources
+ */
+ Ressources.People    = Einwohner
+ Ressources.Store	  = Lager
+ Ressources.Wood	  = Holz
+ Ressources.Apple	  = Apfel
+ Ressources.Flour	  = Mehl

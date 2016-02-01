@@ -11,20 +11,34 @@ public class GlobalStore : MonoBehaviour {
 	public int startSize = 10;
 	private int storeSize = 0;			      //Size of store
 
-	//All text-components
+	/*
+     * All text-components
+     */
 	public Text storeText;
     public Text storeText2;
+
+    //Buildressources
     public Text woodText;
     public Text woodText2;
     public Text stoneText;
     public Text stoneText2;
+
+    //Food
+    public Text appleText;
+    public Text fishText;
+    public Text cropText;
     public Text flourText;
+
+
 
     public void Start(){
 		instance = this;
 		addSize(startSize);
 		addRessources(Ressources.Wood, 10);
         addRessources(Ressources.Flour, 7);
+        addRessources(Ressources.Apple, 4);
+        addRessources(Ressources.Fish, 5);
+        addRessources(Ressources.Crop, 6);
     }
 
 	public int getNumberOfRessource(Ressources id) {
@@ -62,6 +76,7 @@ public class GlobalStore : MonoBehaviour {
 
 	public void actualizeText(Ressources id){
 		switch(id){
+            //Buildressources
 			case Ressources.Wood: 
 				woodText.text = "" + getNumberOfRessource(id);
                 woodText2.text = "" + getNumberOfRessource(id);
@@ -69,6 +84,17 @@ public class GlobalStore : MonoBehaviour {
 			case Ressources.Stone: 
 				stoneText.text = "" + getNumberOfRessource(id);
                 stoneText2.text = "" + getNumberOfRessource(id);
+                break;
+            
+            //Food
+            case Ressources.Apple:
+                appleText.text = "" + getNumberOfRessource(id);
+                break;
+            case Ressources.Fish:
+                fishText.text = "" + getNumberOfRessource(id);
+                break;
+            case Ressources.Crop:
+                cropText.text = "" + getNumberOfRessource(id);
                 break;
             case Ressources.Flour:
                 flourText.text = "" + getNumberOfRessource(id);

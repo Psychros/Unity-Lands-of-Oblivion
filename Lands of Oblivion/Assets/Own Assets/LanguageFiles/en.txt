@@ -23,6 +23,17 @@ Pausemenu.QuitGame				= Quit Game
  * Buildings
  */
 Building.StoreHouse   = Store House
+Building.Woodcutter   = Woodcutter
+Building.AppleOrchard = Apple Orchard
 Building.Fisher       = Fisher
 Building.WoodenHouse  = Wooden House
 Building.Windmill	  = Windmill
+
+/*
+ * Ressources
+ */
+ Ressources.People    = People
+ Ressources.Store	  = Store
+ Ressources.Wood	  = Wood
+ Ressources.Apple	  = Apple
+ Ressources.Flour	  = Flour

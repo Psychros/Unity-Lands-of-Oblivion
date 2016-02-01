@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class BuildmenuManager : MonoBehaviour {
 	public static BuildmenuManager instance;
 	public GameObject activeMenu = null;
+    public Text tooltip;
 
     public GameObject buildingDescription;
     public Text buildingName;
@@ -147,5 +148,18 @@ public class BuildmenuManager : MonoBehaviour {
 
         //Disable the building description
         buildingDescription.SetActive(false);
+    }
+
+    public void showTooltip(string languageKey)
+    {
+        tooltip.transform.position = Input.mousePosition;
+        tooltip.text = Localizer.Instance.GetText(languageKey);
+        Debug.Log(languageKey);
+    }
+
+    public void hideTooltip()
+    {
+        tooltip.text = "";
+        Debug.Log("Hide");
     }
 }
