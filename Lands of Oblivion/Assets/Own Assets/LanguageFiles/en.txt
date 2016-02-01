@@ -36,4 +36,6 @@ Building.Windmill	  = Windmill
  Ressources.Store	  = Store
  Ressources.Wood	  = Wood
  Ressources.Apple	  = Apple
+ Ressources.Fish	  = Fish
+ Ressources.Crop	  = Crop
  Ressources.Flour	  = Flour

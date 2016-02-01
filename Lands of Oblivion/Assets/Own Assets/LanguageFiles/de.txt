@@ -37,4 +37,6 @@ Building.Windmill	  = Windmühle
  Ressources.Store	  = Lager
  Ressources.Wood	  = Holz
  Ressources.Apple	  = Apfel
+ Ressources.Fish	  = Fisch
+ Ressources.Crop	  = Getreide
  Ressources.Flour	  = Mehl
