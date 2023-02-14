@@ -1,0 +1,1187 @@
+Using pre-set license
+Built from '2023.1/staging' branch; Version is '2023.1.0b3 (812fe9b8f2ae) revision 8466409'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Education' Language: 'de' Physical Memory: 32716 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2023.1.0b3\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker6
+-projectPath
+C:/Temp/Unity-Lands-of-Oblivion/Lands of Oblivion
+-logFile
+Logs/AssetImportWorker6.log
+-srvPort
+51538
+Successfully changed project path to: C:/Temp/Unity-Lands-of-Oblivion/Lands of Oblivion
+C:/Temp/Unity-Lands-of-Oblivion/Lands of Oblivion
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [27844] Host "[IP] 192.168.178.35 [Port] 0 [Flags] 2 [Guid] 749066354 [EditorId] 749066354 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P219RO9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [27844] Host "[IP] 192.168.178.35 [Port] 0 [Flags] 2 [Guid] 749066354 [EditorId] 749066354 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P219RO9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Library Redirect Path: Library/Refreshing native plugins compatible for Editor in 13.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2023.1.0b3 (812fe9b8f2ae)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2023.1.0b3/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Temp/Unity-Lands-of-Oblivion/Lands of Oblivion/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 SUPER (ID=0x1e84)
+    Vendor:   NVIDIA
+    VRAM:     8012 MB
+    Driver:   31.0.15.1748
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2023.1.0b3/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2023.1.0b3/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2023.1.0b3/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56192
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2023.1.0b3/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002159 seconds.
+- Loaded All Assemblies, in  0.305 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Finished resetting the current domain, in  0.266 seconds
+Domain Reload Profiling: 570ms
+	BeginReloadAssembly (92ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (122ms)
+		LoadAssemblies (90ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (119ms)
+			TypeCache.Refresh (118ms)
+				TypeCache.ScanAssembly (109ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (267ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (228ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (6ms)
+			ProcessInitializeOnLoadAttributes (169ms)
+			ProcessInitializeOnLoadMethodAttributes (40ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Loaded All Assemblies, in  1.144 seconds
+Refreshing native plugins compatible for Editor in 4.71 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.634 seconds
+Domain Reload Profiling: 1775ms
+	BeginReloadAssembly (228ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (812ms)
+		LoadAssemblies (529ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (354ms)
+			TypeCache.Refresh (224ms)
+				TypeCache.ScanAssembly (213ms)
+			ScanForSourceGeneratedMonoScriptInfo (124ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (635ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (467ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (215ms)
+			ProcessInitializeOnLoadMethodAttributes (137ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 4.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2783 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 54 unused Assets / (349.5 KB). Loaded Objects now: 3308.
+Memory consumption went from 152.0 MB to 151.6 MB.
+Total: 7.050000 ms (FindLiveObjects: 0.232100 ms CreateObjectMapping: 0.091000 ms MarkObjects: 6.478700 ms  DeleteObjects: 0.247400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs:  -> 1e0da09e3242489bf669acc330e4a42a
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Cameras/Scripts/HandHeldCam.cs:  -> 39d3287cbb1e5c085859aee4b8cca7a8
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Cameras/Scripts/FreeLookCam.cs:  -> fbcb717fad2034192c3ecbc696d6e019
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/GlobalFog.cs:  -> 0db0904bd9a405402233e50327d759b7
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/Pathfinder2D.cs:  -> 0665555bfef9a7979ead8399f02b7bcf
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/ThirdPersonCharacter.cs:  -> cfdf9322569f93fa7d0d8541b14b23bc
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Buildings/Building.cs:  -> a5e7e3b14342f32d46db54c347505af3
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/Lines.cs:  -> e81b8e2d18b684ba17f793426dc98d62
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/TDEnemy.cs:  -> be1261a68775e4af86be16856a83ccf5
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/AxisTouchButton.cs:  -> a7aa800e764d8b80087fc24ac7f59d30
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/Pathfinder.cs:  -> 0f62c8e3ac4a646fb2fca6c3f040e8b2
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/LerpControlledBob.cs:  -> e1bf67f0a3095bf49332446dc0219443
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Ressource.cs:  -> f5d585478d910ea02cc9fd983fdf9395
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/ParticleSystems/Scripts/Hose.cs:  -> 1d1751f4f603bc707cbfbd006a3e319e
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Car/Scripts/CarUserControl.cs:  -> b739673caf6b3c3aa830f1d37d22cee0
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionRamp.cs:  -> a41ed1b2f6e5e1b19a597379ce398132
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/BloomOptimized.cs:  -> 73e9f2340960539c6adb160b24456c0f
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Environment/Water/Water/Scripts/WaterBase.cs:  -> c45d6dc5c44825ed7b3cfd00eea96cd1
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Cameras/Scripts/LookatTarget.cs:  -> 24990fd6a1942dd499cec63d308f9c02
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Environment/Water/Water/Scripts/PlanarReflection.cs:  -> 12735a809aeff545be42d56dcf008119
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/DynamicShadowSettings.cs:  -> 4d386fbb6170c62321b4d131fcbbb95b
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Environment/Water/Water/Scripts/WaterTile.cs:  -> befbb5490146d8411f498114065e047b
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/Quads.cs:  -> 4aa4f01508da0be6d551a5f0d4d09d15
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionLookup.cs:  -> 7ad0812592b3c96c61b3568df0ddf22d
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/ParticleSystems/Scripts/AfterburnerPhysicsForce.cs:  -> ea1d2e5ce75d184b47ac9cdb79411e01
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/WaypointListNode.cs:  -> 68ef8c12b4491dc742a322b9f67e3df5
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/WaypointNode.cs:  -> 5a4909d8f6a09b96e88a828cc41d6bda
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Aircraft/Scripts/JetParticleEffect.cs:  -> abfa80fe368b150b31608b6d0d9e5480
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/TimedObjectActivator.cs:  -> 30cdc88d6639e275346fc3db08fd1e8d
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/ActivateTrigger.cs:  -> c17dbf6ebd3571655102669753f97191
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Buildings/Ressources/GlobalStore.cs:  -> 672419464151d6dcdabc5a4a49a243a9
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/ParticleSystems/Scripts/ExplosionFireAndDebris.cs:  -> 9c578ebda2ad3c3c3c6c44dce65093e0
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Environment/Water/Water/Scripts/Displace.cs:  -> 5b4fe65107bc730457d8c227a256a0ca
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/SetGrid.cs:  -> 88246c5d3271d4e34a9be173d8b9fb96
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneUserControl4Axis.cs:  -> 7861dde000b5351936f6898bbbf51638
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/Pathfinding2D.cs:  -> 784447dff0d73ea0c2e1882b2e8ba823
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/EdgeDetection.cs:  -> 865e2b5f0e9558b78899162a2a892e65
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplanePropellerAnimator.cs:  -> 0a888aaa63bfb35fd9eec0b63fc72e3c
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/DepthOfFieldDeprecated.cs:  -> 47abb1b7c83f74d725fb7004ba278218
+  custom:scripting/monoscript/filePath//Assets/LevelTree.cs:  -> f97cb00827f44803ca744642e10ebb9e
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/InputAxisScrollbar.cs:  -> ac9f721155332e2772dc111905c4d583
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs:  -> 6761550c1dfab80b605655e22f825a0a
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/MotionBlur.cs:  -> 4f20cfe80445d55a89dcaee58ddc5823
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/DynamicTDGridObject.cs:  -> 9457d3406c0b4c3750b9f0cf59e97179
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/GridPlayer2D.cs:  -> 4fd25bd1b5c818a277cf78890711620c
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp:  -> f6d255d36842c5fc9ced31251e825d41
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/AICharacterControl.cs:  -> 1ba2ce23cf6d0498a7ed5611bc270566
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneUserControl2Axis.cs:  -> 2b05f3c9809daf4601d3a5f28329996c
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Buildings/BuildingManager.cs:  -> db61c484a21c610b88992bba6c536ada
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/TouchPad.cs:  -> 6807f02d81a6bfd6af95f1e26dad1c08
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/TiltShift.cs:  -> 398b5d703606fee617835df55a98aaef
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/ContrastEnhance.cs:  -> deb9c21156a9b780049923c2bfddadec
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/UI/PausemenuController.cs:  -> 2331e76777189f1f36b7a4d982a2018e
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/SimpleMouseRotator.cs:  -> dba573bcb546f175149e62ba814f5b72
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/SearchPlayerAI.cs:  -> fe78e6f745fa46e65e8915955d1c41b9
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelScripts/LevelGrid.cs:  -> 8b83b2f9599591c14aaf5e252a6a865b
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/CameraRefocus.cs:  -> ad0ece5675b71eb36894f0c255f332e4
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelScripts/Chunk.cs:  -> 24a97a28c87c218ba14ce687d81caeee
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelScripts/RessourceManager.cs:  -> ea8068d54f2f4aa85001ba699fed104c
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/Tonemapping.cs:  -> 2591261ff2bffd12312904a68850b469
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/SimpleAI2D.cs:  -> 4fce0fc88bc55a53fda4974b3f40d05e
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Environment/Water/Water/Scripts/SpecularLighting.cs:  -> b337f2555d0714afc339e7449ab9618f
+  custom:scripting/monoscript/filePath//Assets/TerrainToolkit/TerrainToolkit.cs:  -> 083adfdf7ed6b19a027239910927938c
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs:  -> 88b73dc74cc44043423a370601c3162d
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/TiltInput.cs:  -> d445534f8b62ced30b7038d620451128
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/PostEffectsHelper.cs:  -> 16cf23be805952371740f24a10566c93
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Constants.cs:  -> 1584b44394baa82ae7b8b5bc09a1664c
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Car/Scripts/CarAIControl.cs:  -> ca4f368ea072d7a564df07dc895b2a96
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/Joystick.cs:  -> 11af4b90318823aa68a285f0f2d513aa
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs:  -> 4427281107f61d1837c0a767dd081136
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/Antialiasing.cs:  -> e8c5f0b3efb079455aa639952582caa2
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/QueuePath.cs:  -> eb18f473d0b9e5d7361926b575043927
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelScripts/TreeControler.cs:  -> f926f713141cb94322799297acbd9712
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneAudio.cs:  -> 47362fb700c755aaaf4ee69c8850b615
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Cameras/Scripts/AutoCam.cs:  -> ae81c0234c6aa2e342909cd6ad8531f9
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/ImageEffectBase.cs:  -> 89e2b049111d4944eda816144f054ad4
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Car/Scripts/Suspension.cs:  -> acf7b262a6de56a4883e121a5f1da868
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/Triangles.cs:  -> 0d1725c19794d2f598564c236450e184
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/Pathfinding.cs:  -> 0ed18c72208c2dd4b2deff5ddec763c3
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/WaypointPathfinder.cs:  -> 9a6d9207e626e8c85b4c0a6229bd565d
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/BlurOptimized.cs:  -> 91646c9569393b93a7f2bbe0ba98684a
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/NPC/Need.cs:  -> d0c11846e9f1bfd363f91b3f85a64b06
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/BloomAndFlares.cs:  -> 51c424547a468f4b54b6b27c034c4b23
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Interactable.cs:  -> a15a85ad9f9c9101b23b1d416d2fc7da
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Environment/Water/Water/Scripts/MeshContainer.cs:  -> 75ad9d60f0f027bf75784089522aa0ff
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Math.cs:  -> 97cd5cdd6cf9944f97e4af9a4f5e5981
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/NPC/NPC.cs:  -> 90abe046273d7d199d0f971801ca7233
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelDesigner/LevelDesigner.cs:  -> 521809496679403a766ff9d6897cf672
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/NPC/NPCManager.cs:  -> d4bbb939dafbac4cb2c2d728389eb46d
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/ObjectResetter.cs:  -> 4729f3c5ec4320f6d42859ed0a7e4fcc
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Buildings/Buildingtypes/Windmill.cs:  -> 695612994b4b06728d630af5a896f508
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/ParticleSystems/Scripts/FireLight.cs:  -> b4b66c362b883eb58d7e52f4922a19fc
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/PostEffectsBase.cs:  -> e8430cc6956c899d95de95630ca7b8e5
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/MobileInput.cs:  -> 916a9248ab1eb3f0d791859f028e70d8
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/Node.cs:  -> 4a91f575819247392100f69b84e534b7
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelScripts/TerrainEditor.cs:  -> 155b79e3cb37b651870bf14d2eba0b41
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Cameras/Scripts/PivotBasedCameraRig.cs:  -> 569fe548a68bbe05737c846b6136fd7c
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Buildings/Buildingtypes/StoreHouse.cs:  -> 8dc5b0c2d6442d04fda260a0e528493b
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/VirtualInput.cs:  -> dc5775c312c5ecb7052c36f3d3ca27fc
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/ThirdPersonUserControl.cs:  -> bd5be9b690b2b25691123042e3f029e4
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/UI/Buildmenu/ProductionChainIcon.cs:  -> b21687ddb03d73bd9f0c1daecb9714de
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/UI/MenuController.cs:  -> f98156acb6c9b62b4aff1540a104a198
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/PlatformSpecificContent.cs:  -> d80b16e46fa47259f162b60d4de03e39
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/CameraMotionBlur.cs:  -> f711ee03a2d282a6614a6702ecd37427
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Cameras/Scripts/ProtectCameraFromWallClip.cs:  -> a6bf3ac51a76f2a8fb37c726aead9632
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Car/Scripts/WheelEffects.cs:  -> 3a1bbc7d2b8f318a0cb10eda2837de54
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/RayCastManager.cs:  -> 90c7f884ae5eaf5458f6be26cf8ab8b2
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/TDManager.cs:  -> b6372e55c72e21ee8cc227e19468f315
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Events/BuildBuildingEvent.cs:  -> 1747692da27cd06d2c187ad252558049
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneControlSurfaceAnimator.cs:  -> 4c51064a0de5a48c7f39c24bb0ed983d
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/AI.cs:  -> deb6509230f9319df57a5e8d24dd65be
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/GridPlayer.cs:  -> 5a7ce8a748c17cc36b445c0a542c2ce8
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/Twirl.cs:  -> 6578158840cb67453135558d1c67d6b1
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Buildings/WorkBuilding.cs:  -> d2ab880ba55cdb334bf4f66703422894
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Car/Scripts/Mudguard.cs:  -> 12e7e83acdb435d5e06e72b4316a8319
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/ParticleSystems/Scripts/WaterHoseParticles.cs:  -> 86c1b8c19be690fb9367e984ca7a0ab7
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/SimpleActivatorMenu.cs:  -> 1f886f09fd047de86975dc92f0781ec6
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/TimedObjectDestructor.cs:  -> 2b9ef5c24d8ac1876bcac32bfbb70091
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/Grayscale.cs:  -> 5fdc398328137bb6ebd1c3daa36d547b
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/WaypointProgressTracker.cs:  -> 4258c6b0386daa037a45b680ab62a1e0
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/ParticleSystems/Scripts/ExplosionPhysicsForce.cs:  -> 99c9bdd3f4711349ea008cc9307354fc
+  custom:scripting/monoscript/filePath//Assets/TreeObject.cs:  -> 2903ca4074e995bb69e28cc4447d546f
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/ParticleSystems/Scripts/ExtinguishableParticleSystem.cs:  -> f8b7119b76e142217ea59caecee08c2d
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Cameras/Scripts/TargetFieldOfView.cs:  -> 51d23f9917ca2bff79136f2f326daaed
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelScripts/ChunkController.cs:  -> 5e6f2eed32eea9f1de84c5f5a3ac9acb
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelScripts/Localizer.cs:  -> 86ea85aef2c058bed1af3681a38759b5
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/Blur.cs:  -> ff81738336630f397d8dc1e29277a737
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Events/UserEvent.cs:  -> 24d1da7f200ebed5b6042aa9a5594a28
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Cameras/Scripts/AbstractTargetFollower.cs:  -> 6409c10c17b027813bf616cbbd82342d
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/ParticleSystems/Scripts/SmokeParticles.cs:  -> ae0be802c38d22b76b13deaf32e6b2fa
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/NPC/Animation.cs:  -> af05c952c6c4cae2072edf9532b593d9
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Identifyable.cs:  -> 16f6c6230478658ea5e7432c327fbf35
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/SunShafts.cs:  -> f525d706b3c83fdb367013f38195feb9
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelScripts/InputManager.cs:  -> ebc1fe256c26bbf42f6045524041edf0
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/SepiaTone.cs:  -> 890ce36d79098e6632b0e0b8f8daef3f
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Buildings/Ressources/Cost.cs:  -> c98e18cd086f968a7ff00d0215c42ff6
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/UI/Buildmenu/BuildmenuManager.cs:  -> ec7170a5ff4e72632011ac461ffe85ce
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/ScreenOverlay.cs:  -> a8eaab68b7397ac071b9a2d72722d027
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelDesigner/LevelDesignerEditor.cs:  -> 04175ea033158e8f464cf9817966b4fb
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneController.cs:  -> cfb2d719e9219769fc09de7d4a42bb38
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/NodeSearch.cs:  -> 8ead224d1d2a06e50a5355ca4f9ea5bf
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionCurves.cs:  -> 5f6f8d7f5757a8dad20d3e51e63cb169
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Car/Scripts/CarAudio.cs:  -> fc000aedbef84f7776d30d5e96d6569a
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/MobileControlRig.cs:  -> edcf953c7c7f28c0e7c76ed3794b771a
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/RigidbodyFirstPersonController.cs:  -> cf4d7ca6b61965656f184e194269b863
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/Bloom.cs:  -> bf8f8b9689b827e38b29b5f808e0586b
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/CrossPlatformInputManager.cs:  -> 71b40cfcf26ea9b2fc859976da1da353
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/WaypointPlayer.cs:  -> e03baf65caeb0352a55e55252e65d2df
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/NoiseAndScratches.cs:  -> a7f08d8205a1ec1a6057e669c85f3722
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/CreaseShading.cs:  -> e1c962a19d7357e7ca8bd02802325331
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/HeadBob.cs:  -> 280e62205361a81182004909e3cfba7a
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Buildings/SetBuildingPositionController.cs:  -> b5df7c39ed991516b6672327e93a9924
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/MouseLook.cs:  -> 36c3836205aea061e755e4bcfebbe89c
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/ParticleSystems/Scripts/ParticleSystemMultiplier.cs:  -> ee9356afc1edd7a7e964bbfaae218d2b
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Car/Scripts/CarController.cs:  -> fb53e0bbf58768a4ef106911a1e6c541
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/ParticleSystems/Scripts/Explosive.cs:  -> 3828d6083bb1809dd6ceb0774cff30bf
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/CrossPlatformInput/Scripts/ButtonHandler.cs:  -> bf99f15b4b4da7541cf1a3227d33dba4
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneAiControl.cs:  -> 1998eeeff93b392074de05baabdb9c40
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-firstpass:  -> d3f5e69420834a7f0924d101d704673c
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Environment/Water/Water/Scripts/GerstnerDisplace.cs:  -> 7df2740790548bab84eb0d3c7932989c
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/ImageEffects.cs:  -> 289b64ff0200475bd54da3e741aa150a
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Car/Scripts/BrakeLight.cs:  -> 3113ea39310d45bead23adbbd70231cd
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Environment/Water (Basic)/Scripts/WaterBasic.cs:  -> 55f1f2d585546c05088574d22ca868db
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/ContrastStretch.cs:  -> fed749c0d5309bb74b37525d093bb6ff
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Car/Scripts/CarSelfRighting.cs:  -> cea80a7e099151b7e6e358849786ec5f
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/IllegalArgumentException.cs:  -> fc975b4924a15a5e2041be19db3808bb
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Wireframe.cs:  -> 8a99f4167091befa3e85c331213ea7ff
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Util.cs:  -> c567c840c1075a4816e316d1c03be77c
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/AutoMoveAndRotate.cs:  -> 0f5c35fca62478aa3bdcff53894bf2ca
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/ScreenSpaceAmbientOcclusion.cs:  -> 57cef597c06f7e78ca0c216557b25529
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Characters/RollerBall/Scripts/BallUserControl.cs:  -> a7e27f72ffe35910ae9c3697f09faa90
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/ForcedReset.cs:  -> 5ff613fa73995367b603682b60bcea24
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scenes/Scripts/SimpleAI.cs:  -> 80db34ef989dbc087d18153522fb4618
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/FollowTarget.cs:  -> b1a6ed13124065658ba5d24dfcda5053
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/FOVKick.cs:  -> d136c86792778333cf463e29c8f7ade6
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/SmoothFollow.cs:  -> 6827ffa1ee9ce151924316a12a17fd6f
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/ParticleSystemDestroyer.cs:  -> 4a3ccd840619c24dbe6ed070600d5d9e
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/FPSCounter.cs:  -> 61325357dea45ada3313f117fe0f7127
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Characters/RollerBall/Scripts/Ball.cs:  -> 1f94b792729e7dfe8e4b6b48e94f74ad
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelScripts/LocalizeText.cs:  -> cdcdeddedd1cbd53dc26c3d4c4b1cf16
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/DragRigidbody.cs:  -> 4603c3af3f13916f3fa935f6c699052a
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/Fisheye.cs:  -> 61fcf39ce3073888f924ff188cff9e20
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/Vortex.cs:  -> e8c8c66896a36ec15a0c853131fe5fb2
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/AutoMobileShaderSwitch.cs:  -> bd7f29150fefca748269e9d6b2f4dc52
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Car/Scripts/SkidTrail.cs:  -> 15a75bf14c72d020d3341a05c9220dc5
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/WaypointCircuit.cs:  -> dc5786e42dc00d90cd8d197fc5056233
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Tools/AxeController.cs:  -> 25a4fc7d67b2cb4e30f6debed8c3a9a2
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/NoiseAndGrain.cs:  -> 55b43beb8b2d176095a253ef94837329
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/Buildings/Buildingtypes/ResidentialBuilding.cs:  -> 6cc5cdf70a5774041ff67b686ed8c7f5
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/LevelScripts/TreeGenerator.cs:  -> 01eeb467d753772374030984124634a7
+  custom:scripting/monoscript/filePath//Assets/Pathfinding/Scripts/DynamicMapUpdate.cs:  -> ad137df29f7ed8b8002120583d908cd8
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/ScreenSpaceAmbientObscurance.cs:  -> 53a72b31457918998ce9b82b2e32e4ea
+  custom:scripting/monoscript/filePath//Assets/Own Assets/Scripts/UI/Buildmenu/BuildingIcon.cs:  -> 376363f37865017058db4678c642096f
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Effects/ImageEffects/Scripts/DepthOfField.cs:  -> 7075ccc124d32dbdd80ea0d7209401cb
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Vehicles/Aircraft/Scripts/LandingGear.cs:  -> 65e13eeed4ae22f6a2546db1a8bff3cf
+  custom:scripting/monoscript/filePath//Assets/Standard Assets/Utility/CurveControlledBob.cs:  -> fd3c34ca61c0dfb6328f54c1782436be
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Loaded All Assemblies, in  0.615 seconds
+Refreshing native plugins compatible for Editor in 5.00 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+System.ArgumentException: There is no a valid NamedBuildTarget for BuildTargetGroup 'WP8'
+  at UnityEditor.Build.NamedBuildTarget.FromBuildTargetGroup (UnityEditor.BuildTargetGroup buildTargetGroup) [0x0013f] in <b321354c8bef48c68c45c1d1e227b3da>:0 
+  at UnityEditor.PlayerSettings.GetScriptingDefineSymbolsForGroup (UnityEditor.BuildTargetGroup targetGroup) [0x00000] in <b321354c8bef48c68c45c1d1e227b3da>:0 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize.GetDefinesList (UnityEditor.BuildTargetGroup group) [0x00001] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:143 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize.SetEnabled (System.String defineName, System.Boolean enable, System.Boolean mobile) [0x0001b] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:115 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize..cctor () [0x0004d] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.804 seconds
+Domain Reload Profiling: 1416ms
+	BeginReloadAssembly (150ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (399ms)
+		LoadAssemblies (270ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (198ms)
+			TypeCache.Refresh (188ms)
+				TypeCache.ScanAssembly (177ms)
+			ScanForSourceGeneratedMonoScriptInfo (5ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (805ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (489ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (112ms)
+			ProcessInitializeOnLoadAttributes (223ms)
+			ProcessInitializeOnLoadMethodAttributes (141ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 8.11 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (348.7 KB). Loaded Objects now: 3312.
+Memory consumption went from 132.9 MB to 132.6 MB.
+Total: 8.977700 ms (FindLiveObjects: 0.309000 ms CreateObjectMapping: 0.094600 ms MarkObjects: 8.237400 ms  DeleteObjects: 0.335300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Loaded All Assemblies, in  0.718 seconds
+Refreshing native plugins compatible for Editor in 5.10 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+System.ArgumentException: There is no a valid NamedBuildTarget for BuildTargetGroup 'WP8'
+  at UnityEditor.Build.NamedBuildTarget.FromBuildTargetGroup (UnityEditor.BuildTargetGroup buildTargetGroup) [0x0013f] in <b321354c8bef48c68c45c1d1e227b3da>:0 
+  at UnityEditor.PlayerSettings.GetScriptingDefineSymbolsForGroup (UnityEditor.BuildTargetGroup targetGroup) [0x00000] in <b321354c8bef48c68c45c1d1e227b3da>:0 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize.GetDefinesList (UnityEditor.BuildTargetGroup group) [0x00001] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:143 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize.SetEnabled (System.String defineName, System.Boolean enable, System.Boolean mobile) [0x0001b] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:115 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize..cctor () [0x0004d] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.938 seconds
+Domain Reload Profiling: 1652ms
+	BeginReloadAssembly (147ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (503ms)
+		LoadAssemblies (270ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (303ms)
+			TypeCache.Refresh (180ms)
+				TypeCache.ScanAssembly (169ms)
+			ScanForSourceGeneratedMonoScriptInfo (118ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (938ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (560ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (129ms)
+			ProcessInitializeOnLoadAttributes (237ms)
+			ProcessInitializeOnLoadMethodAttributes (180ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 5.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (328.3 KB). Loaded Objects now: 3316.
+Memory consumption went from 133.5 MB to 133.2 MB.
+Total: 7.320500 ms (FindLiveObjects: 0.236600 ms CreateObjectMapping: 0.082300 ms MarkObjects: 6.743400 ms  DeleteObjects: 0.257300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Loaded All Assemblies, in  0.767 seconds
+Refreshing native plugins compatible for Editor in 6.38 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.988 seconds
+Domain Reload Profiling: 1752ms
+	BeginReloadAssembly (167ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (523ms)
+		LoadAssemblies (317ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (279ms)
+			TypeCache.Refresh (268ms)
+				TypeCache.ScanAssembly (246ms)
+			ScanForSourceGeneratedMonoScriptInfo (5ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (989ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (577ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (142ms)
+			ProcessInitializeOnLoadAttributes (273ms)
+			ProcessInitializeOnLoadMethodAttributes (145ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 5.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (348.4 KB). Loaded Objects now: 3320.
+Memory consumption went from 134.6 MB to 134.3 MB.
+Total: 8.403900 ms (FindLiveObjects: 0.247600 ms CreateObjectMapping: 0.086100 ms MarkObjects: 7.789600 ms  DeleteObjects: 0.279200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Loaded All Assemblies, in  0.669 seconds
+Refreshing native plugins compatible for Editor in 5.91 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+System.ArgumentException: There is no a valid NamedBuildTarget for BuildTargetGroup 'WP8'
+  at UnityEditor.Build.NamedBuildTarget.FromBuildTargetGroup (UnityEditor.BuildTargetGroup buildTargetGroup) [0x0013f] in <b321354c8bef48c68c45c1d1e227b3da>:0 
+  at UnityEditor.PlayerSettings.GetScriptingDefineSymbolsForGroup (UnityEditor.BuildTargetGroup targetGroup) [0x00000] in <b321354c8bef48c68c45c1d1e227b3da>:0 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize.GetDefinesList (UnityEditor.BuildTargetGroup group) [0x00001] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:143 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize.SetEnabled (System.String defineName, System.Boolean enable, System.Boolean mobile) [0x0001b] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:115 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize..cctor () [0x0004d] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.920 seconds
+Domain Reload Profiling: 1587ms
+	BeginReloadAssembly (166ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (420ms)
+		LoadAssemblies (300ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (202ms)
+			TypeCache.Refresh (193ms)
+				TypeCache.ScanAssembly (183ms)
+			ScanForSourceGeneratedMonoScriptInfo (4ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (920ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (574ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (119ms)
+			ProcessInitializeOnLoadAttributes (245ms)
+			ProcessInitializeOnLoadMethodAttributes (196ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 11.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (328.2 KB). Loaded Objects now: 3324.
+Memory consumption went from 135.6 MB to 135.3 MB.
+Total: 8.126500 ms (FindLiveObjects: 0.273600 ms CreateObjectMapping: 0.094700 ms MarkObjects: 7.413400 ms  DeleteObjects: 0.343500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Loaded All Assemblies, in  0.701 seconds
+Refreshing native plugins compatible for Editor in 6.19 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+System.ArgumentException: There is no a valid NamedBuildTarget for BuildTargetGroup 'WP8'
+  at UnityEditor.Build.NamedBuildTarget.FromBuildTargetGroup (UnityEditor.BuildTargetGroup buildTargetGroup) [0x0013f] in <b321354c8bef48c68c45c1d1e227b3da>:0 
+  at UnityEditor.PlayerSettings.GetScriptingDefineSymbolsForGroup (UnityEditor.BuildTargetGroup targetGroup) [0x00000] in <b321354c8bef48c68c45c1d1e227b3da>:0 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize.GetDefinesList (UnityEditor.BuildTargetGroup group) [0x00001] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:143 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize.SetEnabled (System.String defineName, System.Boolean enable, System.Boolean mobile) [0x0001b] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:115 
+  at UnityStandardAssets.CrossPlatformInput.Inspector.CrossPlatformInitialize..cctor () [0x0004d] in C:\Temp\Unity-Lands-of-Oblivion\Lands of Oblivion\Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs:21 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.837 seconds
+Domain Reload Profiling: 1536ms
+	BeginReloadAssembly (145ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (478ms)
+		LoadAssemblies (264ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (285ms)
+			TypeCache.Refresh (279ms)
+				TypeCache.ScanAssembly (266ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (838ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (503ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (99ms)
+			ProcessInitializeOnLoadAttributes (203ms)
+			ProcessInitializeOnLoadMethodAttributes (187ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 6.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (328.8 KB). Loaded Objects now: 3328.
+Memory consumption went from 136.7 MB to 136.4 MB.
+Total: 9.077800 ms (FindLiveObjects: 0.215700 ms CreateObjectMapping: 0.090000 ms MarkObjects: 8.441000 ms  DeleteObjects: 0.330000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Loaded All Assemblies, in  0.701 seconds
+Refreshing native plugins compatible for Editor in 7.26 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.891 seconds
+Domain Reload Profiling: 1589ms
+	BeginReloadAssembly (184ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (56ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (444ms)
+		LoadAssemblies (320ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (209ms)
+			TypeCache.Refresh (197ms)
+				TypeCache.ScanAssembly (183ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (892ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (520ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (112ms)
+			ProcessInitializeOnLoadAttributes (254ms)
+			ProcessInitializeOnLoadMethodAttributes (139ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 4.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (348.8 KB). Loaded Objects now: 3332.
+Memory consumption went from 137.7 MB to 137.4 MB.
+Total: 7.600500 ms (FindLiveObjects: 0.252000 ms CreateObjectMapping: 0.086600 ms MarkObjects: 6.957200 ms  DeleteObjects: 0.303500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Loaded All Assemblies, in  0.845 seconds
+Refreshing native plugins compatible for Editor in 4.80 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.965 seconds
+Domain Reload Profiling: 1809ms
+	BeginReloadAssembly (260ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (28ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (86ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (511ms)
+		LoadAssemblies (296ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (309ms)
+			TypeCache.Refresh (298ms)
+				TypeCache.ScanAssembly (286ms)
+			ScanForSourceGeneratedMonoScriptInfo (6ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (966ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (638ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (300ms)
+			ProcessInitializeOnLoadMethodAttributes (218ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 5.02 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (318.1 KB). Loaded Objects now: 3336.
+Memory consumption went from 135.7 MB to 135.4 MB.
+Total: 7.151400 ms (FindLiveObjects: 0.191400 ms CreateObjectMapping: 0.080200 ms MarkObjects: 6.619700 ms  DeleteObjects: 0.259000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:graphics/etc-compressor: 01010204000000000000000000000000 -> 01020205000000000000000000000000
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 9.03 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5 unused Assets / (289.9 KB). Loaded Objects now: 3334.
+Memory consumption went from 93.7 MB to 93.4 MB.
+Total: 7.437400 ms (FindLiveObjects: 0.317200 ms CreateObjectMapping: 0.085200 ms MarkObjects: 6.752700 ms  DeleteObjects: 0.280700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 11.19 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (291.6 KB). Loaded Objects now: 3334.
+Memory consumption went from 94.7 MB to 94.4 MB.
+Total: 10.850800 ms (FindLiveObjects: 0.344000 ms CreateObjectMapping: 0.115300 ms MarkObjects: 10.059800 ms  DeleteObjects: 0.330300 ms)
+
+Prepare: number of updated asset objects reloaded= 70
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Loaded All Assemblies, in  0.737 seconds
+Refreshing native plugins compatible for Editor in 5.83 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.925 seconds
+Domain Reload Profiling: 1660ms
+	BeginReloadAssembly (155ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (44ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (505ms)
+		LoadAssemblies (270ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (305ms)
+			TypeCache.Refresh (212ms)
+				TypeCache.ScanAssembly (201ms)
+			ScanForSourceGeneratedMonoScriptInfo (88ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (926ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (535ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (130ms)
+			ProcessInitializeOnLoadAttributes (242ms)
+			ProcessInitializeOnLoadMethodAttributes (145ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 5.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2692 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (345.2 KB). Loaded Objects now: 3338.
+Memory consumption went from 136.7 MB to 136.4 MB.
+Total: 8.498600 ms (FindLiveObjects: 0.253000 ms CreateObjectMapping: 0.088100 ms MarkObjects: 7.876700 ms  DeleteObjects: 0.279200 ms)
+
+Prepare: number of updated asset objects reloaded= 70
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:graphics/etc-compressor: 01010204000000000000000000000000 -> 01020205000000000000000000000000
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 54.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (310.2 KB). Loaded Objects now: 3338.
+Memory consumption went from 94.8 MB to 94.5 MB.
+Total: 17.686600 ms (FindLiveObjects: 0.637100 ms CreateObjectMapping: 0.126500 ms MarkObjects: 16.278900 ms  DeleteObjects: 0.640600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 6.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (313.1 KB). Loaded Objects now: 3338.
+Memory consumption went from 95.1 MB to 94.8 MB.
+Total: 8.111700 ms (FindLiveObjects: 0.245200 ms CreateObjectMapping: 0.084100 ms MarkObjects: 7.515200 ms  DeleteObjects: 0.266000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+- Loaded All Assemblies, in  0.748 seconds
+Refreshing native plugins compatible for Editor in 4.44 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.969 seconds
+Domain Reload Profiling: 1714ms
+	BeginReloadAssembly (160ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (508ms)
+		LoadAssemblies (301ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (287ms)
+			TypeCache.Refresh (199ms)
+				TypeCache.ScanAssembly (188ms)
+			ScanForSourceGeneratedMonoScriptInfo (83ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (970ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (597ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (114ms)
+			ProcessInitializeOnLoadAttributes (298ms)
+			ProcessInitializeOnLoadMethodAttributes (167ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Script is not up to date after domain reload: guid(9ddbee00c1ce73549a115cb23f8966f2) path("Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll") state(2)
+Refreshing native plugins compatible for Editor in 7.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2694 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (356.5 KB). Loaded Objects now: 3344.
+Memory consumption went from 138.6 MB to 138.2 MB.
+Total: 7.497700 ms (FindLiveObjects: 0.239600 ms CreateObjectMapping: 0.083400 ms MarkObjects: 6.848000 ms  DeleteObjects: 0.325000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 

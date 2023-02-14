@@ -25,7 +25,7 @@ public class LevelDesignerEditor : Editor {
 
 			//Test for Input
 			Event e = Event.current;
-			if(e.type == EventType.mouseDown){
+			if(e.type == EventType.MouseDown){
 
 				//Left mouse delete objects
 				if(e.button == 0){
